@@ -1,0 +1,11 @@
+export { HomeHero } from "@/app/_components/HomeHero";
+export { HomeTrustBar } from "@/app/_components/HomeTrustBar";
+export { HomeServiceOverview } from "@/app/_components/HomeServiceOverview";
+export { HomeWhyChooseUs } from "@/app/_components/HomeWhyChooseUs";
+export { HomeGardenStory } from "@/app/_components/HomeGardenStory";
+export { HomeSupplyProcess } from "@/app/_components/HomeSupplyProcess";
+export { HomeServiceAreas } from "@/app/_components/HomeServiceAreas";
+export { HomeStartupCTA } from "@/app/_components/HomeStartupCTA";
+export { HomeReviews } from "@/app/_components/HomeReviews";
+export { HomeFAQ } from "@/app/_components/HomeFAQ";
+export { HomeFinalCTA } from "@/app/_components/HomeFinalCTA";
