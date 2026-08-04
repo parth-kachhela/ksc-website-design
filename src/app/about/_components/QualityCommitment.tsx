@@ -12,9 +12,6 @@ export function QualityCommitment() {
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
           <Reveal>
             <div className="flex flex-col gap-5">
-              <span className="flex size-12 items-center justify-center rounded-xl bg-brand-leaf">
-                <ShieldCheck className="size-6 text-primary" aria-hidden="true" />
-              </span>
               <SectionHeading
                 eyebrow="Quality"
                 title={qualityCommitment.title}

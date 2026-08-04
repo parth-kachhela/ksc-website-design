@@ -12,7 +12,7 @@ export function BusinessValues() {
             eyebrow="Business Values"
             title="Values Behind Every Requirement"
             description="The supplier works with a simple, buyer-focused approach built around quality, communication and dependable coordination."
-            align="center"
+            align="left"
           />
         </Reveal>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

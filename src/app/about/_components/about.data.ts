@@ -1,4 +1,4 @@
-import { Leaf, MessagesSquare, Handshake, Target, RefreshCcw } from "lucide-react";
+import { Leaf, MessagesSquare, Handshake, Target, RefreshCcw, Clock3 } from "lucide-react";
 
 export const aboutHero = {
   eyebrow: "Based in Gadu, Junagadh",
@@ -82,6 +82,15 @@ export const businessValues = [
       "The supplier welcomes recurring and repeat requirements from regular buyers.",
     icon: Handshake,
   },
+
+  {
+    title: "Commitment to Timely Service",
+    description:
+      "Buyer inquiries and supply requirements are handled with timely responses and proper coordination.",
+    icon: Clock3,
+  },
+
+
 ];
 
 export const aboutCta = {

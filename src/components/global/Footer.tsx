@@ -97,16 +97,7 @@ export function Footer() {
                 <span>{siteConfig.addressShort}</span>
               </li>
             </ul>
-            <WhatsAppButton asChild size="lg" className="mt-5">
-              <a
-                href={siteConfig.whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <MessageCircle className="size-4" aria-hidden="true" />
-                WhatsApp
-              </a>
-            </WhatsAppButton>
+
             <div className="mt-4 flex items-center gap-3">
               <span className="text-sm text-white/60">Follow us</span>
               <a
@@ -130,26 +121,23 @@ export function Footer() {
                   <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                   <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
                 </svg>
+
+              </a>
+              <a
+                href="#main-content"
+                aria-label="Back to top"
+                className="inline-flex size-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
+              >
+                <ArrowUp className="size-4" aria-hidden="true" />
               </a>
             </div>
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/15 pt-6 text-center sm:flex-row sm:text-left">
+        <div className="mt-12 flex flex-col items-center justify-center gap-4 border-t border-white/15 pt-6 text-center sm:flex-row sm:text-left">
           <p className="text-xs text-white/60">
-            © {new Date().getFullYear()} {siteConfig.name} ·{" "}
-            {siteConfig.domain.replace("https://", "")}
+            © {new Date().getFullYear()} {siteConfig.name}
           </p>
-          <p className="text-xs text-white/60">
-            Serving Gadu, Chorvad, Junagadh and buyers across Gujarat.
-          </p>
-          <a
-            href="#main-content"
-            aria-label="Back to top"
-            className="inline-flex size-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
-          >
-            <ArrowUp className="size-4" aria-hidden="true" />
-          </a>
         </div>
       </div>
     </footer>

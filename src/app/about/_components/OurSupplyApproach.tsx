@@ -13,7 +13,6 @@ export function OurSupplyApproach() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
           <SectionHeading
-            eyebrow="How We Work"
             title="Our Supply Approach"
             align="center"
           />
