@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 720" fill="none" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="800" y1="0" x2="800" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7FBEF"/>
+      <stop offset="0.55" stop-color="#EEF7DF"/>
+      <stop offset="1" stop-color="#DDEFC6"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(800 140) rotate(90) scale(330 560)">
+      <stop stop-color="#FFFDEB" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#FFFDEB" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hill1" x1="800" y1="430" x2="800" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#CFE7AD"/>
+      <stop offset="1" stop-color="#B5D68A"/>
+    </linearGradient>
+    <linearGradient id="hill2" x1="800" y1="500" x2="800" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B8D992"/>
+      <stop offset="1" stop-color="#91BF67"/>
+    </linearGradient>
+    <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#7FAE47"/>
+      <stop offset="1" stop-color="#315F2F"/>
+    </linearGradient>
+    <radialGradient id="coconutGreen" cx="0.32" cy="0.26" r="0.9">
+      <stop stop-color="#BCE276"/>
+      <stop offset="0.55" stop-color="#68A842"/>
+      <stop offset="1" stop-color="#2F6B31"/>
+    </radialGradient>
+    <radialGradient id="coconutBrown" cx="0.32" cy="0.26" r="0.9">
+      <stop stop-color="#B98245"/>
+      <stop offset="0.55" stop-color="#75431F"/>
+      <stop offset="1" stop-color="#3D2111"/>
+    </radialGradient>
+    <filter id="blur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#163A1F" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="720" fill="url(#bg)"/>
+  <ellipse cx="800" cy="135" rx="520" ry="300" fill="url(#glow)"/>
+
+  <g opacity="0.45" filter="url(#blur)">
+    <circle cx="170" cy="145" r="72" fill="#FFF"/>
+    <circle cx="235" cy="160" r="54" fill="#FFF"/>
+    <circle cx="1420" cy="180" r="74" fill="#FFF"/>
+    <circle cx="1480" cy="190" r="48" fill="#FFF"/>
+  </g>
+
+  <path d="M0 520C180 445 338 455 500 520C690 596 850 545 1030 480C1210 415 1400 440 1600 505V720H0V520Z" fill="url(#hill1)" opacity="0.72"/>
+  <path d="M0 610C170 555 315 565 490 625C665 685 855 625 1035 565C1235 500 1400 535 1600 595V720H0V610Z" fill="url(#hill2)" opacity="0.62"/>
+
+  <g opacity="0.24" fill="#376D37">
+    <path d="M80 590c20-84 56-132 99-156-15 45-14 97 5 156H80Z"/>
+    <path d="M1430 570c14-72 42-119 85-151-11 49-8 99 10 151h-95Z"/>
+    <path d="M1325 590c11-52 34-91 68-117-8 39-5 77 8 117h-76Z"/>
+  </g>
+
+  <!-- left decorative palm leaves -->
+  <g opacity="0.46" transform="translate(-45 -35)">
+    <path d="M0 130C145 25 286 12 420 45C274 48 150 90 44 190L0 130Z" fill="url(#leaf)"/>
+    <path d="M20 30C154 72 247 145 312 252C216 173 109 125 0 104L20 30Z" fill="#6F9E43"/>
+    <path d="M105 0C198 85 252 176 278 290C220 185 145 108 61 54L105 0Z" fill="#86B554"/>
+  </g>
+
+  <!-- right palm tree -->
+  <g transform="translate(1270 35)" opacity="0.9">
+    <path d="M175 675C170 510 165 368 185 220" stroke="#684523" stroke-width="22" stroke-linecap="round"/>
+    <path d="M185 220C105 128 30 102-70 112C36 155 94 196 174 246Z" fill="url(#leaf)"/>
+    <path d="M185 220C132 102 84 51 5 4C85 87 128 151 179 240Z" fill="#4D7E35"/>
+    <path d="M185 220C207 92 249 35 330 0C260 75 224 146 196 239Z" fill="#5E8F3C"/>
+    <path d="M185 220C278 125 365 107 458 135C350 158 275 194 201 246Z" fill="#3F7133"/>
+    <path d="M185 220C285 216 363 247 430 315C332 266 264 248 198 243Z" fill="#6C9F42"/>
+    <circle cx="171" cy="237" r="36" fill="url(#coconutGreen)"/>
+    <circle cx="215" cy="245" r="32" fill="url(#coconutGreen)"/>
+    <circle cx="191" cy="279" r="33" fill="url(#coconutGreen)"/>
+  </g>
+
+  <!-- bottom coconuts -->
+  <g transform="translate(1190 505)" filter="url(#shadow)">
+    <ellipse cx="174" cy="171" rx="205" ry="30" fill="#315D31" opacity="0.18"/>
+    <path d="M45 166C150 110 253 106 355 155C253 157 162 178 78 214L45 166Z" fill="#446F36"/>
+    <path d="M102 190C171 121 246 91 330 101C250 128 188 166 126 221L102 190Z" fill="#79A64E"/>
+    <ellipse cx="121" cy="130" rx="68" ry="84" transform="rotate(-12 121 130)" fill="url(#coconutGreen)"/>
+    <ellipse cx="239" cy="123" rx="74" ry="88" transform="rotate(14 239 123)" fill="url(#coconutBrown)"/>
+    <g transform="translate(165 92) rotate(-10)">
+      <ellipse cx="55" cy="62" rx="70" ry="82" fill="#6A3D20"/>
+      <ellipse cx="47" cy="54" rx="57" ry="68" fill="#F7F2DE"/>
+      <ellipse cx="43" cy="51" rx="39" ry="48" fill="#E9DDB8"/>
+    </g>
+  </g>
+
+  <!-- small birds -->
+  <g stroke="#527A41" stroke-width="3" stroke-linecap="round" opacity="0.5">
+    <path d="M680 125q14-14 28 0q14-14 28 0"/>
+    <path d="M770 92q11-11 22 0q11-11 22 0"/>
+  </g>
+
+  <!-- soft center readability overlay -->
+  <rect x="270" y="75" width="1060" height="470" rx="80" fill="#F8FBEF" opacity="0.16"/>
+</svg>
