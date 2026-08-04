@@ -59,7 +59,7 @@ export function HomeHero() {
 
           <div className="relative overflow-hidden rounded-[2.5rem] border border-white/60 bg-white shadow-xl shadow-black/5">
             <Image
-              src="/images/home/hero.png"
+              src="/images/home/hero.avif"
               alt="Green coconut garden and fresh tender coconuts near Gadu, Chorvad, Junagadh, Gujarat"
               width={100}
               height={900}

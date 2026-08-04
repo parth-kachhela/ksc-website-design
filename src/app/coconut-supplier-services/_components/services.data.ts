@@ -41,7 +41,7 @@ export const overviewCards = [
     title: "Tender Coconut Supply",
     description:
       "Tender coconut inquiries based on required quantity, location and preferred size.",
-    image: "/images/services/tender-coconut.png",
+    image: "/images/services/tender-coconut.avif",
     imageAlt:
       "Tender coconuts available for type and size-based bulk supply inquiries",
   },
@@ -50,7 +50,7 @@ export const overviewCards = [
     title: "Green Coconut Supply",
     description:
       "Green coconut requirements for retailers, distributors and other business buyers.",
-    image: "/images/services/green-coconut.png",
+    image: "/images/services/green-coconut.avif",
     imageAlt: "Green coconuts supplied to retail and wholesale business buyers",
   },
   {
@@ -58,7 +58,7 @@ export const overviewCards = [
     title: "Size-Graded Coconut Supply",
     description:
       "Discuss Big, Big-small, Medium Size and Small Size coconut requirements.",
-    image: "/images/services/size-graded-coconut.png",
+    image: "/images/services/size-graded-coconut.avif",
     imageAlt: "Different coconut size grades prepared for buyer requirements",
   },
   {
@@ -66,7 +66,7 @@ export const overviewCards = [
     title: "Bulk and Recurring Orders",
     description:
       "One-time and recurring coconut supply inquiries based on quantity and destination.",
-    image: "/images/services/bulk-coconut.png",
+    image: "/images/services/bulk-coconut.avif",
     imageAlt:
       "Bulk coconut order prepared according to type size and quantity",
   },
@@ -129,7 +129,7 @@ export const coconutSizeGrades: CoconutSizeGrade[] = [
     ],
     availabilityNote:
       "Exact availability depends on coconut type, quantity and current stock.",
-    image: "/images/services/big.png",
+    image: "/images/services/big.avif",
     imageAlt: "Big coconut size requirement for bulk supply",
     whatsappValue: "Big",
   },
@@ -147,7 +147,7 @@ export const coconutSizeGrades: CoconutSizeGrade[] = [
     ],
     availabilityNote:
       "The supplier confirms the available size combination before order confirmation.",
-    image: "/images/services/big-small.png",
+    image: "/images/services/big-small.avif",
     imageAlt: "Big-small coconut size category for wholesale buyers",
     whatsappValue: "Big-small",
   },
@@ -165,7 +165,7 @@ export const coconutSizeGrades: CoconutSizeGrade[] = [
     ],
     availabilityNote:
       "Medium-size availability must be confirmed for each requirement.",
-    image: "/images/services/medium.png",
+    image: "/images/services/medium.avif",
     imageAlt: "Medium-size coconuts arranged for business supply",
     whatsappValue: "Medium Size",
   },
@@ -183,7 +183,7 @@ export const coconutSizeGrades: CoconutSizeGrade[] = [
     ],
     availabilityNote:
       "Small-size availability depends on current stock and requirement quantity.",
-    image: "/images/services/small.png",
+    image: "/images/services/small.avif",
     imageAlt: "Small-size coconuts prepared for bulk business requirements",
     whatsappValue: "Small Size",
   },
@@ -212,7 +212,7 @@ export const supplyServices: SupplyService[] = [
       "Delivery location discussion",
       "One-time or recurring supply requirement",
     ],
-    image: "/images/services/tender-coconut.png",
+    image: "/images/services/tender-coconut.avif",
     imageAlt: "Tender coconuts available for type and size-based bulk supply inquiries",
     ctaLabel: "Inquire for Tender Coconut",
     inquiryType: "Tender Coconut Supply",
@@ -230,7 +230,7 @@ export const supplyServices: SupplyService[] = [
       "Direct WhatsApp communication",
       "Current availability confirmation",
     ],
-    image: "/images/services/green-coconut.png",
+    image: "/images/services/green-coconut.avif",
     imageAlt: "Green coconuts supplied to retail and wholesale business buyers",
     ctaLabel: "Inquire for Green Coconut",
     inquiryType: "Green Coconut Supply",
@@ -249,7 +249,7 @@ export const supplyServices: SupplyService[] = [
       "Mention one-time or recurring frequency",
       "Confirm availability before finalisation",
     ],
-    image: "/images/services/bulk.png",
+    image: "/images/services/bulk.avif",
     imageAlt:
       "Bulk coconut order prepared according to type size and quantity",
     ctaLabel: "Request Bulk Supply",

@@ -3,13 +3,11 @@ import {
   ArrowUp,
   Mail,
   MapPin,
-  MessageSquare,
   Phone,
 } from "lucide-react";
 
 import { siteConfig } from "@/lib/site-config";
 import { footerServices, mainNav, callHref, mailHref } from "@/lib/navigation";
-import { WhatsAppButton } from "@/components/base/button";
 import { BrandLogo } from "@/components/brand/BrandLogo";
 
 export function Footer() {

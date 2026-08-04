@@ -1,5 +1,3 @@
-import { CheckCircle2, MessageSquare, PhoneCall } from "lucide-react";
-
 import type { ServiceCard } from "@/types/service";
 import type { FaqItem } from "@/types/service";
 import type { Review } from "@/types/review";

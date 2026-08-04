@@ -22,7 +22,7 @@ export function BrandLogo({
       aria-label="Kankeshwari Coconut Supplier"
     >
       <Image
-        src="/images/brand/kcs-logo.png"
+        src="/images/brand/kcs-logo.avif"
         alt="Kankeshwari Coconut Supplier logo"
         width={width}
         height={height}
