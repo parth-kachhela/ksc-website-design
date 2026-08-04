@@ -16,7 +16,7 @@ export function ServicesFAQ() {
           <SectionHeading
             eyebrow="FAQ"
             title="Coconut Supply Questions"
-            description="Answers to common questions about tender, green and bulk coconut supply."
+            description="Answers to common questions about coconut type, size grade, quantity and bulk supply."
             align="center"
           />
         </Reveal>

@@ -10,6 +10,8 @@ interface SeoOptions {
   description: string;
   path: string;
   keywords?: string[];
+  ogTitle?: string;
+  ogDescription?: string;
 }
 
 export function buildSeoMetadata({
@@ -17,11 +19,15 @@ export function buildSeoMetadata({
   description,
   path,
   keywords,
+  ogTitle,
+  ogDescription,
 }: SeoOptions): Metadata {
   const url = `${siteUrl}${path}`;
   const fullTitle = title.includes(siteConfig.name)
     ? title
     : `${title} | ${siteConfig.shortName}`;
+  const ogTitleResolved = ogTitle ?? fullTitle;
+  const ogDescriptionResolved = ogDescription ?? description;
 
   return {
     title: fullTitle,
@@ -34,15 +40,15 @@ export function buildSeoMetadata({
       type: "website",
       url,
       siteName: siteConfig.name,
-      title: fullTitle,
-      description,
+      title: ogTitleResolved,
+      description: ogDescriptionResolved,
       images: [{ url: defaultOpenGraphImage, width: 1200, height: 630, alt: siteConfig.name }],
       locale: "en_IN",
     },
     twitter: {
       card: "summary_large_image",
-      title: fullTitle,
-      description,
+      title: ogTitleResolved,
+      description: ogDescriptionResolved,
       images: [defaultOpenGraphImage],
     },
     robots: {

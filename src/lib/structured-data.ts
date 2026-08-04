@@ -68,7 +68,7 @@ export function serviceSchema() {
     provider: { "@type": "LocalBusiness", name: siteConfig.name, url: baseUrl },
     areaServed: ["Gadu", "Chorvad", "Junagadh", "Gujarat"],
     description:
-      "Tender coconut, green coconut and bulk coconut supply inquiries for buyers in Gadu, Chorvad, Junagadh and across Gujarat.",
+      "Tender coconut, green coconut and size-graded coconut supply inquiries based on coconut type, preferred size grade, quantity and supply frequency for buyers in Gadu, Chorvad, Junagadh and across Gujarat.",
   };
 }
 

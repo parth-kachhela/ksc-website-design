@@ -1,19 +1,40 @@
-import type { InquiryType, RequirementFrequency } from "@/types/contact";
+import type {
+  CoconutSizeGrade,
+  CoconutType,
+  InquiryType,
+  RequirementFrequency,
+} from "@/types/contact";
 
 export const contactHero = {
-  eyebrow: "Bulk Coconut Inquiry",
+  eyebrow: "Coconut Type & Size Inquiry",
   title: "Contact Kankeshwari Coconut Supplier",
   description:
-    "Share your coconut type, required quantity and delivery location. Your inquiry will be prepared as a WhatsApp message so you only need to review it and press Send.",
+    "Share your coconut type, preferred size grade, required quantity and delivery location. Your inquiry will be prepared as a WhatsApp message so you only need to review it and press Send.",
 };
 
 export const inquiryTypes: InquiryType[] = [
   "Tender Coconut Supply",
   "Green Coconut Supply",
   "Bulk Coconut Order",
+  "Size-Graded Coconut Supply",
   "Recurring Business Supply",
   "Coconut Business Startup",
   "General Inquiry",
+];
+
+export const coconutTypesOptions: CoconutType[] = [
+  "Tender Coconut",
+  "Green Coconut",
+  "Not Sure / Need Guidance",
+];
+
+export const coconutSizeGradeOptions: CoconutSizeGrade[] = [
+  "Big–Small",
+  "Small–Big",
+  "Medium Size",
+  "Small Size",
+  "Mixed Size Requirement",
+  "Not Sure / Need Guidance",
 ];
 
 export const requirementFrequencies: RequirementFrequency[] = [
@@ -21,6 +42,7 @@ export const requirementFrequencies: RequirementFrequency[] = [
   "Daily Requirement",
   "Weekly Requirement",
   "Monthly Requirement",
+  "Recurring Requirement",
   "Not Sure Yet",
 ];
 

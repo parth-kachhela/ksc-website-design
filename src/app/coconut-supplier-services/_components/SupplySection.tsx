@@ -2,10 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, MessageCircle } from "lucide-react";
 
-import { siteConfig } from "@/lib/site-config";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Reveal } from "@/components/global/Reveal";
 import { cn } from "@/lib/utils";
+import {
+  buildContactQuery,
+  buildServiceWhatsAppUrl,
+} from "@/lib/whatsapp";
 
 interface SupplySectionProps {
   id: string;
@@ -16,7 +20,10 @@ interface SupplySectionProps {
   image: string;
   imageAlt: string;
   ctaLabel: string;
-  typeQuery: string;
+  inquiryType: string;
+  coconutType?: string;
+  sizeGrade?: string;
+  supportedGrades?: string[];
   reversed?: boolean;
 }
 
@@ -29,17 +36,18 @@ export function SupplySection({
   image,
   imageAlt,
   ctaLabel,
-  typeQuery,
+  inquiryType,
+  coconutType,
+  sizeGrade,
+  supportedGrades,
   reversed = false,
 }: SupplySectionProps) {
+  const contactHref = buildContactQuery({ inquiryType, coconutType, sizeGrade });
+  const whatsappUrl = buildServiceWhatsAppUrl(inquiryType, coconutType, sizeGrade);
+
   return (
     <section id={id} className="scroll-mt-20" aria-labelledby={`${id}-title`}>
-      <div
-        className={cn(
-          "mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:gap-14 lg:px-8",
-          reversed ? "" : "",
-        )}
-      >
+      <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:gap-14 lg:px-8">
         <Reveal className={cn(reversed ? "lg:order-2" : "")}>
           <div className="overflow-hidden rounded-[2rem] border border-border bg-white shadow-lg">
             <Image
@@ -66,6 +74,25 @@ export function SupplySection({
             <p className="max-w-xl text-base leading-7 text-muted-foreground">
               {description}
             </p>
+            {supportedGrades && supportedGrades.length > 0 ? (
+              <div>
+                <p className="text-sm font-semibold text-secondary uppercase">
+                  Supported Size Grades
+                </p>
+                <ul className="mt-3 flex flex-wrap gap-2">
+                  {supportedGrades.map((grade) => (
+                    <li key={grade}>
+                      <Badge
+                        variant="secondary"
+                        className="rounded-full px-3 py-1 text-xs font-medium"
+                      >
+                        {grade}
+                      </Badge>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
             <ul className="flex flex-col gap-2.5">
               {points.map((point) => (
                 <li
@@ -82,19 +109,13 @@ export function SupplySection({
             </ul>
             <div className="mt-2 flex flex-col gap-3 sm:flex-row">
               <Button asChild size="lg" className="bg-[#25D366] text-white hover:bg-[#1fb257]">
-                <a
-                  href={`${siteConfig.whatsappUrl}?text=${encodeURIComponent(
-                    `Hello Kankeshwari Coconut Supplier, I would like to discuss a ${title.replace(/ Supply$/, "")} requirement.`,
-                  )}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="size-4" aria-hidden="true" />
                   {ctaLabel}
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <Link href={`/contact?type=${typeQuery}`}>
+                <Link href={contactHref}>
                   Use Inquiry Form
                   <ArrowRight className="size-4" aria-hidden="true" />
                 </Link>

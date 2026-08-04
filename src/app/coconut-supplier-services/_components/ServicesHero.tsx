@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PhoneCall } from "lucide-react";
+import { CheckCircle2, PhoneCall } from "lucide-react";
 
 import { callHref } from "@/lib/navigation";
 import { Button } from "@/components/ui/button";
@@ -25,16 +25,29 @@ export function ServicesHero() {
         <p className="max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
           {servicesHero.description}
         </p>
+        <ul className="flex flex-wrap items-center justify-center gap-2.5">
+          {servicesHero.trustLabels.map((label) => (
+            <li
+              key={label}
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-white px-3 py-1.5 text-xs font-medium text-foreground"
+            >
+              <CheckCircle2 className="size-4 text-secondary" aria-hidden="true" />
+              {label}
+            </li>
+          ))}
+        </ul>
         <div className="flex flex-col gap-3 sm:flex-row">
-          <Button asChild size="lg" className="bg-[#25D366] text-white hover:bg-[#1fb257]">
-            <Link href="/contact?type=Bulk+Coconut+Order">
-              Get Supply Quote
-            </Link>
+          <Button
+            asChild
+            size="lg"
+            className="bg-[#25D366] text-white hover:bg-[#1fb257]"
+          >
+            <Link href="/contact">{servicesHero.primaryCta}</Link>
           </Button>
           <Button asChild size="lg" variant="outline">
             <a href={callHref}>
               <PhoneCall className="size-4 text-secondary" aria-hidden="true" />
-              Call Now
+              {servicesHero.secondaryCta}
             </a>
           </Button>
         </div>

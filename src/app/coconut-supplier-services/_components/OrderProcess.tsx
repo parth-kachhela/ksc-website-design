@@ -14,17 +14,18 @@ export function OrderProcess() {
           <SectionHeading
             eyebrow="Order Process"
             title="How a Coconut Supply Inquiry Works"
+            description="Follow these steps to share your coconut type, size requirement and quantity with the supplier."
             align="center"
           />
         </Reveal>
-        <ol className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <ol className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
           {orderProcess.map((step, index) => (
-            <Reveal key={step.title} delay={index * 0.08}>
+            <Reveal key={step.title} delay={index * 0.06}>
               <li className="flex h-full flex-col gap-3 rounded-2xl border border-border bg-white p-6">
                 <span className="flex size-10 items-center justify-center rounded-full bg-secondary text-base font-bold text-white">
                   {index + 1}
                 </span>
-                <h3 className="font-heading text-xl font-semibold text-foreground">
+                <h3 className="font-heading text-lg font-semibold text-foreground">
                   {step.title}
                 </h3>
                 <p className="text-sm leading-6 text-muted-foreground">

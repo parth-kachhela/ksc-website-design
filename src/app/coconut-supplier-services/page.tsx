@@ -6,10 +6,10 @@ import { JsonLd } from "@/components/global/JsonLd";
 import { PageBreadcrumb } from "@/components/global/PageBreadcrumb";
 import {
   ServicesHero,
+  ServiceOverview,
+  CoconutTypeOptions,
+  CoconutSizeGrades,
   SupplyServices,
-  TenderCoconutSupply,
-  GreenCoconutSupply,
-  BulkOrderSection,
   BuyerTypes,
   StartupSupplySection,
   ServiceLocations,
@@ -20,10 +20,28 @@ import {
 import { servicesFaqs } from "@/app/coconut-supplier-services/_components/services.data";
 
 export const metadata: Metadata = buildSeoMetadata({
-  title: "Bulk Coconut Supplier Services in Gadu, Chorvad & Gujarat",
+  title: "Coconut Supply by Type & Size in Gadu, Chorvad and Gujarat",
   description:
-    "Discuss tender coconut, green coconut and bulk coconut supply requirements with Kankeshwari Coconut Supplier in Gadu, Junagadh.",
+    "Discuss tender, green, Big–Small, Small–Big, medium-size and small-size coconut supply requirements with Kankeshwari Coconut Supplier.",
   path: "/coconut-supplier-services",
+  keywords: [
+    "coconut supply by size",
+    "size-graded coconut supplier",
+    "tender coconut by size requirement",
+    "green coconut size options",
+    "bulk coconut supply by size",
+    "medium-size coconut supplier",
+    "small-size coconut supply",
+    "Big–Small coconut requirement",
+    "Small–Big coconut requirement",
+    "mixed-size coconut order",
+    "coconut supplier in Gadu",
+    "coconut supplier near Chorvad",
+    "bulk coconut supplier in Gujarat",
+  ],
+  ogTitle: "Type and Size-Based Coconut Supply | Kankeshwari Coconut Supplier",
+  ogDescription:
+    "Send your coconut type, preferred size grade, quantity and delivery location directly through WhatsApp.",
 });
 
 export default function ServicesPage() {
@@ -50,10 +68,10 @@ export default function ServicesPage() {
         />
       </div>
       <ServicesHero />
+      <ServiceOverview />
+      <CoconutTypeOptions />
+      <CoconutSizeGrades />
       <SupplyServices />
-      <TenderCoconutSupply />
-      <GreenCoconutSupply />
-      <BulkOrderSection />
       <BuyerTypes />
       <StartupSupplySection />
       <ServiceLocations />

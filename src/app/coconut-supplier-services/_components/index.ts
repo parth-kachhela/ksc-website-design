@@ -1,8 +1,8 @@
 export { ServicesHero } from "@/app/coconut-supplier-services/_components/ServicesHero";
+export { ServiceOverview } from "@/app/coconut-supplier-services/_components/ServiceOverview";
+export { CoconutTypeOptions } from "@/app/coconut-supplier-services/_components/CoconutTypeOptions";
+export { CoconutSizeGrades } from "@/app/coconut-supplier-services/_components/CoconutSizeGrades";
 export { SupplyServices } from "@/app/coconut-supplier-services/_components/SupplyServices";
-export { TenderCoconutSupply } from "@/app/coconut-supplier-services/_components/TenderCoconutSupply";
-export { GreenCoconutSupply } from "@/app/coconut-supplier-services/_components/GreenCoconutSupply";
-export { BulkOrderSection } from "@/app/coconut-supplier-services/_components/BulkOrderSection";
 export { BuyerTypes } from "@/app/coconut-supplier-services/_components/BuyerTypes";
 export { StartupSupplySection } from "@/app/coconut-supplier-services/_components/StartupSupplySection";
 export { ServiceLocations } from "@/app/coconut-supplier-services/_components/ServiceLocations";

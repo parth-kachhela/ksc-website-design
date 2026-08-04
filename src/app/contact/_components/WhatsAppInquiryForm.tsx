@@ -37,11 +37,23 @@ import {
 import {
   inquiryTypes,
   requirementFrequencies,
+  coconutTypesOptions,
+  coconutSizeGradeOptions,
 } from "@/app/contact/_components/contact.data";
 
 interface WhatsAppInquiryFormProps {
   defaultInquiryType?: string;
 }
+
+const VALID_INQUIRY_RECORD = Object.fromEntries(
+  inquiryTypes.map((type) => [type, type]),
+);
+const VALID_COCONUT_TYPE_RECORD = Object.fromEntries(
+  coconutTypesOptions.map((type) => [type, type]),
+);
+const VALID_SIZE_GRADE_RECORD = Object.fromEntries(
+  coconutSizeGradeOptions.map((grade) => [grade, grade]),
+);
 
 export function WhatsAppInquiryForm({
   defaultInquiryType,
@@ -58,13 +70,24 @@ export function WhatsAppInquiryForm({
   });
 
   useEffect(() => {
-    if (defaultInquiryType) {
-      return;
+    const params = new URLSearchParams(window.location.search);
+    const inquiry = params.get("inquiryType");
+    const legacyType = params.get("type");
+    const coconutType = params.get("coconutType");
+    const sizeGrade = params.get("sizeGrade");
+
+    if (inquiry && VALID_INQUIRY_RECORD[inquiry]) {
+      form.setValue("inquiryType", inquiry);
+    } else if (legacyType && VALID_INQUIRY_RECORD[legacyType]) {
+      form.setValue("inquiryType", legacyType);
     }
-    const type = new URLSearchParams(window.location.search).get("type");
-    if (type && inquiryTypes.includes(type as (typeof inquiryTypes)[number])) {
-      form.setValue("inquiryType", type);
+    if (coconutType && VALID_COCONUT_TYPE_RECORD[coconutType]) {
+      form.setValue("coconutType", coconutType);
     }
+    if (sizeGrade && VALID_SIZE_GRADE_RECORD[sizeGrade]) {
+      form.setValue("sizeGrade", sizeGrade);
+    }
+    // Preselect from service page only when defaults were not passed.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [defaultInquiryType]);
 
@@ -74,6 +97,8 @@ export function WhatsAppInquiryForm({
       ...values,
       mobileNumber: normalizeMobile(values.mobileNumber),
       inquiryType: values.inquiryType as InquiryType,
+      coconutType: values.coconutType as ContactFormValues["coconutType"],
+      sizeGrade: values.sizeGrade as ContactFormValues["sizeGrade"],
       frequency: values.frequency as RequirementFrequency,
     };
     const url = buildWhatsAppInquiryUrl(payload);
@@ -241,6 +266,63 @@ export function WhatsAppInquiryForm({
                       {...field}
                     />
                   </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+
+          <div className="grid gap-5 sm:grid-cols-2">
+            <FormField
+              control={form.control}
+              name="coconutType"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Coconut Type</FormLabel>
+                  <Select
+                    onValueChange={field.onChange}
+                    defaultValue={field.value}
+                  >
+                    <FormControl>
+                      <SelectTrigger className="w-full">
+                        <SelectValue placeholder="Select coconut type" />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      {coconutTypesOptions.map((type) => (
+                        <SelectItem key={type} value={type}>
+                          {type}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="sizeGrade"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Preferred Size Grade</FormLabel>
+                  <Select
+                    onValueChange={field.onChange}
+                    defaultValue={field.value}
+                  >
+                    <FormControl>
+                      <SelectTrigger className="w-full">
+                        <SelectValue placeholder="Select size grade" />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      {coconutSizeGradeOptions.map((grade) => (
+                        <SelectItem key={grade} value={grade}>
+                          {grade}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
                   <FormMessage />
                 </FormItem>
               )}

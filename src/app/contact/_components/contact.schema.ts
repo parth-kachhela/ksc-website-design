@@ -19,6 +19,8 @@ export const contactFormSchema = z.object({
     ),
   businessName: z.string().optional(),
   inquiryType: z.string().min(1, "Please select an inquiry type."),
+  coconutType: z.string().min(1, "Please select a coconut type."),
+  sizeGrade: z.string().min(1, "Please select a preferred size grade."),
   quantity: z
     .string()
     .min(1, "Please enter the required quantity.")
@@ -42,6 +44,8 @@ export const contactFormDefaults: ContactFormSchema = {
   mobileNumber: "",
   businessName: "",
   inquiryType: "",
+  coconutType: "",
+  sizeGrade: "",
   quantity: "",
   frequency: "",
   deliveryLocation: "",

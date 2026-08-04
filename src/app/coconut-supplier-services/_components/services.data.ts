@@ -9,13 +9,30 @@ import {
   ShoppingBag,
 } from "lucide-react";
 
-import type { FaqItem } from "@/types/service";
+import type {
+  BuyerType,
+  CoconutSizeGrade,
+  CoconutTypeOption,
+  FaqItem,
+  LocationCard,
+  ProcessStep,
+  SupplyService,
+} from "@/types/service";
 
 export const servicesHero = {
-  eyebrow: "Tender, Green and Bulk Coconut Supply",
-  title: "Coconut Supplier Services in Gadu, Chorvad and Gujarat",
+  eyebrow: "Tender, Green, Size-Graded and Bulk Coconut Supply",
+  title:
+    "Coconut Supply by Type, Size and Quantity in Gadu, Chorvad and Gujarat",
   description:
-    "Contact Kankeshwari Coconut Supplier for tender coconut, green coconut and bulk coconut requirements. Share your quantity, location and expected supply schedule directly through WhatsApp or phone.",
+    "Kankeshwari Coconut Supplier accepts coconut inquiries based on coconut type, required size grade, quantity, supply frequency and delivery location. Buyers can discuss tender coconut, green coconut and bulk size-based requirements directly through WhatsApp or phone.",
+  primaryCta: "Share Coconut Requirement",
+  secondaryCta: "Call Supplier",
+  trustLabels: [
+    "Tender and Green Coconut",
+    "Multiple Size Requirements",
+    "Bulk Order Discussion",
+    "Direct WhatsApp Support",
+  ],
 };
 
 export const overviewCards = [
@@ -23,88 +40,247 @@ export const overviewCards = [
     id: "tender-coconut",
     title: "Tender Coconut Supply",
     description:
-      "Fresh tender coconut inquiries for business buyers and resellers.",
+      "Tender coconut inquiries based on required quantity, location and preferred size.",
     image: "/images/services/tender-coconut.svg",
-    imageAlt: "Fresh tender coconuts supplied for bulk buyers near Gadu Chorvad",
+    imageAlt:
+      "Tender coconuts available for type and size-based bulk supply inquiries",
   },
   {
     id: "green-coconut",
     title: "Green Coconut Supply",
     description:
-      "Green coconut requirements for retail and business supply inquiries.",
+      "Green coconut requirements for retailers, distributors and other business buyers.",
     image: "/images/services/green-coconut.svg",
-    imageAlt: "Green coconuts sourced for retail and wholesale buyers",
+    imageAlt: "Green coconuts supplied to retail and wholesale business buyers",
   },
   {
-    id: "bulk-order",
-    title: "Bulk Coconut Orders",
+    id: "size-graded-coconut",
+    title: "Size-Graded Coconut Supply",
     description:
-      "Direct inquiry support for larger and recurring coconut orders.",
+      "Discuss Big–Small, Small–Big, Medium Size and Small Size coconut requirements.",
+    image: "/images/services/size-graded-coconut.svg",
+    imageAlt: "Different coconut size grades prepared for buyer requirements",
+  },
+  {
+    id: "bulk-coconut-orders",
+    title: "Bulk and Recurring Orders",
+    description:
+      "One-time and recurring coconut supply inquiries based on quantity and destination.",
     image: "/images/services/bulk-coconut.svg",
-    imageAlt: "Bulk coconut orders prepared for wholesale buyers",
+    imageAlt:
+      "Bulk coconut order prepared according to type size and quantity",
   },
 ];
 
-export const supplyServices = [
+export const coconutTypes: CoconutTypeOption[] = [
+  {
+    id: "tender-coconut",
+    name: "Tender Coconut",
+    shortDescription:
+      "Tender coconut requirements for refreshing coconut water and business supply.",
+    description:
+      "Buyers can inquire for tender coconuts by sharing their expected quantity, preferred size requirement, delivery location and supply frequency. Final type and size availability must be confirmed directly with the supplier.",
+    availableGrades: ["Big–Small", "Small–Big", "Medium Size", "Small Size"],
+    buyerExamples: [
+      "Retail coconut sellers",
+      "Fruit shops",
+      "Refreshment businesses",
+      "Events and functions",
+      "Recurring business buyers",
+    ],
+    image: "/images/services/tender-coconut.svg",
+    imageAlt: "Tender coconuts arranged for size and quantity-based supply",
+    whatsappValue: "Tender Coconut",
+  },
+  {
+    id: "green-coconut",
+    name: "Green Coconut",
+    shortDescription:
+      "Green coconut requirements for retailers, wholesalers and distributors.",
+    description:
+      "Green coconut inquiries can be discussed according to the buyer’s preferred grade, total quantity, destination and requirement frequency. Availability depends on current supply conditions.",
+    availableGrades: ["Big–Small", "Small–Big", "Medium Size", "Small Size"],
+    buyerExamples: [
+      "Fruit retailers",
+      "Wholesale buyers",
+      "Coconut distributors",
+      "Market sellers",
+      "Businesses with recurring requirements",
+    ],
+    image: "/images/services/green-coconut.svg",
+    imageAlt:
+      "Green coconuts available in different commercial size requirements",
+    whatsappValue: "Green Coconut",
+  },
+];
+
+export const coconutSizeGrades: CoconutSizeGrade[] = [
+  {
+    id: "big-small",
+    name: "Big–Small",
+    shortDescription:
+      "A size-based coconut requirement using the Big–Small commercial category.",
+    description:
+      "Buyers who require the Big–Small category can share their coconut type, quantity and delivery location. The supplier will confirm current grade availability before finalising the requirement.",
+    suitableFor: [
+      "Bulk coconut buyers",
+      "Retail and distribution requirements",
+      "Buyers requesting a specific commercial size mix",
+    ],
+    availabilityNote:
+      "Exact availability depends on coconut type, quantity and current stock.",
+    image: "/images/services/big-small-coconut.svg",
+    imageAlt: "Big–Small coconut size requirement for bulk supply",
+    whatsappValue: "Big–Small",
+  },
+  {
+    id: "small-big",
+    name: "Small–Big",
+    shortDescription:
+      "A size-based coconut requirement using the Small–Big commercial category.",
+    description:
+      "The Small–Big category can be discussed for buyers who require this particular size combination. Quantity, coconut type and destination should be shared during the inquiry.",
+    suitableFor: [
+      "Wholesale buyers",
+      "Retail supply requirements",
+      "Size-specific recurring orders",
+    ],
+    availabilityNote:
+      "The supplier confirms the available size combination before order confirmation.",
+    image: "/images/services/small-big-coconut.svg",
+    imageAlt: "Small–Big coconut size category for wholesale buyers",
+    whatsappValue: "Small–Big",
+  },
+  {
+    id: "medium-size",
+    name: "Medium Size",
+    shortDescription:
+      "Medium-size coconut inquiries for balanced and consistent business requirements.",
+    description:
+      "Buyers looking for medium-size coconuts can send their required coconut type, quantity, frequency and delivery location directly to the supplier.",
+    suitableFor: [
+      "Retail coconut sellers",
+      "Food and refreshment businesses",
+      "Recurring business supply",
+    ],
+    availabilityNote:
+      "Medium-size availability must be confirmed for each requirement.",
+    image: "/images/services/medium-coconut.svg",
+    imageAlt: "Medium-size coconuts arranged for business supply",
+    whatsappValue: "Medium Size",
+  },
+  {
+    id: "small-size",
+    name: "Small Size",
+    shortDescription:
+      "Small-size coconut requirements for buyers needing a compact grade.",
+    description:
+      "Small-size coconut supply can be discussed according to total quantity, coconut type, destination and expected supply schedule.",
+    suitableFor: [
+      "Bulk order requirements",
+      "Retail and resale needs",
+      "Buyers requesting a smaller commercial grade",
+    ],
+    availabilityNote:
+      "Small-size availability depends on current stock and requirement quantity.",
+    image: "/images/services/small-coconut.svg",
+    imageAlt: "Small-size coconuts prepared for bulk business requirements",
+    whatsappValue: "Small Size",
+  },
+];
+
+export const sizeGradeDisclaimer =
+  "Size names represent the commercial requirement categories used while discussing supply. Exact coconut appearance and availability can vary, so buyers should confirm the required grade before finalising an order.";
+
+export const sizeGradeImageNote =
+  "Images are representative. Actual coconut size, shape and appearance may vary according to type and availability.";
+
+export const productImageNote =
+  "Product images are representative. Actual coconut colour, size, shape and appearance may vary.";
+
+export const supplyServices: SupplyService[] = [
   {
     id: "tender-coconut",
     eyebrow: "Tender Coconut",
     title: "Tender Coconut Supply",
     description:
-      "Kankeshwari Coconut Supplier accepts fresh tender coconut inquiries from buyers looking for dependable bulk availability. Buyers can discuss their expected quantity and confirm availability directly with the supplier.",
+      "Kankeshwari Coconut Supplier accepts fresh tender coconut inquiries from buyers looking for dependable bulk availability. Buyers can select their preferred size grade and discuss expected quantity directly with the supplier.",
     points: [
-      "Fresh tender coconut inquiries",
-      "Bulk requirement discussion",
-      "Quantity confirmation",
-      "Location and availability check",
-      "Suitable for business buyers and resellers",
+      "Tender coconut type selection",
+      "Big–Small, Small–Big, Medium or Small size inquiry",
+      "Required quantity confirmation",
+      "Delivery location discussion",
+      "One-time or recurring supply requirement",
     ],
     image: "/images/services/tender-coconut.svg",
-    imageAlt: "Fresh tender coconuts supplied for bulk buyers near Gadu Chorvad",
+    imageAlt: "Tender coconuts available for type and size-based bulk supply inquiries",
     ctaLabel: "Inquire for Tender Coconut",
-    typeQuery: "Tender+Coconut+Supply",
+    inquiryType: "Tender Coconut Supply",
   },
   {
     id: "green-coconut",
     eyebrow: "Green Coconut",
     title: "Green Coconut Supply",
     description:
-      "Quality green coconut supply for retailers, distributors, fruit sellers and other business requirements. Buyers can share their requirement directly through WhatsApp for a clear discussion.",
+      "Quality green coconut supply for retailers, distributors, fruit sellers and other business requirements. Buyers can share their preferred grade and quantity directly through WhatsApp for a clear discussion.",
     points: [
-      "Green coconut requirements",
-      "Retail and business supply inquiries",
-      "Bulk quantity discussions",
+      "Green coconut requirement discussion",
+      "Preferred size-grade selection",
+      "Retail, wholesale or distribution quantity",
       "Direct WhatsApp communication",
+      "Current availability confirmation",
     ],
     image: "/images/services/green-coconut.svg",
-    imageAlt: "Green coconuts sourced for retail and wholesale buyers",
-    ctaLabel: "Discuss Green Coconut Supply",
-    typeQuery: "Green+Coconut+Supply",
+    imageAlt: "Green coconuts supplied to retail and wholesale business buyers",
+    ctaLabel: "Inquire for Green Coconut",
+    inquiryType: "Green Coconut Supply",
   },
   {
     id: "bulk-order",
     eyebrow: "Bulk Orders",
     title: "Bulk Coconut Orders",
     description:
-      "For larger coconut orders, buyers can share the required quantity, coconut type, delivery location and expected date. KCS helps discuss one-time and recurring requirements directly.",
+      "For larger coconut orders, buyers can share the coconut type, preferred size grade, required quantity, delivery location and expected date. KCS helps discuss one-time and recurring requirements directly.",
     points: [
+      "Select tender or green coconut",
+      "Select the preferred size grade",
       "Share the required quantity",
-      "Mention the coconut type",
       "Provide the delivery location",
-      "Share the expected date",
-      "Recurring or one-time requirement",
+      "Mention one-time or recurring frequency",
+      "Confirm availability before finalisation",
     ],
     image: "/images/services/bulk-coconut.svg",
-    imageAlt: "Bulk coconut orders prepared for wholesale buyers",
+    imageAlt:
+      "Bulk coconut order prepared according to type size and quantity",
     ctaLabel: "Request Bulk Supply",
-    typeQuery: "Bulk+Coconut+Order",
+    inquiryType: "Bulk Coconut Order",
+  },
+  {
+    id: "size-based-supply",
+    eyebrow: "Size-Based Supply",
+    title: "Coconut Supply According to Size Requirement",
+    description:
+      "Buyers can discuss coconut supply according to their preferred commercial size category, including Big–Small, Small–Big, Medium Size and Small Size. The selected grade can be combined with tender or green coconut requirements.",
+    points: [
+      "Big–Small coconut requirement",
+      "Small–Big coconut requirement",
+      "Medium-size coconut requirement",
+      "Small-size coconut requirement",
+      "Type and size combination inquiry",
+      "Availability confirmed directly",
+    ],
+    image: "/images/services/size-graded-coconut.svg",
+    imageAlt: "Coconuts grouped according to different size requirements",
+    ctaLabel: "Discuss Size-Based Supply",
+    inquiryType: "Size-Graded Coconut Supply",
+    supportedGrades: ["Big–Small", "Small–Big", "Medium Size", "Small Size"],
   },
 ];
 
 export const supplyDisclaimer =
-  "MOQ and pricing are confirmed directly based on current availability and requirement details.";
+  "Coconut size, type and quantity availability may vary. Buyers should confirm their requirement directly with the supplier.";
 
-export const buyerTypes = [
+export const buyerTypes: BuyerType[] = [
   {
     title: "Retail Coconut Sellers",
     description:
@@ -159,23 +335,24 @@ export const startupSection = {
   eyebrow: "Coconut Business Startup",
   title: "Coconut Supply Support for New Business Requirements",
   paragraphs: [
-    "Starting a coconut selling business begins with understanding your expected quantity and choosing between tender or green coconut. Kankeshwari Coconut Supplier welcomes inquiries from new business owners who want to discuss coconut sourcing for their startup.",
-    "Share your city or delivery location, your expected quantity and how often you may need supply. This helps the supplier confirm current availability and discuss options that fit the scale of your new business before you make any commitment.",
-    "A new coconut seller can contact KCS by WhatsApp or phone to discuss recurring supply expectations. The goal is a clear conversation about sourcing, availability and the practical details of getting your coconut business started.",
+    "Starting a coconut selling business requires clarity about coconut type, preferred size category, expected quantity and target customers. Kankeshwari Coconut Supplier welcomes inquiries from new business owners who want to discuss tender coconut, green coconut and size-based sourcing requirements.",
+    "Before contacting the supplier, new business owners should estimate their expected quantity and decide whether they need Big–Small, Small–Big, Medium Size, Small Size or a mixed requirement. Buyers who are unsure can explain their business model and request guidance based on current availability.",
+    "Share your city, delivery location, preferred coconut type, required size grade and expected supply frequency. The supplier can then discuss available sourcing options without making an unverified stock or delivery commitment.",
   ],
   ctaLabel: "Discuss Coconut Sourcing for Your Startup",
   checklistTitle: "Key Details to Share",
   checklist: [
-    "Expected quantity for your startup",
-    "Tender or green coconut preference",
+    "Tender or green coconut requirement",
+    "Preferred size grade",
+    "Expected order quantity",
     "City or delivery location",
-    "Recurring supply expectations",
-    "Any current availability questions",
+    "One-time or recurring supply frequency",
+    "Any mixed-size requirement",
   ],
   asideNote: "Availability is confirmed before any commitment is made.",
 };
 
-export const locations = [
+export const locations: LocationCard[] = [
   {
     name: "Gadu",
     description:
@@ -198,25 +375,35 @@ export const locations = [
   },
 ];
 
-export const orderProcess = [
+export const orderProcess: ProcessStep[] = [
   {
-    title: "Select Requirement Type",
-    description: "Choose tender coconut, green coconut or a bulk coconut order.",
+    title: "Choose Coconut Type",
+    description: "Select tender coconut, green coconut or ask for guidance.",
+    icon: Store,
+  },
+  {
+    title: "Select Size Requirement",
+    description:
+      "Choose Big–Small, Small–Big, Medium Size, Small Size or a mixed requirement.",
+    icon: Package,
   },
   {
     title: "Share Quantity and Location",
     description:
-      "Send your expected quantity, coconut type and delivery location.",
+      "Send the expected quantity, delivery location and supply frequency.",
+    icon: ShoppingCart,
   },
   {
-    title: "Discuss Availability",
+    title: "Confirm Availability",
     description:
-      "The supplier reviews current availability and responds clearly.",
+      "The supplier checks the requested type, size and current availability.",
+    icon: Users,
   },
   {
-    title: "Confirm Final Details",
+    title: "Finalise Supply Details",
     description:
-      "Finalise quantity, timing and location details after mutual confirmation.",
+      "Quantity, size, timing and location are finalised after mutual confirmation.",
+    icon: Briefcase,
   },
 ];
 
@@ -224,7 +411,42 @@ export const servicesFaqs: FaqItem[] = [
   {
     question: "What coconut types can I inquire about?",
     answer:
-      "Buyers can inquire about tender coconuts, green coconuts and bulk coconut requirements by sharing their quantity and location directly with the supplier.",
+      "Buyers can inquire about tender coconuts and green coconuts by sharing their quantity, preferred size grade and location directly with the supplier.",
+  },
+  {
+    question: "What coconut sizes can I inquire about?",
+    answer:
+      "Buyers can discuss Big–Small, Small–Big, Medium Size and Small Size coconut requirements. Final size availability depends on coconut type, quantity and current stock.",
+  },
+  {
+    question: "Can I select both coconut type and size?",
+    answer:
+      "Yes. Buyers can share whether they need tender or green coconut along with their preferred size grade.",
+  },
+  {
+    question: "What do Big–Small and Small–Big mean?",
+    answer:
+      "These are commercial size requirement categories used while discussing coconut supply. Buyers should confirm the expected grade directly with the supplier because actual coconut appearance may vary.",
+  },
+  {
+    question: "Can I request a mixed coconut size order?",
+    answer:
+      "Buyers can share a mixed-size requirement. The supplier will confirm whether the requested combination is available for the required quantity.",
+  },
+  {
+    question: "Are all coconut sizes always available?",
+    answer:
+      "No fixed availability is guaranteed. Coconut type, size grade and quantity availability must be confirmed directly for every requirement.",
+  },
+  {
+    question: "How should I send a size-based inquiry on WhatsApp?",
+    answer:
+      "Share your name, coconut type, preferred size grade, required quantity, requirement frequency and delivery location.",
+  },
+  {
+    question: "Is pricing different for different coconut sizes?",
+    answer:
+      "Pricing may depend on coconut type, size requirement, quantity, current availability and delivery location. Final pricing is confirmed directly by the supplier.",
   },
   {
     question: "Can I place a recurring coconut supply inquiry?",
@@ -239,27 +461,22 @@ export const servicesFaqs: FaqItem[] = [
   {
     question: "How is coconut pricing decided?",
     answer:
-      "Pricing depends on coconut type, quantity, current availability and delivery location. Buyers are advised to confirm pricing directly with the supplier.",
+      "Pricing depends on coconut type, size requirement, quantity, current availability and delivery location. Buyers are advised to confirm pricing directly with the supplier.",
   },
   {
     question: "Can a new coconut seller contact KCS?",
     answer:
-      "Yes. New coconut sellers and business owners can discuss their expected quantity, location and sourcing requirement to understand available supply options.",
+      "Yes. New coconut sellers and business owners can discuss their expected quantity, preferred size grade, location and sourcing requirement to understand available supply options.",
   },
   {
     question: "Can buyers outside Junagadh contact the supplier?",
     answer:
-      "Yes. Buyers can contact the supplier with their quantity and destination to confirm available supply options for their location.",
+      "Yes. Buyers can contact the supplier with their quantity, size grade and destination to confirm available supply options for their location.",
   },
   {
     question: "How quickly will I receive a response?",
     answer:
       "Response time depends on availability. Calling may be suitable for urgent requirements.",
-  },
-  {
-    question: "What details should I send on WhatsApp?",
-    answer:
-      "Share your name, coconut type, required quantity, requirement frequency and delivery city or location to help the supplier respond accurately.",
   },
 ];
 
@@ -267,7 +484,7 @@ export const servicesCta = {
   eyebrow: "Place an Inquiry",
   title: "Share Your Coconut Requirement Today",
   description:
-    "Share your coconut type, quantity and delivery location to discuss current availability with Kankeshwari Coconut Supplier.",
+    "Share your coconut type, preferred size grade, quantity and delivery location to discuss current availability with Kankeshwari Coconut Supplier.",
   whatsappLabel: "Send WhatsApp Inquiry",
   callLabel: "Call Kankeshwari Coconut Supplier",
 };

@@ -37,10 +37,7 @@ export function MobileNavigation() {
       <SheetContent side="right" className="w-80 max-w-[85vw]">
         <SheetHeader className="border-b border-border pb-4">
           <SheetTitle className="flex items-center gap-2 text-left">
-            <BrandMark className="size-8" />
-            <span className="font-heading text-lg leading-tight text-foreground">
-              {siteConfig.name}
-            </span>
+            <BrandMark className="size-12" />
           </SheetTitle>
         </SheetHeader>
         <nav className="mt-4 flex flex-col gap-1" aria-label="Mobile navigation">

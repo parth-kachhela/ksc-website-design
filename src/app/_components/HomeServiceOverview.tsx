@@ -11,15 +11,17 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { buildContactQuery } from "@/lib/whatsapp";
 import {
   supplyCards,
   supplyNote,
 } from "@/app/_components/home.data";
 
 const cardLinks = [
-  { href: "/contact?type=Tender+Coconut+Supply", label: "Inquire for Tender Coconut" },
-  { href: "/contact?type=Green+Coconut+Supply", label: "Discuss Green Coconut Supply" },
-  { href: "/contact?type=Bulk+Coconut+Order", label: "Request Bulk Supply" },
+  { href: buildContactQuery({ inquiryType: "Tender Coconut Supply" }), label: "Inquire for Tender Coconut" },
+  { href: buildContactQuery({ inquiryType: "Green Coconut Supply" }), label: "Discuss Green Coconut Supply" },
+  { href: buildContactQuery({ inquiryType: "Size-Graded Coconut Supply" }), label: "Discuss Size-Based Supply" },
+  { href: buildContactQuery({ inquiryType: "Bulk Coconut Order" }), label: "Request Bulk Supply" },
 ];
 
 export function HomeServiceOverview() {
@@ -34,7 +36,7 @@ export function HomeServiceOverview() {
           />
         </Reveal>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {supplyCards.map((card, index) => (
             <Reveal key={card.title} delay={index * 0.08}>
               <Card className="h-full rounded-2xl border-border transition-shadow duration-300 hover:shadow-lg">

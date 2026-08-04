@@ -502,6 +502,109 @@ await write(
   760,
 );
 
+await write(
+  "size-graded-coconut",
+  "services",
+  `
+  <rect width="1200" height="760" fill="url(#skyPale)"/>
+  <circle cx="820" cy="140" r="230" fill="url(#sun)"/>
+  ${bokeh(rng, 9, 20, 60, 0.5)}
+  <ellipse cx="600" cy="750" rx="620" ry="56" fill="url(#ground)"/>
+  <g filter="url(#shadow)">
+    ${greenCoconut(330, 540, 100, "greenSoft")}
+    ${greenCoconut(470, 620, 120)}
+    ${brownCoconut(610, 520, 118)}
+    ${brownCoconut(760, 640, 92)}
+    ${greenCoconut(880, 520, 78, "greenSoft")}
+  </g>
+  ${frond(200, 100, 230, 125, "#37702A", "up")}
+  ${frond(1000, 90, 250, 55, "#2E5E24", "up")}
+`,
+  1200,
+  760,
+);
+
+await write(
+  "big-small-coconut",
+  "services",
+  `
+  <rect width="1200" height="760" fill="url(#skyPale)"/>
+  <circle cx="250" cy="140" r="210" fill="url(#sun)"/>
+  ${bokeh(rng, 8, 20, 60, 0.5)}
+  <ellipse cx="600" cy="750" rx="620" ry="56" fill="url(#ground)"/>
+  <g filter="url(#shadow)">
+    ${greenCoconut(430, 500, 132)}
+    ${greenCoconut(770, 540, 92, "greenSoft")}
+    ${brownCoconut(610, 650, 108)}
+  </g>
+  ${frond(200, 100, 230, 130, "#37702A", "up")}
+  ${frond(1000, 90, 240, 50, "#2E5E24", "up")}
+`,
+  1200,
+  760,
+);
+
+await write(
+  "small-big-coconut",
+  "services",
+  `
+  <rect width="1200" height="760" fill="url(#skyPale)"/>
+  <circle cx="950" cy="140" r="230" fill="url(#sun)"/>
+  ${bokeh(rng, 8, 20, 60, 0.5)}
+  <ellipse cx="600" cy="750" rx="620" ry="56" fill="url(#ground)"/>
+  <g filter="url(#shadow)">
+    ${greenCoconut(430, 520, 88, "greenSoft")}
+    ${greenCoconut(600, 470, 136)}
+    ${greenCoconut(800, 560, 96, "greenSoft")}
+  </g>
+  ${frond(200, 100, 230, 125, "#37702A", "up")}
+  ${frond(1000, 90, 250, 55, "#2E5E24", "up")}
+`,
+  1200,
+  760,
+);
+
+await write(
+  "medium-coconut",
+  "services",
+  `
+  <rect width="1200" height="760" fill="url(#skyPale)"/>
+  <circle cx="600" cy="140" r="230" fill="url(#sun)"/>
+  ${bokeh(rng, 8, 20, 60, 0.5)}
+  <ellipse cx="600" cy="750" rx="620" ry="56" fill="url(#ground)"/>
+  <g filter="url(#shadow)">
+    ${greenCoconut(470, 510, 118)}
+    ${greenCoconut(740, 560, 112, "greenSoft")}
+    ${brownCoconut(600, 670, 100)}
+  </g>
+  ${frond(200, 100, 230, 125, "#37702A", "up")}
+  ${frond(1000, 90, 250, 55, "#2E5E24", "up")}
+`,
+  1200,
+  760,
+);
+
+await write(
+  "small-coconut",
+  "services",
+  `
+  <rect width="1200" height="760" fill="url(#skyPale)"/>
+  <circle cx="320" cy="140" r="220" fill="url(#sun)"/>
+  ${bokeh(rng, 8, 20, 60, 0.5)}
+  <ellipse cx="600" cy="750" rx="620" ry="56" fill="url(#ground)"/>
+  <g filter="url(#shadow)">
+    ${greenCoconut(480, 520, 84, "greenSoft")}
+    ${greenCoconut(640, 590, 78)}
+    ${brownCoconut(770, 560, 86)}
+    ${greenCoconut(580, 680, 72, "greenSoft")}
+  </g>
+  ${frond(200, 100, 230, 130, "#37702A", "up")}
+  ${frond(1000, 90, 240, 50, "#2E5E24", "up")}
+`,
+  1200,
+  760,
+);
+
 // ================= VIDEO POSTER =================
 await write(
   "coconut-garden-poster",

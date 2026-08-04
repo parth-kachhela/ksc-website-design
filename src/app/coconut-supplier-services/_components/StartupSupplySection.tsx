@@ -1,4 +1,5 @@
 import { StartupSection } from "@/components/global/StartupSection";
+import { buildContactQuery } from "@/lib/whatsapp";
 import { startupSection } from "@/app/coconut-supplier-services/_components/services.data";
 
 export function StartupSupplySection() {
@@ -13,7 +14,7 @@ export function StartupSupplySection() {
       points={startupSection.checklist}
       asideNote={startupSection.asideNote}
       ctaLabel={startupSection.ctaLabel}
-      ctaHref="/contact?type=Coconut+Business+Startup"
+      ctaHref={buildContactQuery({ inquiryType: "Coconut Business Startup" })}
     />
   );
 }

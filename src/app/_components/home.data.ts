@@ -42,9 +42,15 @@ export const supplyCards: ServiceCard[] = [
     ctaLabel: "Discuss Green Coconut Supply",
   },
   {
+    title: "Size-Graded Coconut Supply",
+    description:
+      "Discuss Big–Small, Small–Big, Medium Size and Small Size coconut requirements by type and quantity.",
+    ctaLabel: "Discuss Size-Based Supply",
+  },
+  {
     title: "Bulk Coconut Orders",
     description:
-      "Direct inquiry support for quantity, location and delivery-related requirements for larger coconut orders.",
+      "Direct inquiry support for quantity, size, location and delivery-related requirements for larger coconut orders.",
     ctaLabel: "Request Bulk Supply",
   },
 ];
