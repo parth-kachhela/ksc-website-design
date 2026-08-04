@@ -29,7 +29,7 @@ export function QualityCommitment() {
           <Reveal delay={0.1}>
             <figure className="overflow-hidden rounded-[2rem] border border-border bg-white shadow-lg">
               <Image
-                src="/images/gallery/garden-2.svg"
+                src="/images/about/quality-commitment.png"
                 alt="Fresh tender coconuts prepared for bulk supply"
                 width={1200}
                 height={900}

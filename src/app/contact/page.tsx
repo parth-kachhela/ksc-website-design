@@ -9,7 +9,6 @@ import {
   ContactInformation,
   WhatsAppInquiryForm,
   LocationMap,
-  ContactSupport,
   ContactCTA,
 } from "@/app/contact/_components";
 
@@ -45,7 +44,7 @@ export default function ContactPage() {
         </div>
       </div>
       <LocationMap />
-      <ContactSupport />
+
       <ContactCTA />
     </>
   );

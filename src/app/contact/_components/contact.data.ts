@@ -62,13 +62,6 @@ export const contactCards = [
     hint: "For written inquiries",
   },
   {
-    label: "Address",
-    value: "Gadu, Junagadh, Gujarat - 362255",
-    href: "https://www.google.com/maps?q=Kankeshwari%20Coconut%20Supplier%20Gadu%20Chorvad%20Highway%20Junagadh%20Gujarat%20362255&output=embed",
-    action: "Get Directions",
-    hint: "Detailed address below",
-  },
-  {
     label: "WhatsApp",
     value: "+91 63522 95050",
     href: "https://wa.me/916352295050",

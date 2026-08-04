@@ -39,12 +39,12 @@ export const gardenSourcing = {
   ],
   images: [
     {
-      src: "/images/garden/garden-hero.svg",
+      src: "/images/about/garden-hero.png",
       alt: "Coconut trees and green garden near Gadu Junagadh Gujarat",
       caption: "Coconut trees near Gadu",
     },
     {
-      src: "/images/garden/tender-garden.svg",
+      src: "/images/about/tender-garden.png",
       alt: "Tender coconuts growing in the garden",
       caption: "Tender coconut garden",
     },
