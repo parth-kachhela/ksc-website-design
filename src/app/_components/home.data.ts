@@ -4,10 +4,10 @@ import type { Review } from "@/types/review";
 import type { TrustItem } from "@/types/global";
 
 export const hero = {
-  eyebrow: "Bulk Tender & Green Coconut Supply",
-  title: "Trusted Coconut Supplier in Gadu, Chorvad & Across Gujarat",
+  eyebrow: "Bulk Tender Coconut Supply",
+  title: "Trusted Coconut Supplier in Gadu, Chorvad, Gujarat & All Over India",
   description:
-    "Kankeshwari Coconut Supplier provides quality tender and green coconuts for bulk buyers, retailers, distributors and businesses. Based near the Gadu\u2013Chorvad Highway in Junagadh, we focus on dependable communication, quality supply and timely service.",
+    "Kankeshwari Coconut Supplier provides quality tender coconuts for bulk buyers, retailers, distributors and businesses. Based near the Gadu\u2013Chorvad Highway in Junagadh, we focus on dependable communication, quality supply and timely service across India.",
   primaryCta: "Get Bulk Supply Quote",
   secondaryCta: "Talk with us",
   trustLine: "Rated 5.0 by customers on Google",
@@ -29,15 +29,9 @@ export const supplyCards: ServiceCard[] = [
     ctaLabel: "Inquire for Tender Coconut",
   },
   {
-    title: "Green Coconut Supply",
-    description:
-      "Quality green coconut supply for retailers, distributors, fruit sellers and other business requirements.",
-    ctaLabel: "Discuss Green Coconut Supply",
-  },
-  {
     title: "Size-Graded Coconut Supply",
     description:
-      "Discuss Big–Small, Small–Big, Medium Size and Small Size coconut requirements by type and quantity.",
+      "Discuss Big, Big-small, Medium Size and Small Size coconut requirements by type and quantity.",
     ctaLabel: "Discuss Size-Based Supply",
   },
   {
@@ -154,12 +148,12 @@ export const processSteps = [
 ];
 
 export const serviceAreaTitle =
-  "Coconut Supplier in Gadu, Chorvad and Junagadh";
+  "Coconut Supplier in Gadu, Chorvad, Junagadh, Gujarat & All Over India";
 
 export const serviceAreaParagraphs = [
   "Kankeshwari Coconut Supplier is based in Gadu, located in the Junagadh district of Gujarat, with close association with the Chorvad Highway. The location places the supplier close to the region's coconut-growing areas, which supports inquiries from buyers looking for a coconut supplier in Gadu, a coconut supplier in Chorvad and a coconut supplier in Junagadh.",
-  "The business accepts direct bulk coconut inquiries for tender and green coconuts. Retailers, distributors, fruit sellers and businesses planning regular supply can share their required coconut type, quantity and delivery location. Because each requirement differs, buyers are encouraged to confirm current availability and delivery-related details directly with the supplier.",
-  "For buyers searching for a bulk coconut supplier in Gujarat or a tender coconut supplier, Kankeshwari Coconut Supplier offers direct phone and WhatsApp support. Contact the supplier to discuss your quantity, location and expected requirement. Supply options depend on quantity and destination, so confirming the details directly helps buyers plan their sourcing.",
+  "The business accepts direct bulk coconut inquiries for tender coconuts. Retailers, distributors, fruit sellers and businesses planning regular supply can share their required coconut type, quantity and delivery location. Because each requirement differs, buyers are encouraged to confirm current availability and delivery-related details directly with the supplier.",
+  "For buyers searching for a bulk coconut supplier in Gujarat or a tender coconut supplier across India, Kankeshwari Coconut Supplier offers direct phone and WhatsApp support. Contact the supplier to discuss your quantity, location and expected requirement. Supply options depend on quantity and destination, so confirming the details directly helps buyers plan their sourcing.",
 ];
 
 export const startupSection = {
@@ -209,11 +203,6 @@ export const faqs: FaqItem[] = [
       "Yes, buyers can contact Kankeshwari Coconut Supplier to discuss tender coconut requirements and current availability.",
   },
   {
-    question: "Do you provide green coconuts for business requirements?",
-    answer:
-      "Green coconut supply can be discussed for retailers, distributors and other bulk buyers, subject to availability and location.",
-  },
-  {
     question: "Can I contact you for a coconut business startup?",
     answer:
       "Yes. New business owners can share their expected quantity, location and coconut sourcing requirement to discuss available supply options.",
@@ -229,7 +218,7 @@ export const faqs: FaqItem[] = [
       "Review customer feedback, verify contact and location details, discuss quality expectations and confirm supply terms directly before finalizing an order.",
   },
   {
-    question: "Is delivery available across Gujarat?",
+    question: "Is delivery available across Gujarat and India?",
     answer:
       "Delivery and supply availability depend on quantity, destination and current stock. Contact the supplier directly for confirmation.",
   },

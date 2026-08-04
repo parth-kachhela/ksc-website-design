@@ -4,15 +4,15 @@ export const aboutHero = {
   eyebrow: "Based in Gadu, Junagadh",
   title: "Committed to Quality Coconut Supply and Reliable Service",
   intro:
-    "Kankeshwari Coconut Supplier serves buyers looking for tender coconut, green coconut and bulk coconut supply from Gadu in Junagadh, Gujarat.",
+    "Kankeshwari Coconut Supplier serves buyers looking for tender coconut and bulk coconut supply from Gadu in Junagadh, Gujarat and all over India.",
 };
 
 export const introduction = {
   title: "A Coconut Supplier Focused on Quality and Communication",
   paragraphs: [
-    "Kankeshwari Coconut Supplier operates from Gadu in the Junagadh district of Gujarat, located near the Chorvad Highway. The business is engaged in the supply of coconuts to buyers with varying requirements, including tender coconut, green coconut and bulk orders.",
+    "Kankeshwari Coconut Supplier operates from Gadu in the Junagadh district of Gujarat, located near the Chorvad Highway. The business is engaged in the supply of coconuts to buyers with varying requirements, including tender coconut and bulk orders.",
     "Buyers can contact the supplier directly to discuss their coconut requirement, expected quantity and delivery location. Customer reviews commonly highlight coconut quality, clear communication and timely supply, which reflects the supplier's practical, buyer-focused approach.",
-    "Whether you are a retailer, distributor, fruit seller or a business planning recurring supply, you can share your requirement directly by phone or WhatsApp and receive a clear response about availability and supply options.",
+    "Whether you are a retailer, distributor, fruit seller or a business planning recurring supply, you can share your requirement directly by phone or WhatsApp and receive a clear response about availability and supply options across India.",
   ],
   supplyApproachTitle: "Our Supply Approach",
   supplyApproach: [
@@ -35,7 +35,7 @@ export const gardenSourcing = {
   title: "Connected to the Coconut-Growing Region",
   paragraphs: [
     "Gujarat's coconut-growing region forms an important part of the supply story behind Kankeshwari Coconut Supplier. Garden visuals help buyers understand the natural source, product freshness and care involved before the coconut reaches its destination.",
-    "Our garden and sourcing visuals represent the natural environment connected with coconut supply in the region. They are presented to help buyers appreciate the origin and handling involved in sourcing tender and green coconuts.",
+    "Our garden and sourcing visuals represent the natural environment connected with coconut supply in the region. They are presented to help buyers appreciate the origin and handling involved in sourcing tender coconuts.",
   ],
   images: [
     {

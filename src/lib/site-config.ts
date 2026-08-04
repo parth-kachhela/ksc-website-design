@@ -3,7 +3,7 @@ export const siteConfig = {
   shortName: "KCS",
   domain: "https://kankeshwaricoconutsupplier.com",
   description:
-    "Kankeshwari Coconut Supplier provides quality tender and green coconut supply for bulk buyers in Gadu, Chorvad, Junagadh and across Gujarat.",
+    "Kankeshwari Coconut Supplier provides quality tender coconut supply for bulk buyers in Gadu, Chorvad, Junagadh, Gujarat and all over India.",
   phoneDisplay: "+91 63522 95050",
   phoneRaw: "916352295050",
   email: "kcsgadu@gmail.com",

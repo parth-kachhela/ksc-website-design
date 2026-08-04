@@ -14,7 +14,6 @@ export const contactHero = {
 
 export const inquiryTypes: InquiryType[] = [
   "Tender Coconut Supply",
-  "Green Coconut Supply",
   "Bulk Coconut Order",
   "Size-Graded Coconut Supply",
   "Recurring Business Supply",
@@ -24,7 +23,6 @@ export const inquiryTypes: InquiryType[] = [
 
 export const coconutTypesOptions: CoconutType[] = [
   "Tender Coconut",
-  "Green Coconut",
   "Not Sure / Need Guidance",
 ];
 

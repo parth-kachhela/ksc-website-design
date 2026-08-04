@@ -19,7 +19,6 @@ import {
 
 const cardLinks = [
   { href: buildContactQuery({ inquiryType: "Tender Coconut Supply" }), label: "Inquire for Tender Coconut" },
-  { href: buildContactQuery({ inquiryType: "Green Coconut Supply" }), label: "Discuss Green Coconut Supply" },
   { href: buildContactQuery({ inquiryType: "Size-Graded Coconut Supply" }), label: "Discuss Size-Based Supply" },
   { href: buildContactQuery({ inquiryType: "Bulk Coconut Order" }), label: "Request Bulk Supply" },
 ];
@@ -36,7 +35,7 @@ export function HomeServiceOverview() {
           />
         </Reveal>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {supplyCards.map((card, index) => (
             <Reveal key={card.title} delay={index * 0.08}>
               <Card className="flex justify-between  h-full rounded-2xl border-border transition-shadow duration-300 hover:shadow-lg">

@@ -1,6 +1,5 @@
 export type InquiryType =
   | "Tender Coconut Supply"
-  | "Green Coconut Supply"
   | "Bulk Coconut Order"
   | "Size-Graded Coconut Supply"
   | "Recurring Business Supply"
@@ -9,7 +8,6 @@ export type InquiryType =
 
 export type CoconutType =
   | "Tender Coconut"
-  | "Green Coconut"
   | "Not Sure / Need Guidance";
 
 export type CoconutSizeGrade =

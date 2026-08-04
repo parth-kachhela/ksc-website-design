@@ -19,24 +19,24 @@ import {
 import { servicesFaqs } from "@/app/coconut-supplier-services/_components/services.data";
 
 export const metadata: Metadata = buildSeoMetadata({
-  title: "Coconut Supply by Type & Size in Gadu, Chorvad and Gujarat",
+  title: "Coconut Supply by Type & Size in Gadu, Chorvad, Gujarat and All Over India",
   description:
-    "Discuss tender, green, Big–Small, Small–Big, medium-size and small-size coconut supply requirements with Kankeshwari Coconut Supplier.",
+    "Discuss tender, Big, Big-small, Medium Size and Small Size coconut supply requirements with Kankeshwari Coconut Supplier.",
   path: "/coconut-supplier-services",
   keywords: [
     "coconut supply by size",
     "size-graded coconut supplier",
     "tender coconut by size requirement",
-    "green coconut size options",
     "bulk coconut supply by size",
     "medium-size coconut supplier",
     "small-size coconut supply",
-    "Big–Small coconut requirement",
-    "Small–Big coconut requirement",
+    "Big coconut requirement",
+    "Big-small coconut requirement",
     "mixed-size coconut order",
     "coconut supplier in Gadu",
     "coconut supplier near Chorvad",
     "bulk coconut supplier in Gujarat",
+    "coconut supplier all over India",
   ],
   ogTitle: "Type and Size-Based Coconut Supply | Kankeshwari Coconut Supplier",
   ogDescription:

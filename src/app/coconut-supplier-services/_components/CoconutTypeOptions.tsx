@@ -11,7 +11,6 @@ import { coconutTypes } from "@/app/coconut-supplier-services/_components/servic
 
 const inquiryTypeByType: Record<string, string> = {
   tender: "Tender Coconut Supply",
-  green: "Green Coconut Supply",
 };
 
 export function CoconutTypeOptions() {

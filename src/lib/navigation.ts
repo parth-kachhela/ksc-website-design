@@ -9,7 +9,6 @@ export const mainNav = [
 
 export const footerServices = [
   { label: "Tender Coconut Supply", href: "/coconut-supplier-services#tender-coconut" },
-  { label: "Green Coconut Supply", href: "/coconut-supplier-services#green-coconut" },
   { label: "Bulk Coconut Orders", href: "/coconut-supplier-services#bulk-order" },
   { label: "Coconut Supply for Businesses", href: "/coconut-supplier-services#buyers" },
   { label: "Coconut Business Startup Sourcing", href: "/coconut-supplier-services#startup" },

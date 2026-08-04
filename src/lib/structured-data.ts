@@ -26,6 +26,7 @@ export function localBusinessSchema() {
       { "@type": "Place", name: "Chorvad" },
       { "@type": "Place", name: "Junagadh" },
       { "@type": "Place", name: "Gujarat" },
+      { "@type": "Place", name: "India" },
     ],
     aggregateRating: {
       "@type": "AggregateRating",
@@ -66,9 +67,9 @@ export function serviceSchema() {
     "@type": "Service",
     serviceType: "Coconut Supply",
     provider: { "@type": "LocalBusiness", name: siteConfig.name, url: baseUrl },
-    areaServed: ["Gadu", "Chorvad", "Junagadh", "Gujarat"],
+    areaServed: ["Gadu", "Chorvad", "Junagadh", "Gujarat", "India"],
     description:
-      "Tender coconut, green coconut and size-graded coconut supply inquiries based on coconut type, preferred size grade, quantity and supply frequency for buyers in Gadu, Chorvad, Junagadh and across Gujarat.",
+      "Tender coconut and size-graded coconut supply inquiries based on coconut type, preferred size grade, quantity and supply frequency for buyers in Gadu, Chorvad, Junagadh, Gujarat and all over India.",
   };
 }
 

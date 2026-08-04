@@ -8,7 +8,6 @@ import { overviewCards } from "@/app/coconut-supplier-services/_components/servi
 
 const cardAnchors: Record<string, string> = {
   "tender-coconut": "#tender-coconut",
-  "green-coconut": "#green-coconut",
   "size-graded-coconut": "#size-grades",
   "bulk-coconut-orders": "#bulk-order",
 };

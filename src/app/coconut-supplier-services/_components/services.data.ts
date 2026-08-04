@@ -20,15 +20,15 @@ import type {
 } from "@/types/service";
 
 export const servicesHero = {
-  eyebrow: "Tender, Green, Size-Graded and Bulk Coconut Supply",
+  eyebrow: "Tender, Size-Graded and Bulk Coconut Supply",
   title:
-    "Coconut Supply by Type, Size and Quantity in Gadu, Chorvad and Gujarat",
+    "Coconut Supply by Type, Size and Quantity in Gadu, Chorvad, Gujarat and All Over India",
   description:
-    "Kankeshwari Coconut Supplier accepts coconut inquiries based on coconut type, required size grade, quantity, supply frequency and delivery location. Buyers can discuss tender coconut, green coconut and bulk size-based requirements directly through WhatsApp or phone.",
+    "Kankeshwari Coconut Supplier accepts coconut inquiries based on coconut type, required size grade, quantity, supply frequency and delivery location. Buyers can discuss tender coconut and bulk size-based requirements directly through WhatsApp or phone.",
   primaryCta: "Share Coconut Requirement",
   secondaryCta: "Call Supplier",
   trustLabels: [
-    "Tender and Green Coconut",
+    "Tender Coconut",
     "Multiple Size Requirements",
     "Bulk Order Discussion",
     "Direct WhatsApp Support",
@@ -44,14 +44,6 @@ export const overviewCards = [
     image: "/images/services/tender-coconut.avif",
     imageAlt:
       "Tender coconuts available for type and size-based bulk supply inquiries",
-  },
-  {
-    id: "green-coconut",
-    title: "Green Coconut Supply",
-    description:
-      "Green coconut requirements for retailers, distributors and other business buyers.",
-    image: "/images/services/green-coconut.avif",
-    imageAlt: "Green coconuts supplied to retail and wholesale business buyers",
   },
   {
     id: "size-graded-coconut",
@@ -91,26 +83,6 @@ export const coconutTypes: CoconutTypeOption[] = [
     image: "/images/services/tender-coconut.svg",
     imageAlt: "Tender coconuts arranged for size and quantity-based supply",
     whatsappValue: "Tender Coconut",
-  },
-  {
-    id: "green-coconut",
-    name: "Green Coconut",
-    shortDescription:
-      "Green coconut requirements for retailers, wholesalers and distributors.",
-    description:
-      "Green coconut inquiries can be discussed according to the buyer’s preferred grade, total quantity, destination and requirement frequency. Availability depends on current supply conditions.",
-    availableGrades: ["Big", "Big-small", "Medium Size", "Small Size"],
-    buyerExamples: [
-      "Fruit retailers",
-      "Wholesale buyers",
-      "Coconut distributors",
-      "Market sellers",
-      "Businesses with recurring requirements",
-    ],
-    image: "/images/services/green-coconut.svg",
-    imageAlt:
-      "Green coconuts available in different commercial size requirements",
-    whatsappValue: "Green Coconut",
   },
 ];
 
@@ -218,31 +190,13 @@ export const supplyServices: SupplyService[] = [
     inquiryType: "Tender Coconut Supply",
   },
   {
-    id: "green-coconut",
-    eyebrow: "Green Coconut",
-    title: "Green Coconut Supply",
-    description:
-      "Quality green coconut supply for retailers, distributors, fruit sellers and other business requirements. Buyers can share their preferred grade and quantity directly through WhatsApp for a clear discussion.",
-    points: [
-      "Green coconut requirement discussion",
-      "Preferred size-grade selection",
-      "Retail, wholesale or distribution quantity",
-      "Direct WhatsApp communication",
-      "Current availability confirmation",
-    ],
-    image: "/images/services/green-coconut.avif",
-    imageAlt: "Green coconuts supplied to retail and wholesale business buyers",
-    ctaLabel: "Inquire for Green Coconut",
-    inquiryType: "Green Coconut Supply",
-  },
-  {
     id: "bulk-order",
     eyebrow: "Bulk Orders",
     title: "Bulk Coconut Orders",
     description:
       "For larger coconut orders, buyers can share the coconut type, preferred size grade, required quantity, delivery location and expected date. KCS helps discuss one-time and recurring requirements directly.",
     points: [
-      "Select tender or green coconut",
+      "Select tender coconut",
       "Select the preferred size grade",
       "Share the required quantity",
       "Provide the delivery location",
@@ -315,14 +269,14 @@ export const startupSection = {
   eyebrow: "Coconut Business Startup",
   title: "Coconut Supply Support for New Business Requirements",
   paragraphs: [
-    "Starting a coconut selling business requires clarity about coconut type, preferred size category, expected quantity and target customers. Kankeshwari Coconut Supplier welcomes inquiries from new business owners who want to discuss tender coconut, green coconut and size-based sourcing requirements.",
+    "Starting a coconut selling business requires clarity about coconut type, preferred size category, expected quantity and target customers. Kankeshwari Coconut Supplier welcomes inquiries from new business owners who want to discuss tender coconut and size-based sourcing requirements.",
     "Before contacting the supplier, new business owners should estimate their expected quantity and decide whether they need Big, Big-small, Medium Size, Small Size or a mixed requirement. Buyers who are unsure can explain their business model and request guidance based on current availability.",
     "Share your city, delivery location, preferred coconut type, required size grade and expected supply frequency. The supplier can then discuss available sourcing options without making an unverified stock or delivery commitment.",
   ],
   ctaLabel: "Build Your Startup",
   checklistTitle: "Key Details to Share",
   checklist: [
-    "Tender or green coconut requirement",
+    "Tender coconut requirement",
     "Preferred size grade",
     "Expected order quantity",
     "City or delivery location",
@@ -349,9 +303,14 @@ export const locations: LocationCard[] = [
       "Buyers across Junagadh can contact the supplier with their quantity and location.",
   },
   {
-    name: "Other Gujarat Locations",
+    name: "Gujarat",
     description:
-      "Buyers outside the immediate area can contact the supplier with their quantity and destination to confirm available supply options.",
+      "Buyers across Gujarat can contact the supplier with their quantity and destination to confirm available supply options.",
+  },
+  {
+    name: "All Over India",
+    description:
+      "KCS supplies tender coconuts to buyers across India. Contact us with your quantity, size requirement and delivery location to discuss supply options.",
   },
 ];
 
@@ -391,7 +350,7 @@ export const servicesFaqs: FaqItem[] = [
   {
     question: "What coconut types can I inquire about?",
     answer:
-      "Buyers can inquire about tender coconuts and green coconuts by sharing their quantity, preferred size grade and location directly with the supplier.",
+      "Buyers can inquire about tender coconuts by sharing their quantity, preferred size grade and location directly with the supplier.",
   },
   {
     question: "What coconut sizes can I inquire about?",
@@ -401,7 +360,7 @@ export const servicesFaqs: FaqItem[] = [
   {
     question: "Can I select both coconut type and size?",
     answer:
-      "Yes. Buyers can share whether they need tender or green coconut along with their preferred size grade.",
+      "Yes. Buyers can share their preferred size grade along with their tender coconut requirement.",
   },
   {
     question: "What do Big and Big-small mean?",
@@ -451,7 +410,7 @@ export const servicesFaqs: FaqItem[] = [
   {
     question: "Can buyers outside Junagadh contact the supplier?",
     answer:
-      "Yes. Buyers can contact the supplier with their quantity, size grade and destination to confirm available supply options for their location.",
+      "Yes. Buyers can contact the supplier with their quantity, size grade and destination to confirm available supply options for their location across India.",
   },
   {
     question: "How quickly will I receive a response?",

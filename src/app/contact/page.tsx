@@ -12,9 +12,9 @@ import {
 } from "@/app/contact/_components";
 
 export const metadata: Metadata = buildSeoMetadata({
-  title: "Contact Kankeshwari Coconut Supplier | Bulk Coconut Inquiry",
+  title: "Contact Kankeshwari Coconut Supplier | Bulk Coconut Inquiry All Over India",
   description:
-    "Call or WhatsApp Kankeshwari Coconut Supplier for bulk tender and green coconut requirements in Gadu, Chorvad, Junagadh and Gujarat.",
+    "Call or WhatsApp Kankeshwari Coconut Supplier for bulk tender coconut requirements in Gadu, Chorvad, Junagadh, Gujarat and all over India.",
   path: "/contact",
 });
 

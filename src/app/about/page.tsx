@@ -14,9 +14,9 @@ import {
 } from "@/app/about/_components";
 
 export const metadata: Metadata = buildSeoMetadata({
-  title: "About Kankeshwari Coconut Supplier | Trusted Supplier in Gujarat",
+  title: "About Kankeshwari Coconut Supplier | Trusted Supplier in Gujarat & All Over India",
   description:
-    "Learn about Kankeshwari Coconut Supplier, a quality-focused coconut supplier based in Gadu near Chorvad, Junagadh, Gujarat.",
+    "Learn about Kankeshwari Coconut Supplier, a quality-focused coconut supplier based in Gadu near Chorvad, Junagadh, Gujarat supplying tender coconuts across India.",
   path: "/about",
 });
 

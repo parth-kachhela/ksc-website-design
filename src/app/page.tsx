@@ -19,9 +19,9 @@ import {
 import { faqs } from "@/app/_components/home.data";
 
 export const metadata: Metadata = buildSeoMetadata({
-  title: "Kankeshwari Coconut Supplier | Coconut Supplier in Gadu & Chorvad",
+  title: "Kankeshwari Coconut Supplier | Coconut Supplier in Gadu, Chorvad, Gujarat & All Over India",
   description:
-    "Contact Kankeshwari Coconut Supplier for tender, green and bulk coconut supply in Gadu, Chorvad, Junagadh and across Gujarat.",
+    "Contact Kankeshwari Coconut Supplier for tender and bulk coconut supply in Gadu, Chorvad, Junagadh, Gujarat and all over India.",
   path: "/",
 });
 
