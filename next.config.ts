@@ -1,8 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  output: 'export',
+  // Website ko completely static HTML/CSS/JS mein export karega
+  output: "export",
+
+  // Static hosting par next/image server optimization available nahi hota
+  images: {
+    unoptimized: true,
+  },
+
 };
 
 export default nextConfig;
