@@ -6,12 +6,10 @@ import { JsonLd } from "@/components/global/JsonLd";
 import {
   ServicesHero,
   ServiceOverview,
-  CoconutTypeOptions,
   CoconutSizeGrades,
   SupplyServices,
   BuyerTypes,
   StartupSupplySection,
-  ServiceLocations,
   OrderProcess,
   ServicesFAQ,
   ServicesCTA,
@@ -64,7 +62,6 @@ export default function ServicesPage() {
       <SupplyServices />
       <BuyerTypes />
       <StartupSupplySection />
-      <ServiceLocations />
       <OrderProcess />
       <ServicesFAQ />
       <ServicesCTA />

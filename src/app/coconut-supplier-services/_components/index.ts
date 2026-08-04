@@ -5,7 +5,6 @@ export { CoconutSizeGrades } from "@/app/coconut-supplier-services/_components/C
 export { SupplyServices } from "@/app/coconut-supplier-services/_components/SupplyServices";
 export { BuyerTypes } from "@/app/coconut-supplier-services/_components/BuyerTypes";
 export { StartupSupplySection } from "@/app/coconut-supplier-services/_components/StartupSupplySection";
-export { ServiceLocations } from "@/app/coconut-supplier-services/_components/ServiceLocations";
 export { OrderProcess } from "@/app/coconut-supplier-services/_components/OrderProcess";
 export { ServicesFAQ } from "@/app/coconut-supplier-services/_components/ServicesFAQ";
 export { ServicesCTA } from "@/app/coconut-supplier-services/_components/ServicesCTA";

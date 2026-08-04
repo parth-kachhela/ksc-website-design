@@ -1,6 +1,4 @@
 import Image from "next/image";
-
-import { Badge } from "@/components/ui/badge";
 import { Reveal } from "@/components/global/Reveal";
 import { aboutHero } from "@/app/about/_components/about.data";
 
