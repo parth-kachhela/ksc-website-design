@@ -3,7 +3,7 @@ import { MessageCircle } from "lucide-react";
 
 import { SectionHeading } from "@/components/global/SectionHeading";
 import { Reveal } from "@/components/global/Reveal";
-import { Button } from "@/components/ui/button";
+import { WhatsAppButton } from "@/components/base/button";
 import { orderProcess } from "@/app/coconut-supplier-services/_components/services.data";
 
 export function OrderProcess() {
@@ -37,16 +37,15 @@ export function OrderProcess() {
         </ol>
         <Reveal delay={0.2}>
           <div className="mt-10 flex justify-center">
-            <Button
+            <WhatsAppButton
               asChild
               size="lg"
-              className="bg-[#25D366] text-white hover:bg-[#1fb257]"
             >
               <Link href="/contact">
                 <MessageCircle className="size-4" aria-hidden="true" />
                 Start on the WhatsApp Inquiry Form
               </Link>
-            </Button>
+            </WhatsAppButton>
           </div>
         </Reveal>
       </div>

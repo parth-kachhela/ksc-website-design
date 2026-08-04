@@ -11,13 +11,8 @@ export const hero = {
   description:
     "Kankeshwari Coconut Supplier provides quality tender and green coconuts for bulk buyers, retailers, distributors and businesses. Based near the Gadu\u2013Chorvad Highway in Junagadh, we focus on dependable communication, quality supply and timely service.",
   primaryCta: "Get Bulk Supply Quote",
-  secondaryCta: "Call +91 63522 95050",
+  secondaryCta: "Talk with us",
   trustLine: "Rated 5.0 by customers on Google",
-  floatingCards: [
-    { label: "Gadu, Junagadh", icon: PhoneCall },
-    { label: "Bulk Orders", icon: CheckCircle2 },
-    { label: "WhatsApp Available", icon: MessageCircle },
-  ],
 };
 
 export const trustItems: TrustItem[] = [
@@ -80,6 +75,11 @@ export const benefits = [
     description:
       "Suitable for retailers, distributors, businesses and buyers with recurring requirements.",
   },
+  {
+    title: "Flexible Order Planning",
+    description:
+      "Buyers can discuss one-time, scheduled or recurring coconut supply based on their business needs.",
+  },
 ];
 
 export const supplyNote =
@@ -87,13 +87,26 @@ export const supplyNote =
 
 export const gardenStory = {
   eyebrow: "Coconut Garden & Sourcing",
+
   title: "From Coconut Gardens to Reliable Supply",
+
   description:
-    "Quality coconut supply begins with careful sourcing. Explore the coconut gardens, natural growing environment and the journey behind the coconuts supplied by Kankeshwari Coconut Supplier.",
+    "Quality coconut supply begins at the source. Discover the natural coconut-growing environment, careful sourcing process and supply journey followed by Kankeshwari Coconut Supplier.",
+
+  highlights: [
+    "Coconuts sourced from trusted growing regions.",
+    "Careful selection based on freshness and quality.",
+    "Suitable supply support for retail and bulk requirements.",
+    "Direct communication for quantity and delivery planning.",
+  ],
+
   note:
-    "Our supply story is connected to Gujarat\u2019s coconut-growing region. The garden visuals help buyers understand the natural source, product freshness and care involved before the coconut reaches its destination.",
-  videoPoster: "/images/video/coconut-garden-poster.svg",
+    "Our sourcing journey is connected to Gujarat’s coconut-growing region. Every order is handled with attention to freshness, quality and dependable supply.",
+
   videoTitle: "Coconut Garden and Supply Journey",
+
+  videoSubtitle:
+    "A closer look at the natural source and journey behind our coconut supply.",
 };
 
 export const galleryImages = [

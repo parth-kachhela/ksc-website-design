@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { SectionHeading } from "@/components/global/SectionHeading";
 import { Reveal } from "@/components/global/Reveal";
-import { Button } from "@/components/ui/button";
+import { OutlineButton } from "@/components/base/button";
 import {
   Accordion,
   AccordionContent,
@@ -45,11 +45,11 @@ export function HomeFAQ() {
 
         <Reveal delay={0.15}>
           <div className="mt-8 flex justify-center">
-            <Button asChild variant="outline">
+            <OutlineButton asChild>
               <Link href="/contact">
                 Contact Kankeshwari Coconut Supplier
               </Link>
-            </Button>
+            </OutlineButton>
           </div>
         </Reveal>
       </div>

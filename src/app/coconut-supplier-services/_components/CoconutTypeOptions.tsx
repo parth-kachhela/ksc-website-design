@@ -3,7 +3,7 @@ import { CheckCircle2, MessageCircle } from "lucide-react";
 
 import { SectionHeading } from "@/components/global/SectionHeading";
 import { Reveal } from "@/components/global/Reveal";
-import { Button } from "@/components/ui/button";
+import { WhatsAppButton } from "@/components/base/button";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { buildServiceWhatsAppUrl } from "@/lib/whatsapp";
@@ -100,10 +100,10 @@ export function CoconutTypeOptions() {
                           ))}
                         </ul>
                       </div>
-                      <Button
+                      <WhatsAppButton
                         asChild
                         size="lg"
-                        className="w-fit bg-[#25D366] text-white hover:bg-[#1fb257]"
+                        className="w-fit"
                       >
                         <a
                           href={whatsappUrl}
@@ -113,7 +113,7 @@ export function CoconutTypeOptions() {
                           <MessageCircle className="size-4" aria-hidden="true" />
                           Inquire for {type.name}
                         </a>
-                      </Button>
+                      </WhatsAppButton>
                     </div>
                   </div>
                 </article>

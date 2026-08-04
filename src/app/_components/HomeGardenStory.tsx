@@ -1,145 +1,147 @@
 "use client";
 
-import Image from "next/image";
-import { useState } from "react";
-import { Play, X } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { CheckCircle2, Volume2, VolumeX } from "lucide-react";
 
 import { SectionHeading } from "@/components/global/SectionHeading";
 import { Reveal } from "@/components/global/Reveal";
-import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
-import {
-  gardenStory,
-  galleryImages,
-} from "@/app/_components/home.data";
+import { gardenStory } from "@/app/_components/home.data";
 
 const VIDEO_SRC = "/videos/coconut-garden.mp4";
 
 export function HomeGardenStory() {
-  const [open, setOpen] = useState(false);
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
   const [videoFailed, setVideoFailed] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    const video = videoRef.current;
+
+    if (!section || !video) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {
+            // Muted autoplay can still be blocked by some browsers.
+          });
+        } else {
+          video.pause();
+        }
+      },
+      {
+        threshold: 0.35,
+      },
+    );
+
+    observer.observe(section);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  const toggleMute = () => {
+    const video = videoRef.current;
+
+    if (!video) return;
+
+    video.muted = !video.muted;
+    setIsMuted(video.muted);
+  };
 
   return (
     <section
-      className="overflow-hidden bg-white py-16 sm:py-20"
+      ref={sectionRef}
+      className="overflow-hidden bg-white py-16 sm:py-20 lg:py-24"
       aria-labelledby="garden-story-title"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <Reveal>
-          <SectionHeading
-            eyebrow={gardenStory.eyebrow}
-            title={gardenStory.title}
-            description={gardenStory.description}
-          />
-        </Reveal>
-
-        <Reveal className="mt-12">
-          <div className="overflow-hidden rounded-[2rem] border border-border bg-brand-deep shadow-xl">
-            <div className="relative aspect-video w-full">
-              <Image
-                src={gardenStory.videoPoster}
-                alt="Coconut garden near Gadu, Chorvad, Junagadh, Gujarat"
-                fill
-                sizes="(max-width: 1280px) 100vw, 1200px"
-                className="object-cover opacity-90"
+        <div className="grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+          {/* Left Content */}
+          <Reveal>
+            <div>
+              <SectionHeading
+                align="left"
+                eyebrow={gardenStory.eyebrow}
+                title={gardenStory.title}
+                description={gardenStory.description}
               />
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-black/30">
-                <Button
-                  size="icon-lg"
-                  aria-label="Play coconut garden video"
-                  onClick={() => setOpen(true)}
-                  className="size-20 rounded-full bg-white/95 text-primary shadow-xl transition-transform duration-200 hover:scale-105"
-                >
-                  <Play className="size-8 fill-current" aria-hidden="true" />
-                </Button>
-                <p className="px-6 text-center text-base font-medium text-white">
-                  {gardenStory.videoTitle}
+
+              <div className="mt-7 space-y-4">
+                {gardenStory.highlights.map((highlight) => (
+                  <div
+                    key={highlight}
+                    className="flex items-start gap-3 text-sm leading-6 text-muted-foreground sm:text-base"
+                  >
+                    <CheckCircle2
+                      className="mt-0.5 size-5 shrink-0 text-primary"
+                      aria-hidden="true"
+                    />
+
+                    <span>{highlight}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-8 rounded-2xl border border-primary/10 bg-brand-pale p-5">
+                <p className="text-sm leading-6 text-muted-foreground sm:text-base">
+                  {gardenStory.note}
                 </p>
               </div>
             </div>
-          </div>
-        </Reveal>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <div className="relative overflow-hidden rounded-[2rem] border border-border bg-brand-deep shadow-2xl">
+              <div className="relative aspect-video w-full bg-black">
+                {videoFailed ? (
+                  <div className="flex h-full w-full flex-col items-center justify-center gap-3 px-6 text-center">
+                    <p className="font-heading text-xl font-semibold text-white">
+                      Video Coming Soon
+                    </p>
 
-        <Reveal delay={0.1}>
-          <p className="mx-auto mt-8 max-w-3xl text-center text-base leading-7 text-muted-foreground">
-            {gardenStory.note}
-          </p>
-        </Reveal>
-
-        <div className="mt-10 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
-          {galleryImages.map((image, index) => (
-            <Reveal key={image.src} delay={index * 0.06}>
-              <figure className="group overflow-hidden rounded-2xl border border-border bg-white transition-shadow duration-300 hover:shadow-lg">
-                <div className="relative aspect-[4/5]">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    sizes="(max-width: 640px) 50vw, 25vw"
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    <p className="max-w-md text-sm leading-6 text-white/70">
+                      The coconut garden and sourcing journey video is currently
+                      being prepared.
+                    </p>
+                  </div>
+                ) : (
+                  <video
+                    ref={videoRef}
+                    className="h-170 w-full object-cover"
+                    src={VIDEO_SRC}
+                    aria-label={gardenStory.videoTitle}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                    onError={() => setVideoFailed(true)}
                   />
-                </div>
-                {image.caption ? (
-                  <figcaption className="border-t border-border bg-brand-pale px-3 py-2.5 text-xs leading-4 font-medium text-muted-foreground">
-                    {image.caption}
-                  </figcaption>
-                ) : null}
-              </figure>
-            </Reveal>
-          ))}
+                )}
+
+                {!videoFailed && (
+                  <button
+                    type="button"
+                    onClick={toggleMute}
+                    aria-label={isMuted ? "Unmute video" : "Mute video"}
+                    className="absolute right-4 top-4 z-10 flex size-11 items-center justify-center rounded-full border border-white/20 bg-black/50 text-white backdrop-blur-md transition hover:bg-black/70"
+                  >
+                    {isMuted ? (
+                      <VolumeX className="size-5" aria-hidden="true" />
+                    ) : (
+                      <Volume2 className="size-5" aria-hidden="true" />
+                    )}
+                  </button>
+                )}
+              </div>
+            </div>
+          </Reveal>
         </div>
       </div>
-
-      <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="max-w-4xl gap-0 overflow-hidden p-0">
-          <DialogHeader className="flex-row items-center justify-between gap-4 border-b border-border p-4">
-            <div>
-              <DialogTitle className="font-heading text-lg font-semibold text-foreground">
-                {gardenStory.videoTitle}
-              </DialogTitle>
-              <DialogDescription className="text-sm text-muted-foreground">
-                Coconut garden and supply journey
-              </DialogDescription>
-            </div>
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setOpen(false)}
-              aria-label="Close video"
-            >
-              <X className="size-4" aria-hidden="true" />
-            </Button>
-          </DialogHeader>
-          <div className="aspect-video w-full bg-black">
-            {videoFailed ? (
-              <div className="flex h-full w-full flex-col items-center justify-center gap-2 px-6 text-center">
-                <p className="text-base font-medium text-white">
-                  The coconut garden video is being prepared.
-                </p>
-                <p className="text-sm text-white/70">
-                  Meanwhile, explore the gallery or contact the supplier
-                  directly for more information.
-                </p>
-              </div>
-            ) : (
-              <video
-                className="h-full w-full"
-                src={VIDEO_SRC}
-                poster={gardenStory.videoPoster}
-                controls
-                preload="none"
-                onError={() => setVideoFailed(true)}
-              />
-            )}
-          </div>
-        </DialogContent>
-      </Dialog>
     </section>
   );
 }

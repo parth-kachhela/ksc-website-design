@@ -3,7 +3,7 @@ import { MessageCircle, PhoneCall } from "lucide-react";
 
 import { siteConfig } from "@/lib/site-config";
 import { callHref } from "@/lib/navigation";
-import { Button } from "@/components/ui/button";
+import { OutlineButton, WhatsAppButton } from "@/components/base/button";
 import { Badge } from "@/components/ui/badge";
 import { BrandLogo } from "@/components/brand/BrandLogo";
 import { aboutHero } from "@/app/about/_components/about.data";
@@ -30,10 +30,9 @@ export function AboutHero() {
             {aboutHero.intro}
           </p>
           <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
-            <Button
+            <WhatsAppButton
               asChild
               size="lg"
-              className="bg-[#25D366] text-white hover:bg-[#1fb257]"
             >
               <a
                 href={siteConfig.whatsappUrl}
@@ -43,13 +42,13 @@ export function AboutHero() {
                 <MessageCircle className="size-4" aria-hidden="true" />
                 WhatsApp Inquiry
               </a>
-            </Button>
-            <Button asChild size="lg" variant="outline">
+            </WhatsAppButton>
+            <OutlineButton asChild size="lg">
               <a href={callHref}>
                 <PhoneCall className="size-4" aria-hidden="true" />
                 Call {siteConfig.phoneDisplay}
               </a>
-            </Button>
+            </OutlineButton>
           </div>
         </div>
 

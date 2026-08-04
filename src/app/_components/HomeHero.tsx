@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { callHref } from "@/lib/navigation";import { Button } from "@/components/ui/button";
+import { callHref } from "@/lib/navigation";
+import { OutlineButton, PrimaryButton } from "@/components/base/button";
 import { Badge } from "@/components/ui/badge";
 import { hero } from "@/app/_components/home.data";
 
@@ -38,12 +39,12 @@ export function HomeHero() {
             {hero.description}
           </p>
           <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
-            <Button asChild size="lg" className="text-base">
+            <PrimaryButton asChild size="lg" className="text-base">
               <Link href="/contact">{hero.primaryCta}</Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="text-base">
+            </PrimaryButton>
+            <OutlineButton asChild size="lg" className="text-base">
               <a href={callHref}>{hero.secondaryCta}</a>
-            </Button>
+            </OutlineButton>
           </div>
           <p className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
             <span className="flex text-secondary" aria-hidden="true">
@@ -54,39 +55,18 @@ export function HomeHero() {
         </div>
 
         <div className="relative">
-          <div
-            className="absolute -top-8 -right-8 size-40 rounded-[2.5rem] bg-brand-lime/30"
-            aria-hidden="true"
-          />
-          <div
-            className="absolute -bottom-10 -left-6 size-32 rounded-full bg-secondary/20"
-            aria-hidden="true"
-          />
+
+
           <div className="relative overflow-hidden rounded-[2.5rem] border border-white/60 bg-white shadow-xl shadow-black/5">
             <Image
-              src="/images/home/hero-coconut.svg"
+              src="/images/home/hero.png"
               alt="Green coconut garden and fresh tender coconuts near Gadu, Chorvad, Junagadh, Gujarat"
-              width={1200}
+              width={100}
               height={900}
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="aspect-[4/3] h-auto w-full object-cover"
+              className="aspect-4/3 h-auto w-full object-cover"
             />
-          </div>
-
-          <div className="absolute bottom-6 left-6 flex flex-col gap-2 rounded-2xl border border-border bg-white/90 p-4 shadow-lg backdrop-blur-sm">
-            {hero.floatingCards.map((card) => (
-              <span
-                key={card.label}
-                className="flex items-center gap-2 text-sm font-medium text-foreground"
-              >
-                <card.icon
-                  className="size-4 text-secondary"
-                  aria-hidden="true"
-                />
-                {card.label}
-              </span>
-            ))}
           </div>
         </div>
       </div>

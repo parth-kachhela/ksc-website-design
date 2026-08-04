@@ -2,7 +2,7 @@ import { MessageCircle, PhoneCall } from "lucide-react";
 
 import { SectionHeading } from "@/components/global/SectionHeading";
 import { Reveal } from "@/components/global/Reveal";
-import { Button } from "@/components/ui/button";
+import { OutlineButton, WhatsAppButton } from "@/components/base/button";
 import { siteConfig } from "@/lib/site-config";
 import { callHref } from "@/lib/navigation";
 import { processSteps } from "@/app/_components/home.data";
@@ -45,11 +45,7 @@ export function HomeSupplyProcess() {
               supplier.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <Button
-                asChild
-                size="lg"
-                className="bg-[#25D366] text-white hover:bg-[#1fb257]"
-              >
+              <WhatsAppButton asChild size="lg">
                 <a
                   href={siteConfig.whatsappUrl}
                   target="_blank"
@@ -58,13 +54,13 @@ export function HomeSupplyProcess() {
                   <MessageCircle className="size-4" aria-hidden="true" />
                   Start a Bulk Inquiry
                 </a>
-              </Button>
-              <Button asChild size="lg" variant="outline">
+              </WhatsAppButton>
+              <OutlineButton asChild size="lg">
                 <a href={callHref}>
                   <PhoneCall className="size-4" aria-hidden="true" />
-                  Call {siteConfig.phoneDisplay}
+                  Talk with Us
                 </a>
-              </Button>
+              </OutlineButton>
             </div>
           </div>
         </Reveal>

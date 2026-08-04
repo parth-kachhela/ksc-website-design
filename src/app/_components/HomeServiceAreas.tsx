@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowRight, MapPin } from "lucide-react";
 
 import { Reveal } from "@/components/global/Reveal";
-import { Button } from "@/components/ui/button";
+import { LinkButton, OutlineButton, PrimaryButton } from "@/components/base/button";
 import { siteConfig } from "@/lib/site-config";
 import {
   serviceAreaTitle,
@@ -34,17 +34,17 @@ export function HomeServiceAreas() {
             </div>
             <Reveal delay={0.15}>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Button asChild size="lg">
+                <PrimaryButton asChild size="lg">
                   <Link href="/coconut-supplier-services">
-                    Explore our coconut supplier services
+                    Explore our supplier services
                     <ArrowRight className="size-4" aria-hidden="true" />
                   </Link>
-                </Button>
-                <Button asChild size="lg" variant="outline">
+                </PrimaryButton>
+                <OutlineButton asChild size="lg">
                   <Link href="/contact">
-                    Send a bulk coconut inquiry
+                    Send a bulk inquiry
                   </Link>
-                </Button>
+                </OutlineButton>
               </div>
             </Reveal>
           </div>
@@ -66,12 +66,12 @@ export function HomeServiceAreas() {
                 contact the supplier directly to confirm quantity and delivery
                 location.
               </p>
-              <Button asChild variant="link" className="px-0 text-secondary">
-                <Link href="/contact">
+              <LinkButton asChild className="px-0 text-secondary">
+                <Link href="https://maps.app.goo.gl/1Cyg2YJoCXqCZ46g6">
                   Get directions on Google Maps
                   <ArrowRight className="size-4" aria-hidden="true" />
                 </Link>
-              </Button>
+              </LinkButton>
             </aside>
           </Reveal>
         </div>

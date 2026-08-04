@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import { mainNav, callHref } from "@/lib/navigation";
 import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
+import { GhostButton, WhatsAppButton } from "@/components/base/button";
 import { BrandLogo } from "@/components/brand/BrandLogo";
 import { MobileNavigation } from "@/components/global/MobileNavigation";
 
@@ -70,13 +70,13 @@ export function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-2 md:flex">
-          <Button asChild variant="ghost" size="lg">
+          <GhostButton asChild size="lg">
             <a href={callHref}>
               <Phone className="size-4" aria-hidden="true" />
               Call Now
             </a>
-          </Button>
-          <Button asChild size="lg" className="bg-[#25D366] text-white hover:bg-[#1fb257]">
+          </GhostButton>
+          <WhatsAppButton asChild size="lg">
             <a
               href={siteConfig.whatsappUrl}
               target="_blank"
@@ -85,7 +85,7 @@ export function Navbar() {
               <MessageCircle className="size-4" aria-hidden="true" />
               WhatsApp Inquiry
             </a>
-          </Button>
+          </WhatsAppButton>
         </div>
 
         <MobileNavigation />

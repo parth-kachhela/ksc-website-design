@@ -10,7 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { LinkButton } from "@/components/base/button";
 import { buildContactQuery } from "@/lib/whatsapp";
 import {
   supplyCards,
@@ -39,7 +39,7 @@ export function HomeServiceOverview() {
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {supplyCards.map((card, index) => (
             <Reveal key={card.title} delay={index * 0.08}>
-              <Card className="h-full rounded-2xl border-border transition-shadow duration-300 hover:shadow-lg">
+              <Card className="flex justify-between  h-full rounded-2xl border-border transition-shadow duration-300 hover:shadow-lg">
                 <CardHeader>
                   <CardTitle className="font-heading text-2xl font-semibold text-foreground">
                     {card.title}
@@ -51,12 +51,12 @@ export function HomeServiceOverview() {
                   </p>
                 </CardContent>
                 <CardFooter>
-                  <Button asChild variant="link" className="px-0 text-secondary">
+                  <LinkButton asChild className="px-0 text-secondary">
                     <Link href={cardLinks[index].href}>
                       {cardLinks[index].label}
                       <ArrowRight className="size-4" aria-hidden="true" />
                     </Link>
-                  </Button>
+                  </LinkButton>
                 </CardFooter>
               </Card>
             </Reveal>

@@ -8,7 +8,7 @@ import { CalendarDays, MessageCircle, Send, CheckCircle2 } from "lucide-react";
 import { buildWhatsAppInquiryUrl } from "@/lib/whatsapp";
 import { cn } from "@/lib/utils";
 import type { ContactFormValues, InquiryType, RequirementFrequency } from "@/types/contact";
-import { Button } from "@/components/ui/button";
+import { WhatsAppButton } from "@/components/base/button";
 import {
   Form,
   FormControl,
@@ -139,10 +139,10 @@ export function WhatsAppInquiryForm({
             Your WhatsApp message has been prepared. If it did not open
             automatically, tap the button below.
           </p>
-          <Button
+          <WhatsAppButton
             asChild
             size="lg"
-            className="w-fit bg-[#25D366] text-white hover:bg-[#1fb257]"
+            className="w-fit"
           >
             <a
               href={submittedUrl}
@@ -152,7 +152,7 @@ export function WhatsAppInquiryForm({
               <MessageCircle className="size-4" aria-hidden="true" />
               Open WhatsApp Message
             </a>
-          </Button>
+          </WhatsAppButton>
         </div>
       ) : null}
 
@@ -452,11 +452,11 @@ export function WhatsAppInquiryForm({
             )}
           />
 
-          <Button
+          <WhatsAppButton
             type="submit"
             size="lg"
             disabled={isOpening}
-            className={cn("w-full bg-[#25D366] text-white hover:bg-[#1fb257]")}
+            className={cn("w-full")}
           >
             {isOpening ? (
               <>
@@ -472,7 +472,7 @@ export function WhatsAppInquiryForm({
                 Continue to WhatsApp
               </>
             )}
-          </Button>
+          </WhatsAppButton>
           <p className="text-center text-xs leading-5 text-muted-foreground">
             No details are stored on this website. Your information is only used
             to prepare the WhatsApp message.

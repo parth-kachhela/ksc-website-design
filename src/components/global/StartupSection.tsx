@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Reveal } from "@/components/global/Reveal";
-import { Button } from "@/components/ui/button";
+import { Button, PrimaryButton } from "@/components/base/button";
 
 type StartupVariant = "dark" | "light";
 
@@ -94,12 +94,12 @@ export function StartupSection({
                     </p>
                   ))}
                 </div>
-                <Button asChild size="lg" className="mt-6">
+                <PrimaryButton asChild size="lg" className="mt-6">
                   <Link href={ctaHref}>
                     {ctaLabel}
                     <ArrowRight className="size-4" aria-hidden="true" />
                   </Link>
-                </Button>
+                </PrimaryButton>
               </Reveal>
 
               <Reveal delay={0.1}>

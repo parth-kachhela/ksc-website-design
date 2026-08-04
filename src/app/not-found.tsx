@@ -2,7 +2,7 @@ import Link from "next/link";
 import { MessageCircle } from "lucide-react";
 
 import { siteConfig } from "@/lib/site-config";
-import { Button } from "@/components/ui/button";
+import { PrimaryButton, WhatsAppButton } from "@/components/base/button";
 import { BrandMark } from "@/components/brand/BrandMark";
 
 export default function NotFound() {
@@ -16,13 +16,10 @@ export default function NotFound() {
         The page you are looking for may have moved or does not exist.
       </p>
       <div className="flex flex-wrap items-center justify-center gap-3">
-        <Button asChild>
+        <PrimaryButton asChild>
           <Link href="/">Return Home</Link>
-        </Button>
-        <Button
-          asChild
-          className="bg-[#25D366] text-white hover:bg-[#1fb257]"
-        >
+        </PrimaryButton>
+        <WhatsAppButton asChild>
           <a
             href={siteConfig.whatsappUrl}
             target="_blank"
@@ -31,7 +28,7 @@ export default function NotFound() {
             <MessageCircle className="size-4" aria-hidden="true" />
             Contact on WhatsApp
           </a>
-        </Button>
+        </WhatsAppButton>
       </div>
     </div>
   );

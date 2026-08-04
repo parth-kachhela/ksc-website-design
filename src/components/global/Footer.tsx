@@ -9,7 +9,7 @@ import {
 
 import { siteConfig } from "@/lib/site-config";
 import { footerServices, mainNav, callHref, mailHref } from "@/lib/navigation";
-import { Button } from "@/components/ui/button";
+import { WhatsAppButton } from "@/components/base/button";
 import { BrandLogo } from "@/components/brand/BrandLogo";
 
 export function Footer() {
@@ -97,11 +97,7 @@ export function Footer() {
                 <span>{siteConfig.addressShort}</span>
               </li>
             </ul>
-            <Button
-              asChild
-              size="lg"
-              className="mt-5 bg-[#25D366] text-white hover:bg-[#1fb257]"
-            >
+            <WhatsAppButton asChild size="lg" className="mt-5">
               <a
                 href={siteConfig.whatsappUrl}
                 target="_blank"
@@ -110,7 +106,7 @@ export function Footer() {
                 <MessageCircle className="size-4" aria-hidden="true" />
                 WhatsApp
               </a>
-            </Button>
+            </WhatsAppButton>
             <div className="mt-4 flex items-center gap-3">
               <span className="text-sm text-white/60">Follow us</span>
               <a

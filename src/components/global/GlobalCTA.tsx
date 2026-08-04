@@ -3,7 +3,7 @@ import { MessageCircle, Phone } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 import { callHref } from "@/lib/navigation";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
+import { Button, WhatsAppButton } from "@/components/base/button";
 
 interface GlobalCTAProps {
   whatsappLabel?: string;
@@ -28,11 +28,7 @@ export function GlobalCTA({
         className,
       )}
     >
-      <Button
-        asChild
-        size="lg"
-        className="bg-[#25D366] text-white hover:bg-[#1fb257]"
-      >
+      <WhatsAppButton asChild size="lg">
         <a
           href={siteConfig.whatsappUrl}
           target="_blank"
@@ -41,7 +37,7 @@ export function GlobalCTA({
           <MessageCircle className="size-4" aria-hidden="true" />
           {whatsappLabel}
         </a>
-      </Button>
+      </WhatsAppButton>
       <Button asChild size="lg" variant={callVariant}>
         <a href={callHref}>
           <Phone className="size-4" aria-hidden="true" />

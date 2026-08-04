@@ -72,11 +72,6 @@ export function CTASection({
             align="center"
           />
         </Reveal>
-        {footer ? (
-          <Reveal delay={0.2}>
-            <p className="text-sm text-white/70">{footer}</p>
-          </Reveal>
-        ) : null}
       </div>
     </section>
   );

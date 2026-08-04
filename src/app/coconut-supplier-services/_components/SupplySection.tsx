@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, MessageCircle } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
+import { OutlineButton, WhatsAppButton } from "@/components/base/button";
 import { Badge } from "@/components/ui/badge";
 import { Reveal } from "@/components/global/Reveal";
 import { cn } from "@/lib/utils";
@@ -108,18 +108,18 @@ export function SupplySection({
               ))}
             </ul>
             <div className="mt-2 flex flex-col gap-3 sm:flex-row">
-              <Button asChild size="lg" className="bg-[#25D366] text-white hover:bg-[#1fb257]">
+              <WhatsAppButton asChild size="lg">
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="size-4" aria-hidden="true" />
                   {ctaLabel}
                 </a>
-              </Button>
-              <Button asChild size="lg" variant="outline">
+              </WhatsAppButton>
+              <OutlineButton asChild size="lg">
                 <Link href={contactHref}>
                   Use Inquiry Form
                   <ArrowRight className="size-4" aria-hidden="true" />
                 </Link>
-              </Button>
+              </OutlineButton>
             </div>
           </div>
         </Reveal>

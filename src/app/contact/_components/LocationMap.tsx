@@ -1,7 +1,7 @@
 import { MapPin, Navigation } from "lucide-react";
 
 import { Reveal } from "@/components/global/Reveal";
-import { Button } from "@/components/ui/button";
+import { OutlineButton } from "@/components/base/button";
 import { siteConfig } from "@/lib/site-config";
 import { mapEmbedUrl, directionsUrl } from "@/app/contact/_components/contact.data";
 
@@ -48,7 +48,7 @@ export function LocationMap() {
               The address on the map is based on the registered business
               location in Gadu, Junagadh, Gujarat.
             </p>
-            <Button asChild size="lg" variant="outline">
+            <OutlineButton asChild size="lg">
               <a
                 href={directionsUrl}
                 target="_blank"
@@ -57,7 +57,7 @@ export function LocationMap() {
                 <Navigation className="size-4" aria-hidden="true" />
                 Get Directions
               </a>
-            </Button>
+            </OutlineButton>
           </div>
         </Reveal>
       </div>

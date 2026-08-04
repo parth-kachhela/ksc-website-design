@@ -3,7 +3,7 @@ import { CheckCircle2, MessageCircle } from "lucide-react";
 
 import { SectionHeading } from "@/components/global/SectionHeading";
 import { Reveal } from "@/components/global/Reveal";
-import { Button } from "@/components/ui/button";
+import { WhatsAppButton } from "@/components/base/button";
 import { Badge } from "@/components/ui/badge";
 import { buildServiceWhatsAppUrl } from "@/lib/whatsapp";
 import {
@@ -77,10 +77,10 @@ export function CoconutSizeGrades() {
                       </p>
                     ) : null}
                     <div className="mt-auto pt-1">
-                      <Button
+                      <WhatsAppButton
                         asChild
                         size="lg"
-                        className="w-full bg-[#25D366] text-white hover:bg-[#1fb257]"
+                        className="w-full"
                       >
                         <a
                           href={whatsappUrl}
@@ -90,7 +90,7 @@ export function CoconutSizeGrades() {
                           <MessageCircle className="size-4" aria-hidden="true" />
                           Inquire for This Size
                         </a>
-                      </Button>
+                      </WhatsAppButton>
                     </div>
                   </div>
                 </article>

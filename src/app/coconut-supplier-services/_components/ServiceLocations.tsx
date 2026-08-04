@@ -2,7 +2,7 @@ import { MapPin } from "lucide-react";
 
 import { SectionHeading } from "@/components/global/SectionHeading";
 import { Reveal } from "@/components/global/Reveal";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { FeatureCard } from "@/components/base/card";
 import { locations } from "@/app/coconut-supplier-services/_components/services.data";
 
 export function ServiceLocations() {
@@ -20,21 +20,14 @@ export function ServiceLocations() {
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {locations.map((location, index) => (
             <Reveal key={location.name} delay={index * 0.06}>
-              <Card className="h-full rounded-2xl border-border bg-brand-pale">
-                <CardHeader>
-                  <span className="flex size-11 items-center justify-center rounded-xl bg-white shadow-sm">
-                    <MapPin className="size-5 text-secondary" aria-hidden="true" />
-                  </span>
-                  <CardTitle className="font-heading text-xl font-semibold text-foreground">
-                    {location.name}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm leading-6 text-muted-foreground">
-                    {location.description}
-                  </p>
-                </CardContent>
-              </Card>
+              <FeatureCard
+                icon={MapPin}
+                title={location.name}
+                description={location.description}
+                cardVariant="pale"
+                iconTone="white"
+                descriptionSize="sm"
+              />
             </Reveal>
           ))}
         </div>

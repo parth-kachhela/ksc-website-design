@@ -1,6 +1,6 @@
 import { SectionHeading } from "@/components/global/SectionHeading";
 import { Reveal } from "@/components/global/Reveal";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { FeatureCard } from "@/components/base/card";
 import { buyerTypes } from "@/app/coconut-supplier-services/_components/services.data";
 
 export function BuyerTypes() {
@@ -22,21 +22,13 @@ export function BuyerTypes() {
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {buyerTypes.map((buyer, index) => (
             <Reveal key={buyer.title} delay={index * 0.05}>
-              <Card className="h-full rounded-2xl border-border bg-white">
-                <CardHeader>
-                  <span className="flex size-11 items-center justify-center rounded-xl bg-brand-leaf">
-                    <buyer.icon className="size-5 text-primary" aria-hidden="true" />
-                  </span>
-                  <CardTitle className="font-heading text-lg font-semibold leading-6 text-foreground">
-                    {buyer.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm leading-6 text-muted-foreground">
-                    {buyer.description}
-                  </p>
-                </CardContent>
-              </Card>
+              <FeatureCard
+                icon={buyer.icon}
+                title={buyer.title}
+                description={buyer.description}
+                titleSize="lg"
+                descriptionSize="sm"
+              />
             </Reveal>
           ))}
         </div>

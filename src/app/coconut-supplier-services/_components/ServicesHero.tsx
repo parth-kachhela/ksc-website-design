@@ -2,7 +2,7 @@ import Link from "next/link";
 import { CheckCircle2, PhoneCall } from "lucide-react";
 
 import { callHref } from "@/lib/navigation";
-import { Button } from "@/components/ui/button";
+import { OutlineButton, WhatsAppButton } from "@/components/base/button";
 import { Badge } from "@/components/ui/badge";
 import { servicesHero } from "@/app/coconut-supplier-services/_components/services.data";
 
@@ -37,19 +37,18 @@ export function ServicesHero() {
           ))}
         </ul>
         <div className="flex flex-col gap-3 sm:flex-row">
-          <Button
+          <WhatsAppButton
             asChild
             size="lg"
-            className="bg-[#25D366] text-white hover:bg-[#1fb257]"
           >
             <Link href="/contact">{servicesHero.primaryCta}</Link>
-          </Button>
-          <Button asChild size="lg" variant="outline">
+          </WhatsAppButton>
+          <OutlineButton asChild size="lg">
             <a href={callHref}>
               <PhoneCall className="size-4 text-secondary" aria-hidden="true" />
               {servicesHero.secondaryCta}
             </a>
-          </Button>
+          </OutlineButton>
         </div>
       </div>
     </section>

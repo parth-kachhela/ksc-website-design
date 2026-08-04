@@ -7,7 +7,11 @@ import { MessageCircle, Phone } from "lucide-react";
 import { mainNav, callHref } from "@/lib/navigation";
 import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
+import {
+  GhostButton,
+  PrimaryButton,
+  SecondaryButton,
+} from "@/components/base/button";
 import {
   Sheet,
   SheetClose,
@@ -25,19 +29,21 @@ export function MobileNavigation() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button
-          variant="ghost"
+        <GhostButton
           size="icon-lg"
           className="md:hidden"
           aria-label="Open navigation menu"
         >
           <Menu className="size-5" aria-hidden="true" />
-        </Button>
+        </GhostButton>
       </SheetTrigger>
       <SheetContent side="right" className="w-80 max-w-[85vw]">
         <SheetHeader className="border-b border-border pb-4">
           <SheetTitle className="flex items-center gap-2 text-left">
-            <BrandMark className="size-12" />
+            <BrandMark className="size-8" />
+            <span className="font-heading text-lg leading-tight text-foreground">
+              {siteConfig.shortName}
+            </span>
           </SheetTitle>
         </SheetHeader>
         <nav className="mt-4 flex flex-col gap-1" aria-label="Mobile navigation">
@@ -62,18 +68,13 @@ export function MobileNavigation() {
           })}
         </nav>
         <div className="mt-6 flex flex-col gap-3 border-t border-border pt-6">
-          <Button asChild size="lg" className="w-full">
+          <PrimaryButton asChild size="lg" className="w-full">
             <a href={callHref}>
               <Phone className="size-4" aria-hidden="true" />
               Call {siteConfig.phoneDisplay}
             </a>
-          </Button>
-          <Button
-            asChild
-            size="lg"
-            variant="secondary"
-            className="w-full"
-          >
+          </PrimaryButton>
+          <SecondaryButton asChild size="lg" className="w-full">
             <a
               href={siteConfig.whatsappUrl}
               target="_blank"
@@ -82,7 +83,7 @@ export function MobileNavigation() {
               <MessageCircle className="size-4" aria-hidden="true" />
               WhatsApp Inquiry
             </a>
-          </Button>
+          </SecondaryButton>
         </div>
       </SheetContent>
     </Sheet>

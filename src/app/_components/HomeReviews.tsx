@@ -16,7 +16,7 @@ export function HomeReviews() {
           <SectionHeading
             eyebrow="Customer Reviews"
             title="What Customers Say"
-            description={`Rated ${siteConfig.rating} based on customer feedback shared on Google.`}
+
             align="center"
           />
         </Reveal>

@@ -4,7 +4,11 @@ import Link from "next/link";
 import { MessageCircle, RotateCcw } from "lucide-react";
 
 import { siteConfig } from "@/lib/site-config";
-import { Button } from "@/components/ui/button";
+import {
+  OutlineButton,
+  PrimaryButton,
+  WhatsAppButton,
+} from "@/components/base/button";
 
 export default function Error({
   error,
@@ -26,14 +30,14 @@ export default function Error({
         {siteConfig.name} on WhatsApp or phone for help.
       </p>
       <div className="flex flex-wrap items-center justify-center gap-3">
-        <Button onClick={reset}>
+        <PrimaryButton onClick={reset}>
           <RotateCcw className="size-4" aria-hidden="true" />
           Try Again
-        </Button>
-        <Button asChild variant="outline">
+        </PrimaryButton>
+        <OutlineButton asChild>
           <Link href="/">Return Home</Link>
-        </Button>
-        <Button asChild className="bg-[#25D366] text-white hover:bg-[#1fb257]">
+        </OutlineButton>
+        <WhatsAppButton asChild>
           <a
             href={siteConfig.whatsappUrl}
             target="_blank"
@@ -42,7 +46,7 @@ export default function Error({
             <MessageCircle className="size-4" aria-hidden="true" />
             WhatsApp Support
           </a>
-        </Button>
+        </WhatsAppButton>
       </div>
       {error?.digest ? (
         <p className="text-xs text-muted-foreground">{error.digest}</p>
