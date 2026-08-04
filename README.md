@@ -55,33 +55,36 @@ npm run lint
 ## 6. Folder Structure
 
 ```
-├── app/
-│   ├── layout.tsx            # Root layout, fonts, metadata, JSON-LD, nav/footer
-│   ├── page.tsx              # Home (composes app/_components only)
-│   ├── about/                # About page + its own _components
-│   ├── coconut-supplier-services/  # Services page + its own _components
-│   ├── contact/              # Contact page + form + its own _components
-│   ├── _components/          # Home page sections + home.data.ts
-│   ├── robots.ts, sitemap.ts, manifest.ts
-│   ├── loading.tsx, error.tsx, not-found.tsx
-│   └── fonts.ts
-├── components/
-│   ├── ui/                   # shadcn/ui primitives
-│   ├── brand/                # BrandLogo, BrandMark
-│   └── global/               # Navbar, Footer, floating buttons, etc.
-├── lib/
-│   ├── site-config.ts        # ★ ALL business details (single source of truth)
-│   ├── whatsapp.ts           # WhatsApp message builder
-│   ├── seo.ts, structured-data.ts, navigation.ts, utils.ts
-├── types/                    # Strict TS types
-├── public/images/...         # Brand, home, garden, gallery, video, seo assets
-├── public/videos/            # Placeholder for the coconut garden video
+├── src/
+│   ├── app/                   # Next.js App Router (src convention)
+│   │   ├── layout.tsx         # Root layout, fonts, metadata, JSON-LD, nav/footer
+│   │   ├── page.tsx           # Home (composes app/_components only)
+│   │   ├── about/             # About page + its own _components
+│   │   ├── coconut-supplier-services/  # Services page + its own _components
+│   │   ├── contact/           # Contact page + form + its own _components
+│   │   ├── _components/       # Home page sections + home.data.ts
+│   │   ├── robots.ts, sitemap.ts, manifest.ts
+│   │   ├── loading.tsx, error.tsx, not-found.tsx
+│   │   └── fonts.ts
+│   ├── components/
+│   │   ├── ui/                # shadcn/ui primitives
+│   │   ├── brand/             # BrandLogo, BrandMark
+│   │   └── global/            # Navbar, Footer, floating buttons, etc.
+│   ├── lib/
+│   │   ├── site-config.ts     # ★ ALL business details (single source of truth)
+│   │   ├── whatsapp.ts        # WhatsApp message builder
+│   │   ├── seo.ts, structured-data.ts, navigation.ts, utils.ts
+│   └── types/                 # Strict TS types
+├── public/images/...          # Brand, home, garden, gallery, video, seo assets
+├── public/videos/             # Placeholder for the coconut garden video
 └── scripts/generate-images.mjs  # Generates placeholder SVGs + OG image
 ```
 
+Application code lives under `src/` (`app`, `components`, `lib`, `types`). `public/`, config files and `scripts/` stay in the project root. The `@/*` alias maps to `./src/*`.
+
 ## 7. Business Configuration
 
-All business details (name, phone, email, address, WhatsApp URL, rating, review count) live in **`lib/site-config.ts`**.
+All business details (name, phone, email, address, WhatsApp URL, rating, review count) live in **`src/lib/site-config.ts`**.
 
 | Setting        | Default                              |
 | -------------- | ------------------------------------ |
@@ -93,7 +96,7 @@ All business details (name, phone, email, address, WhatsApp URL, rating, review 
 | Rating         | 5.0 (configurable)                   |
 | Review count   | 34 (configurable)                    |
 
-Never hardcode contact details inside components — always import from `lib/site-config.ts`.
+Never hardcode contact details inside components — always import from `src/lib/site-config.ts`.
 
 ## 8. Replacing Images
 
@@ -110,7 +113,7 @@ Replace the demo `.svg` files with real WebP/AVIF/JPG photos keeping the **same 
 
 ## 9. Replacing the Coconut Garden Video
 
-The video is referenced in `app/_components/HomeGardenStory.tsx`:
+The video is referenced in `src/app/_components/HomeGardenStory.tsx`:
 
 ```ts
 const VIDEO_SRC = "/videos/coconut-garden.mp4";
@@ -120,7 +123,7 @@ Drop your file at `public/videos/coconut-garden.mp4` (or change `VIDEO_SRC` to a
 
 ## 10. Updating Rating & Review Count
 
-Edit `lib/site-config.ts`:
+Edit `src/lib/site-config.ts`:
 
 ```ts
 rating: "5.0",
@@ -131,22 +134,22 @@ These values feed the home Trust Bar, hero trust line, reviews section, and the 
 
 ## 11. How the WhatsApp Inquiry Works
 
-The form lives in `app/contact/_components/WhatsAppInquiryForm.tsx`.
+The form lives in `src/app/contact/_components/WhatsAppInquiryForm.tsx`.
 
 1. React Hook Form + Zod validate every field (including Indian mobile format).
-2. On submit, `buildWhatsAppInquiryUrl()` in `lib/whatsapp.ts` builds the formatted message and URL-encodes it.
+2. On submit, `buildWhatsAppInquiryUrl()` in `src/lib/whatsapp.ts` builds the formatted message and URL-encodes it.
 3. WhatsApp opens in a new tab with the pre-filled message: `https://wa.me/916352295050?text=<encoded>`.
 4. No data is stored, sent to a server, or persisted locally.
 
 ## 12. Updating SEO Metadata
 
-Per-page metadata is generated in each `app/*/page.tsx` via `buildSeoMetadata()` (`lib/seo.ts`):
+Per-page metadata is generated in each `src/app/*/page.tsx` via `buildSeoMetadata()` (`src/lib/seo.ts`):
 
 - Unique `title`, `description`, `canonical`
 - Open Graph + Twitter card
 - Robots directives
 
-Structured data utilities live in `lib/structured-data.ts` (LocalBusiness + WholesaleStore, WebSite, BreadcrumbList, Service, FAQPage, VideoObject). Sitemap entries are in `app/sitemap.ts`; robots rules in `app/robots.ts`.
+Structured data utilities live in `src/lib/structured-data.ts` (LocalBusiness + WholesaleStore, WebSite, BreadcrumbList, Service, FAQPage, VideoObject). Sitemap entries are in `src/app/sitemap.ts`; robots rules in `src/app/robots.ts`.
 
 ## 13. Analytics & Search Console
 
@@ -179,7 +182,7 @@ Project settings: **Next.js** framework preset, build command `next build`, outp
 
 ## 16. Brand & Colors
 
-Brand palette (defined in `app/globals.css`):
+Brand palette (defined in `src/app/globals.css`):
 
 - Primary Dark Green `#234B20`
 - Deep Forest `#183C1C` / Dark Footer `#102C16`
