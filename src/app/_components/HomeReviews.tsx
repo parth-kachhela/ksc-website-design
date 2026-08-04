@@ -41,12 +41,13 @@ export function HomeReviews() {
                   &ldquo;{review.text}&rdquo;
                 </blockquote>
                 <figcaption className="flex items-center gap-3 border-t border-border pt-4">
-                  <span
-                    aria-hidden="true"
-                    className="flex size-10 items-center justify-center rounded-full bg-secondary text-sm font-bold text-white"
-                  >
-                    {review.initials}
-                  </span>
+                  <img
+                    src={`https://i.pravatar.cc/150?img=${index + 1}`}
+                    alt={`${review.name} avatar`}
+                    width={40}
+                    height={40}
+                    className="size-10 shrink-0 rounded-full object-cover"
+                  />
                   <div>
                     <span className="block text-sm font-semibold text-foreground">
                       {review.name}
