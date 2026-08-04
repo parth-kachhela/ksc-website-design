@@ -38,15 +38,20 @@ export function StartupSection({
   const titleId = id ? `${id}-title` : undefined;
 
   const checklist = (
-    <ul className={cn("flex flex-col", isLight ? "gap-3" : "gap-4")}>
+    <ul
+      className={cn(
+        "flex w-full flex-col",
+        isLight ? "gap-3" : "gap-3 sm:gap-4",
+      )}
+    >
       {points.map((point) => (
         <li
           key={point}
           className={cn(
-            "flex items-start gap-3 rounded-2xl",
+            "flex min-w-0 items-start gap-3 rounded-xl sm:rounded-2xl",
             isLight
-              ? "text-base leading-6 text-foreground"
-              : "border border-white/15 bg-white/5 p-4 text-base leading-6 text-white/90",
+              ? "text-sm leading-6 text-foreground sm:text-base"
+              : "border border-white/15 bg-white/5 p-3 text-sm leading-6 text-white/90 sm:p-4 sm:text-base",
           )}
         >
           <CheckCircle2
@@ -56,7 +61,8 @@ export function StartupSection({
             )}
             aria-hidden="true"
           />
-          <span>{point}</span>
+
+          <span className="min-w-0 break-words">{point}</span>
         </li>
       ))}
     </ul>
@@ -66,52 +72,70 @@ export function StartupSection({
     return (
       <section
         id={id}
-        className="scroll-mt-20 bg-white py-16 sm:py-20"
+        className="scroll-mt-20 bg-white py-12 sm:py-16 lg:py-20"
         aria-labelledby={titleId}
       >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="overflow-hidden rounded-[2rem] border border-border bg-brand-pale">
-            <div className="grid gap-10 p-8 lg:grid-cols-[1.1fr_0.9fr] lg:p-12">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="overflow-hidden rounded-2xl border border-border bg-brand-pale sm:rounded-[2rem]">
+            <div className="grid gap-8 p-5 sm:p-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10 lg:p-12">
               <Reveal>
-                <div className="flex flex-col items-start gap-4">
-                  <span className="text-sm font-semibold tracking-wide text-secondary uppercase">
+                <div className="flex min-w-0 flex-col items-start">
+                  <span className="text-xs font-semibold tracking-wide text-secondary uppercase sm:text-sm">
                     {eyebrow}
                   </span>
+
                   <h2
                     id={titleId}
-                    className="font-heading text-3xl leading-tight font-semibold tracking-tight text-foreground sm:text-4xl"
+                    className="mt-3 max-w-2xl font-heading text-2xl leading-tight font-semibold tracking-tight text-foreground sm:text-3xl lg:text-4xl"
                   >
                     {title}
                   </h2>
-                </div>
-                <div className="mt-5 space-y-4">
-                  {paragraphs?.map((paragraph, index) => (
-                    <p
-                      key={index}
-                      className="max-w-xl text-base leading-7 text-muted-foreground"
-                    >
-                      {paragraph}
+
+                  {paragraphs?.length ? (
+                    <div className="mt-5 space-y-4">
+                      {paragraphs.map((paragraph, index) => (
+                        <p
+                          key={`${paragraph}-${index}`}
+                          className="max-w-xl text-sm leading-6 text-muted-foreground sm:text-base sm:leading-7"
+                        >
+                          {paragraph}
+                        </p>
+                      ))}
+                    </div>
+                  ) : description ? (
+                    <p className="mt-5 max-w-xl text-sm leading-6 text-muted-foreground sm:text-base sm:leading-7">
+                      {description}
                     </p>
-                  ))}
+                  ) : null}
+
+                  <PrimaryButton
+                    asChild
+                    size="lg"
+                    className="mt-6 w-full justify-center sm:w-auto"
+                  >
+                    <Link href={ctaHref}>
+                      <span>{ctaLabel}</span>
+                      <ArrowRight
+                        className="size-4 shrink-0"
+                        aria-hidden="true"
+                      />
+                    </Link>
+                  </PrimaryButton>
                 </div>
-                <PrimaryButton asChild size="lg" className="mt-6">
-                  <Link href={ctaHref}>
-                    {ctaLabel}
-                    <ArrowRight className="size-4" aria-hidden="true" />
-                  </Link>
-                </PrimaryButton>
               </Reveal>
 
               <Reveal delay={0.1}>
-                <aside className="flex flex-col gap-4 rounded-2xl border border-border bg-white p-6">
+                <aside className="flex min-w-0 flex-col gap-4 rounded-xl border border-border bg-white p-5 sm:rounded-2xl sm:p-6">
                   {checklistTitle ? (
-                    <h3 className="font-heading text-xl font-semibold text-foreground">
+                    <h3 className="font-heading text-lg font-semibold text-foreground sm:text-xl">
                       {checklistTitle}
                     </h3>
                   ) : null}
+
                   {checklist}
+
                   {asideNote ? (
-                    <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                    <p className="mt-1 text-sm leading-6 text-muted-foreground sm:mt-2">
                       {asideNote}
                     </p>
                   ) : null}
@@ -127,39 +151,49 @@ export function StartupSection({
   return (
     <section
       id={id}
-      className="scroll-mt-20 bg-brand-deep py-16 text-white sm:py-20"
+      className="scroll-mt-20 bg-brand-deep py-12 text-white sm:py-16 lg:py-20"
       aria-labelledby={titleId}
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-12">
           <Reveal>
-            <div className="flex flex-col gap-5">
-              <span className="text-sm font-semibold tracking-wide text-[#91CE38] uppercase">
+            <div className="flex min-w-0 flex-col items-start">
+              <span className="text-xs font-semibold tracking-wide text-[#91CE38] uppercase sm:text-sm">
                 {eyebrow}
               </span>
+
               <h2
                 id={titleId}
-                className="max-w-xl font-heading text-3xl leading-tight font-semibold tracking-tight sm:text-4xl"
+                className="mt-3 max-w-xl font-heading text-2xl leading-tight font-semibold tracking-tight sm:text-3xl lg:text-4xl"
               >
                 {title}
               </h2>
-              <p className="max-w-xl text-base leading-7 text-white/80">
-                {description}
-              </p>
+
+              {description ? (
+                <p className="mt-4 max-w-xl text-sm leading-6 text-white/80 sm:mt-5 sm:text-base sm:leading-7">
+                  {description}
+                </p>
+              ) : null}
+
               <Button
                 asChild
                 size="lg"
-                className="w-fit bg-[#91CE38] text-[#173018] hover:bg-white"
+                className="mt-6 w-full justify-center bg-[#91CE38] text-[#173018] hover:bg-white sm:w-auto"
               >
                 <Link href={ctaHref}>
-                  {ctaLabel}
-                  <ArrowRight className="size-4" aria-hidden="true" />
+                  <span>{ctaLabel}</span>
+                  <ArrowRight
+                    className="size-4 shrink-0"
+                    aria-hidden="true"
+                  />
                 </Link>
               </Button>
             </div>
           </Reveal>
 
-          <Reveal delay={0.1}>{checklist}</Reveal>
+          <Reveal delay={0.1}>
+            <div className="min-w-0">{checklist}</div>
+          </Reveal>
         </div>
       </div>
     </section>

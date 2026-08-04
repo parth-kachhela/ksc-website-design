@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MessageCircle } from "lucide-react";
+import { MessageSquare } from "lucide-react";
 
 import { SectionHeading } from "@/components/global/SectionHeading";
 import { Reveal } from "@/components/global/Reveal";
@@ -42,7 +42,7 @@ export function OrderProcess() {
               size="lg"
             >
               <Link href="/contact">
-                <MessageCircle className="size-4" aria-hidden="true" />
+                <MessageSquare className="size-4" aria-hidden="true" />
                 Start on the WhatsApp Inquiry Form
               </Link>
             </WhatsAppButton>

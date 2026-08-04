@@ -3,7 +3,7 @@ import {
   ArrowUp,
   Mail,
   MapPin,
-  MessageCircle,
+  MessageSquare,
   Phone,
 } from "lucide-react";
 

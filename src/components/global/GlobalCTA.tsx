@@ -1,4 +1,4 @@
-import { MessageCircle, Phone } from "lucide-react";
+import { MessageCircle, MessagesSquare, Phone } from "lucide-react";
 
 import { siteConfig } from "@/lib/site-config";
 import { callHref } from "@/lib/navigation";
@@ -34,14 +34,14 @@ export function GlobalCTA({
           target="_blank"
           rel="noopener noreferrer"
         >
-          <MessageCircle className="size-4" aria-hidden="true" />
-          {whatsappLabel}
+          <MessagesSquare className="size-4"/>
+          Chat on WhatsApp
         </a>
       </WhatsAppButton>
       <Button asChild size="lg" variant={callVariant}>
         <a href={callHref}>
           <Phone className="size-4" aria-hidden="true" />
-          {callLabel}
+          Talk with us
         </a>
       </Button>
     </div>

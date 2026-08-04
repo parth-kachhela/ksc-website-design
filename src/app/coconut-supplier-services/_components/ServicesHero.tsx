@@ -8,14 +8,17 @@ import { servicesHero } from "@/app/coconut-supplier-services/_components/servic
 
 export function ServicesHero() {
   return (
-    <section className="bg-brand-pale" aria-labelledby="services-hero-title">
-      <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 px-4 py-16 text-center sm:px-6 lg:py-24">
-        <Badge
-          variant="secondary"
-          className="rounded-full px-3 py-1 text-xs font-semibold tracking-wide uppercase"
+    <section
+          className="relative overflow-hidden bg-brand-pale bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage:
+              "url('/images/services/coconut-services-hero-background.svg')",
+          }}
+          aria-labelledby="services-hero-title"
         >
-          {servicesHero.eyebrow}
-        </Badge>
+          <div className="absolute inset-0 bg-brand-pale/20" aria-hidden="true" />
+
+          <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center gap-6 px-4 py-16 text-center sm:px-6 lg:py-24">
         <h1
           id="services-hero-title"
           className="max-w-3xl font-heading text-4xl leading-tight font-semibold tracking-tight text-foreground sm:text-5xl"

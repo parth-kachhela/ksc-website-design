@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { MessageCircle, Phone } from "lucide-react";
+import { MessageSquare, Phone } from "lucide-react";
 
 import { mainNav, callHref } from "@/lib/navigation";
 import { siteConfig } from "@/lib/site-config";
@@ -80,7 +80,7 @@ export function MobileNavigation() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <MessageCircle className="size-4" aria-hidden="true" />
+              <MessageSquare className="size-4" aria-hidden="true" />
               WhatsApp Inquiry
             </a>
           </SecondaryButton>

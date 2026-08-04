@@ -8,8 +8,6 @@ export function ContactCTA() {
       title={contactCta.title}
       description={contactCta.description}
       footer={contactCta.footer}
-      whatsappLabel="Send WhatsApp Inquiry"
-      callLabel="Call Supplier"
     />
   );
 }

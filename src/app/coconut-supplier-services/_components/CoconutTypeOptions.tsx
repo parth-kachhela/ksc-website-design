@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CheckCircle2, MessageCircle } from "lucide-react";
+import { CheckCircle2, MessageSquare } from "lucide-react";
 
 import { SectionHeading } from "@/components/global/SectionHeading";
 import { Reveal } from "@/components/global/Reveal";
@@ -110,7 +110,7 @@ export function CoconutTypeOptions() {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <MessageCircle className="size-4" aria-hidden="true" />
+                          <MessageSquare className="size-4" aria-hidden="true" />
                           Inquire for {type.name}
                         </a>
                       </WhatsAppButton>

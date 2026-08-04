@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { CalendarDays, MessageCircle, Send, CheckCircle2 } from "lucide-react";
+import { CalendarDays, MessageSquare, Send, CheckCircle2 } from "lucide-react";
 
 import { buildWhatsAppInquiryUrl } from "@/lib/whatsapp";
 import { cn } from "@/lib/utils";
@@ -113,7 +113,7 @@ export function WhatsAppInquiryForm({
     <div className="rounded-[2rem] border border-border bg-white p-6 shadow-xl shadow-black/5 sm:p-8">
       <div className="mb-6 flex items-center gap-3">
         <span className="flex size-11 items-center justify-center rounded-xl bg-[#25D366]/15">
-          <MessageCircle className="size-5 text-[#1fb257]" aria-hidden="true" />
+          <MessageSquare className="size-5 text-[#1fb257]" aria-hidden="true" />
         </span>
         <div>
           <h2 className="font-heading text-2xl font-semibold text-foreground">
@@ -149,7 +149,7 @@ export function WhatsAppInquiryForm({
               target="_blank"
               rel="noopener noreferrer"
             >
-              <MessageCircle className="size-4" aria-hidden="true" />
+              <MessageSquare className="size-4" aria-hidden="true" />
               Open WhatsApp Message
             </a>
           </WhatsAppButton>

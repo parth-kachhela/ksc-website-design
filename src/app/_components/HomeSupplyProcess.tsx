@@ -1,4 +1,4 @@
-import { MessageCircle, PhoneCall } from "lucide-react";
+import { MessageSquare, PhoneCall } from "lucide-react";
 
 import { SectionHeading } from "@/components/global/SectionHeading";
 import { Reveal } from "@/components/global/Reveal";
@@ -51,7 +51,7 @@ export function HomeSupplyProcess() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <MessageCircle className="size-4" aria-hidden="true" />
+                  <MessageSquare className="size-4" aria-hidden="true" />
                   Start a Bulk Inquiry
                 </a>
               </WhatsAppButton>

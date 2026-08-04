@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, MessageCircle } from "lucide-react";
+import { ArrowRight, CheckCircle2, MessageSquare } from "lucide-react";
 
 import { OutlineButton, WhatsAppButton } from "@/components/base/button";
 import { Badge } from "@/components/ui/badge";
@@ -110,7 +110,7 @@ export function SupplySection({
             <div className="mt-2 flex flex-col gap-3 sm:flex-row">
               <WhatsAppButton asChild size="lg">
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="size-4" aria-hidden="true" />
+                  <MessageSquare className="size-4" aria-hidden="true" />
                   {ctaLabel}
                 </a>
               </WhatsAppButton>

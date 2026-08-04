@@ -41,7 +41,7 @@ export const overviewCards = [
     title: "Tender Coconut Supply",
     description:
       "Tender coconut inquiries based on required quantity, location and preferred size.",
-    image: "/images/services/tender-coconut.svg",
+    image: "/images/services/tender-coconut.png",
     imageAlt:
       "Tender coconuts available for type and size-based bulk supply inquiries",
   },
@@ -50,15 +50,15 @@ export const overviewCards = [
     title: "Green Coconut Supply",
     description:
       "Green coconut requirements for retailers, distributors and other business buyers.",
-    image: "/images/services/green-coconut.svg",
+    image: "/images/services/green-coconut.png",
     imageAlt: "Green coconuts supplied to retail and wholesale business buyers",
   },
   {
     id: "size-graded-coconut",
     title: "Size-Graded Coconut Supply",
     description:
-      "Discuss Big–Small, Small–Big, Medium Size and Small Size coconut requirements.",
-    image: "/images/services/size-graded-coconut.svg",
+      "Discuss Big, Big-small, Medium Size and Small Size coconut requirements.",
+    image: "/images/services/size-graded-coconut.png",
     imageAlt: "Different coconut size grades prepared for buyer requirements",
   },
   {
@@ -66,7 +66,7 @@ export const overviewCards = [
     title: "Bulk and Recurring Orders",
     description:
       "One-time and recurring coconut supply inquiries based on quantity and destination.",
-    image: "/images/services/bulk-coconut.svg",
+    image: "/images/services/bulk-coconut.png",
     imageAlt:
       "Bulk coconut order prepared according to type size and quantity",
   },
@@ -80,7 +80,7 @@ export const coconutTypes: CoconutTypeOption[] = [
       "Tender coconut requirements for refreshing coconut water and business supply.",
     description:
       "Buyers can inquire for tender coconuts by sharing their expected quantity, preferred size requirement, delivery location and supply frequency. Final type and size availability must be confirmed directly with the supplier.",
-    availableGrades: ["Big–Small", "Small–Big", "Medium Size", "Small Size"],
+    availableGrades: ["Big", "Big-small", "Medium Size", "Small Size"],
     buyerExamples: [
       "Retail coconut sellers",
       "Fruit shops",
@@ -99,7 +99,7 @@ export const coconutTypes: CoconutTypeOption[] = [
       "Green coconut requirements for retailers, wholesalers and distributors.",
     description:
       "Green coconut inquiries can be discussed according to the buyer’s preferred grade, total quantity, destination and requirement frequency. Availability depends on current supply conditions.",
-    availableGrades: ["Big–Small", "Small–Big", "Medium Size", "Small Size"],
+    availableGrades: ["Big", "Big-small", "Medium Size", "Small Size"],
     buyerExamples: [
       "Fruit retailers",
       "Wholesale buyers",
@@ -117,11 +117,11 @@ export const coconutTypes: CoconutTypeOption[] = [
 export const coconutSizeGrades: CoconutSizeGrade[] = [
   {
     id: "big-small",
-    name: "Big–Small",
+    name: "Big Size",
     shortDescription:
-      "A size-based coconut requirement using the Big–Small commercial category.",
+      "A size-based coconut requirement using the Big commercial category.",
     description:
-      "Buyers who require the Big–Small category can share their coconut type, quantity and delivery location. The supplier will confirm current grade availability before finalising the requirement.",
+      "Buyers who require the Big category can share their coconut type, quantity and delivery location. The supplier will confirm current grade availability before finalising the requirement.",
     suitableFor: [
       "Bulk coconut buyers",
       "Retail and distribution requirements",
@@ -129,17 +129,17 @@ export const coconutSizeGrades: CoconutSizeGrade[] = [
     ],
     availabilityNote:
       "Exact availability depends on coconut type, quantity and current stock.",
-    image: "/images/services/big-small-coconut.svg",
-    imageAlt: "Big–Small coconut size requirement for bulk supply",
-    whatsappValue: "Big–Small",
+    image: "/images/services/big.png",
+    imageAlt: "Big coconut size requirement for bulk supply",
+    whatsappValue: "Big",
   },
   {
-    id: "small-big",
-    name: "Small–Big",
+    id: "big-small-mix",
+    name: "Big-small",
     shortDescription:
-      "A size-based coconut requirement using the Small–Big commercial category.",
+      "A size-based coconut requirement using the Big-small commercial category.",
     description:
-      "The Small–Big category can be discussed for buyers who require this particular size combination. Quantity, coconut type and destination should be shared during the inquiry.",
+      "The Big-small category can be discussed for buyers who require this particular size combination. Quantity, coconut type and destination should be shared during the inquiry.",
     suitableFor: [
       "Wholesale buyers",
       "Retail supply requirements",
@@ -147,9 +147,9 @@ export const coconutSizeGrades: CoconutSizeGrade[] = [
     ],
     availabilityNote:
       "The supplier confirms the available size combination before order confirmation.",
-    image: "/images/services/small-big-coconut.svg",
-    imageAlt: "Small–Big coconut size category for wholesale buyers",
-    whatsappValue: "Small–Big",
+    image: "/images/services/big-small.png",
+    imageAlt: "Big-small coconut size category for wholesale buyers",
+    whatsappValue: "Big-small",
   },
   {
     id: "medium-size",
@@ -165,7 +165,7 @@ export const coconutSizeGrades: CoconutSizeGrade[] = [
     ],
     availabilityNote:
       "Medium-size availability must be confirmed for each requirement.",
-    image: "/images/services/medium-coconut.svg",
+    image: "/images/services/medium.png",
     imageAlt: "Medium-size coconuts arranged for business supply",
     whatsappValue: "Medium Size",
   },
@@ -183,7 +183,7 @@ export const coconutSizeGrades: CoconutSizeGrade[] = [
     ],
     availabilityNote:
       "Small-size availability depends on current stock and requirement quantity.",
-    image: "/images/services/small-coconut.svg",
+    image: "/images/services/small.png",
     imageAlt: "Small-size coconuts prepared for bulk business requirements",
     whatsappValue: "Small Size",
   },
@@ -207,12 +207,12 @@ export const supplyServices: SupplyService[] = [
       "Kankeshwari Coconut Supplier accepts fresh tender coconut inquiries from buyers looking for dependable bulk availability. Buyers can select their preferred size grade and discuss expected quantity directly with the supplier.",
     points: [
       "Tender coconut type selection",
-      "Big–Small, Small–Big, Medium or Small size inquiry",
+      "Big, Big-small, Medium or Small size inquiry",
       "Required quantity confirmation",
       "Delivery location discussion",
       "One-time or recurring supply requirement",
     ],
-    image: "/images/services/tender-coconut.svg",
+    image: "/images/services/tender-coconut.png",
     imageAlt: "Tender coconuts available for type and size-based bulk supply inquiries",
     ctaLabel: "Inquire for Tender Coconut",
     inquiryType: "Tender Coconut Supply",
@@ -230,7 +230,7 @@ export const supplyServices: SupplyService[] = [
       "Direct WhatsApp communication",
       "Current availability confirmation",
     ],
-    image: "/images/services/green-coconut.svg",
+    image: "/images/services/green-coconut.png",
     imageAlt: "Green coconuts supplied to retail and wholesale business buyers",
     ctaLabel: "Inquire for Green Coconut",
     inquiryType: "Green Coconut Supply",
@@ -249,31 +249,11 @@ export const supplyServices: SupplyService[] = [
       "Mention one-time or recurring frequency",
       "Confirm availability before finalisation",
     ],
-    image: "/images/services/bulk-coconut.svg",
+    image: "/images/services/bulk.png",
     imageAlt:
       "Bulk coconut order prepared according to type size and quantity",
     ctaLabel: "Request Bulk Supply",
     inquiryType: "Bulk Coconut Order",
-  },
-  {
-    id: "size-based-supply",
-    eyebrow: "Size-Based Supply",
-    title: "Coconut Supply According to Size Requirement",
-    description:
-      "Buyers can discuss coconut supply according to their preferred commercial size category, including Big–Small, Small–Big, Medium Size and Small Size. The selected grade can be combined with tender or green coconut requirements.",
-    points: [
-      "Big–Small coconut requirement",
-      "Small–Big coconut requirement",
-      "Medium-size coconut requirement",
-      "Small-size coconut requirement",
-      "Type and size combination inquiry",
-      "Availability confirmed directly",
-    ],
-    image: "/images/services/size-graded-coconut.svg",
-    imageAlt: "Coconuts grouped according to different size requirements",
-    ctaLabel: "Discuss Size-Based Supply",
-    inquiryType: "Size-Graded Coconut Supply",
-    supportedGrades: ["Big–Small", "Small–Big", "Medium Size", "Small Size"],
   },
 ];
 
@@ -336,10 +316,10 @@ export const startupSection = {
   title: "Coconut Supply Support for New Business Requirements",
   paragraphs: [
     "Starting a coconut selling business requires clarity about coconut type, preferred size category, expected quantity and target customers. Kankeshwari Coconut Supplier welcomes inquiries from new business owners who want to discuss tender coconut, green coconut and size-based sourcing requirements.",
-    "Before contacting the supplier, new business owners should estimate their expected quantity and decide whether they need Big–Small, Small–Big, Medium Size, Small Size or a mixed requirement. Buyers who are unsure can explain their business model and request guidance based on current availability.",
+    "Before contacting the supplier, new business owners should estimate their expected quantity and decide whether they need Big, Big-small, Medium Size, Small Size or a mixed requirement. Buyers who are unsure can explain their business model and request guidance based on current availability.",
     "Share your city, delivery location, preferred coconut type, required size grade and expected supply frequency. The supplier can then discuss available sourcing options without making an unverified stock or delivery commitment.",
   ],
-  ctaLabel: "Discuss Coconut Sourcing for Your Startup",
+  ctaLabel: "Build Your Startup",
   checklistTitle: "Key Details to Share",
   checklist: [
     "Tender or green coconut requirement",
@@ -384,7 +364,7 @@ export const orderProcess: ProcessStep[] = [
   {
     title: "Select Size Requirement",
     description:
-      "Choose Big–Small, Small–Big, Medium Size, Small Size or a mixed requirement.",
+      "Choose Big, Big-small, Medium Size, Small Size or a mixed requirement.",
     icon: Package,
   },
   {
@@ -416,7 +396,7 @@ export const servicesFaqs: FaqItem[] = [
   {
     question: "What coconut sizes can I inquire about?",
     answer:
-      "Buyers can discuss Big–Small, Small–Big, Medium Size and Small Size coconut requirements. Final size availability depends on coconut type, quantity and current stock.",
+      "Buyers can discuss Big, Big-small, Medium Size and Small Size coconut requirements. Final size availability depends on coconut type, quantity and current stock.",
   },
   {
     question: "Can I select both coconut type and size?",
@@ -424,7 +404,7 @@ export const servicesFaqs: FaqItem[] = [
       "Yes. Buyers can share whether they need tender or green coconut along with their preferred size grade.",
   },
   {
-    question: "What do Big–Small and Small–Big mean?",
+    question: "What do Big and Big-small mean?",
     answer:
       "These are commercial size requirement categories used while discussing coconut supply. Buyers should confirm the expected grade directly with the supplier because actual coconut appearance may vary.",
   },

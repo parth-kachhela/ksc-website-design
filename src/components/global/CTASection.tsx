@@ -5,7 +5,6 @@ import { GlobalCTA } from "@/components/global/GlobalCTA";
 import { cn } from "@/lib/utils";
 
 type CTASectionBg = "dark" | "deep";
-type CTACallVariant = "secondary" | "outline";
 
 interface CTASectionProps {
   eyebrow?: string;
@@ -13,9 +12,6 @@ interface CTASectionProps {
   description: string;
   footer?: string;
   bg?: CTASectionBg;
-  whatsappLabel?: string;
-  callLabel?: string;
-  callVariant?: CTACallVariant;
   className?: string;
 }
 
@@ -28,11 +24,7 @@ export function CTASection({
   eyebrow,
   title,
   description,
-  footer,
   bg = "dark",
-  whatsappLabel = "Chat on WhatsApp",
-  callLabel = "Call Supplier",
-  callVariant = "secondary",
   className,
 }: CTASectionProps) {
   const titleId = useId();
@@ -65,12 +57,7 @@ export function CTASection({
           </p>
         </Reveal>
         <Reveal delay={0.14}>
-          <GlobalCTA
-            whatsappLabel={whatsappLabel}
-            callLabel={callLabel}
-            callVariant={callVariant}
-            align="center"
-          />
+          <GlobalCTA align="center" />
         </Reveal>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { ArrowUpRight, Phone, Mail, MapPin, MessageCircle } from "lucide-react";
+import { ArrowUpRight, Phone, Mail, MapPin, MessageSquare } from "lucide-react";
 
 import { Reveal } from "@/components/global/Reveal";
 import {
@@ -14,7 +14,7 @@ const cardIcons: Record<string, typeof Phone> = {
   Phone,
   Email: Mail,
   Address: MapPin,
-  WhatsApp: MessageCircle,
+  WhatsApp: MessageSquare,
 };
 
 export function ContactInformation() {

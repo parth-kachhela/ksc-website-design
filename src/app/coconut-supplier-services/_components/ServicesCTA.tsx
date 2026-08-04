@@ -7,8 +7,7 @@ export function ServicesCTA() {
       eyebrow={servicesCta.eyebrow}
       title={servicesCta.title}
       description={servicesCta.description}
-      whatsappLabel={servicesCta.whatsappLabel}
-      callLabel={servicesCta.callLabel}
+
     />
   );
 }

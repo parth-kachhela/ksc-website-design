@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MessageCircle } from "lucide-react";
+import { MessageSquare } from "lucide-react";
 
 import { siteConfig } from "@/lib/site-config";
 import { PrimaryButton, WhatsAppButton } from "@/components/base/button";
@@ -25,7 +25,7 @@ export default function NotFound() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <MessageCircle className="size-4" aria-hidden="true" />
+            <MessageSquare className="size-4" aria-hidden="true" />
             Contact on WhatsApp
           </a>
         </WhatsAppButton>

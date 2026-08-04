@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { MessageCircle, RotateCcw } from "lucide-react";
+import { MessageSquare, RotateCcw } from "lucide-react";
 
 import { siteConfig } from "@/lib/site-config";
 import {
@@ -43,7 +43,7 @@ export default function Error({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <MessageCircle className="size-4" aria-hidden="true" />
+            <MessageSquare className="size-4" aria-hidden="true" />
             WhatsApp Support
           </a>
         </WhatsAppButton>

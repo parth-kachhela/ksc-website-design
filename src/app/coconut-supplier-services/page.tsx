@@ -69,7 +69,6 @@ export default function ServicesPage() {
       </div>
       <ServicesHero />
       <ServiceOverview />
-      <CoconutTypeOptions />
       <CoconutSizeGrades />
       <SupplyServices />
       <BuyerTypes />

@@ -1,4 +1,4 @@
-import { HelpCircle, Phone, MessageCircle } from "lucide-react";
+import { HelpCircle, Phone, MessageSquare } from "lucide-react";
 
 import { siteConfig } from "@/lib/site-config";
 import { callHref } from "@/lib/navigation";
@@ -22,7 +22,7 @@ export function ContactSupport() {
           </Reveal>
           <Reveal delay={0.06}>
             <FeatureCard
-              icon={MessageCircle}
+              icon={MessageSquare}
               title="Prefer to Talk Directly?"
               description={`Call or WhatsApp ${siteConfig.phoneDisplay} for a direct discussion about coconut type, quantity and location.`}
               cardVariant="pale"

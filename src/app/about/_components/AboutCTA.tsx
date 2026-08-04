@@ -9,8 +9,6 @@ export function AboutCTA() {
       title={aboutCta.title}
       description={aboutCta.description}
       footer={aboutCta.footer}
-      whatsappLabel="WhatsApp Inquiry"
-      callLabel="Call Supplier"
     />
   );
 }

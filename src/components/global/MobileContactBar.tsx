@@ -1,6 +1,6 @@
 "use client";
 
-import { MessageCircle, Phone } from "lucide-react";
+import { MessageSquare, Phone } from "lucide-react";
 
 import { siteConfig } from "@/lib/site-config";
 import { callHref } from "@/lib/navigation";
@@ -25,7 +25,7 @@ export function MobileContactBar() {
         rel="noopener noreferrer"
         className="flex min-h-12 items-center justify-center gap-2 bg-[#25D366] py-3 text-sm font-semibold text-white transition-colors active:bg-[#1fb257]"
       >
-        <MessageCircle className="size-4" aria-hidden="true" />
+        <MessageSquare className="size-4" aria-hidden="true" />
         WhatsApp
       </a>
     </div>
