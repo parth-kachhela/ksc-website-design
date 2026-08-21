@@ -13,8 +13,8 @@ export function BuyerTypes() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
           <SectionHeading
-            eyebrow="Who We Can Speak With"
-            title="Buyers We Can Speak With"
+            eyebrow="Who We Supply"
+            title="Wholesale Buyers We Serve"
             description="KCS welcomes inquiries from a range of buyers. Share your requirement and the supplier will confirm what is currently available."
             align="center"
           />

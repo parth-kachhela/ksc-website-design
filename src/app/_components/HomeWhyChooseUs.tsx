@@ -14,7 +14,8 @@ export function HomeWhyChooseUs() {
         <Reveal>
           <SectionHeading
             eyebrow="Why KCS"
-            title="Why Buyers Choose Kankeshwari Coconut Supplier"
+            title="Why Choose Us?"
+            description="We work with local farmers and wholesale buyers to create a simple and dependable supply chain — from the farm directly to the wholesale market."
             align="center"
           />
         </Reveal>

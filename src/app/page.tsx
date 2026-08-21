@@ -11,7 +11,7 @@ import {
   HomeGardenStory,
   HomeSupplyProcess,
   HomeServiceAreas,
-  HomeStartupCTA,
+  HomeWhoWeSupply,
   HomeReviews,
   HomeFAQ,
   HomeFinalCTA,
@@ -19,9 +19,10 @@ import {
 import { faqs } from "@/app/_components/home.data";
 
 export const metadata: Metadata = buildSeoMetadata({
-  title: "Kankeshwari Coconut Supplier | Coconut Supplier in Gadu, Chorvad, Gujarat & All Over India",
+  title:
+    "Kankeshwari Coconut Supplier | Wholesale Tender Coconut Supplier in Gadu, Junagadh, Gujarat",
   description:
-    "Contact Kankeshwari Coconut Supplier for tender and bulk coconut supply in Gadu, Chorvad, Junagadh, Gujarat and all over India.",
+    "Wholesale tender coconut supplier in Gadu, District Junagadh, Gujarat. Fresh coconuts sourced directly from farms in Gadu and coastal areas near Somnath for bulk buyers.",
   path: "/",
 });
 
@@ -36,7 +37,7 @@ export default function HomePage() {
       <HomeGardenStory />
       <HomeSupplyProcess />
       <HomeServiceAreas />
-      <HomeStartupCTA />
+      <HomeWhoWeSupply />
       <HomeReviews />
       <HomeFAQ />
       <HomeFinalCTA />

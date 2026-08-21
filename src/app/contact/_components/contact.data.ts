@@ -6,18 +6,18 @@ import type {
 } from "@/types/contact";
 
 export const contactHero = {
-  eyebrow: "Coconut Type & Size Inquiry",
+  eyebrow: "Wholesale Inquiry",
   title: "Contact Kankeshwari Coconut Supplier",
   description:
-    "Share your coconut type, preferred size grade, required quantity and delivery location. Your inquiry will be prepared as a WhatsApp message so you only need to review it and press Send.",
+    "Looking for a reliable wholesale tender coconut supplier? Share your preferred size grade, required bulk quantity and delivery location. Your inquiry will be prepared as a WhatsApp message so you only need to review it and press Send.",
 };
 
 export const inquiryTypes: InquiryType[] = [
   "Tender Coconut Supply",
   "Bulk Coconut Order",
   "Size-Graded Coconut Supply",
-  "Recurring Business Supply",
-  "Coconut Business Startup",
+  "Recurring Wholesale Supply",
+  "Wholesale Business Inquiry",
   "General Inquiry",
 ];
 
@@ -83,8 +83,8 @@ export const directionsUrl =
 
 export const contactCta = {
   eyebrow: "Get in Touch",
-  title: "Ready to Discuss Your Coconut Requirement?",
+  title: "Ready to Discuss Your Bulk Requirement?",
   description:
-    "Share your coconut type, quantity and delivery location. The supplier will respond with available supply details.",
+    "Contact Kankeshwari Coconut Supplier for bulk requirements and wholesale enquiries. Share your preferred size, quantity and delivery location.",
   footer: "+91 63522 95050 · Gadu, Junagadh, Gujarat - 362255",
 };

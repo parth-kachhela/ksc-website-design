@@ -27,7 +27,7 @@ export function Footer() {
               {siteConfig.description}
             </p>
             <p className="max-w-xs text-sm font-medium text-white">
-              Quality coconut supply from Gadu, Junagadh, Gujarat.
+              Fresh tender coconuts, direct from farms in Gadu, Junagadh, Gujarat.
             </p>
           </div>
 

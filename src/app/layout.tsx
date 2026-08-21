@@ -16,20 +16,21 @@ const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
   title: {
-    default: `${siteConfig.name} | Coconut Supplier in Gadu & Chorvad`,
+    default: `${siteConfig.name} | Wholesale Tender Coconut Supplier in Gadu, Gujarat`,
     template: `%s`,
   },
   description: siteConfig.description,
   applicationName: siteConfig.name,
   keywords: [
+    "wholesale tender coconut supplier",
     "coconut supplier in Gadu",
-    "coconut supplier in Chorvad",
     "coconut supplier in Junagadh",
     "coconut supplier in Gujarat",
+    "farm-direct coconut supplier",
     "bulk coconut supplier",
     "tender coconut supplier",
     "green coconut supplier",
-    "coconut business startup",
+    "coconut supplier near Somnath",
   ],
   authors: [{ name: siteConfig.name, url: siteConfig.domain }],
   creator: siteConfig.name,
@@ -51,7 +52,7 @@ export const metadata: Metadata = {
     type: "website",
     url: siteConfig.domain,
     siteName: siteConfig.name,
-    title: `${siteConfig.name} | Coconut Supplier in Gadu & Chorvad`,
+    title: `${siteConfig.name} | Wholesale Tender Coconut Supplier in Gadu, Gujarat`,
     description: siteConfig.description,
     images: [
       {
@@ -65,7 +66,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} | Coconut Supplier in Gadu & Chorvad`,
+    title: `${siteConfig.name} | Wholesale Tender Coconut Supplier in Gadu, Gujarat`,
     description: siteConfig.description,
     images: [`${siteConfig.domain}/images/seo/kcs-og-image.jpg`],
   },

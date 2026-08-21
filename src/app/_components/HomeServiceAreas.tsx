@@ -62,9 +62,8 @@ export function HomeServiceAreas() {
                 {siteConfig.addressFull}
               </p>
               <p className="mt-4 text-sm leading-6 text-muted-foreground">
-                Buyers interested in tender coconut supply across Gujarat and all over India can
-                contact the supplier directly to confirm quantity and delivery
-                location.
+                Wholesale buyers can contact the supplier directly to confirm
+                quantity, coconut size and delivery location.
               </p>
               <LinkButton asChild className="px-0 text-secondary">
                 <Link href="https://maps.app.goo.gl/1Cyg2YJoCXqCZ46g6">

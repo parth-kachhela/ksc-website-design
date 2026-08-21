@@ -14,8 +14,8 @@ export function HomeSupplyProcess() {
         <Reveal>
           <SectionHeading
             eyebrow="Simple Process"
-            title="How to Place a Coconut Supply Inquiry"
-            description="Share your requirement directly. The inquiry process is straightforward and handled over a call or WhatsApp."
+            title="From Farm to Wholesale Market"
+            description="We believe in keeping the process simple. Share your wholesale requirement directly — the inquiry is handled over a call or WhatsApp."
             align="center"
           />
         </Reveal>

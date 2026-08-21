@@ -12,9 +12,10 @@ import {
 } from "@/app/contact/_components";
 
 export const metadata: Metadata = buildSeoMetadata({
-  title: "Contact Kankeshwari Coconut Supplier | Bulk Coconut Inquiry All Over India",
+  title:
+    "Contact Kankeshwari Coconut Supplier | Wholesale Tender Coconut Inquiries",
   description:
-    "Call or WhatsApp Kankeshwari Coconut Supplier for bulk tender coconut requirements in Gadu, Chorvad, Junagadh, Gujarat and all over India.",
+    "Call or WhatsApp Kankeshwari Coconut Supplier in Gadu, District Junagadh, Gujarat for bulk tender coconut requirements and wholesale enquiries.",
   path: "/contact",
 });
 

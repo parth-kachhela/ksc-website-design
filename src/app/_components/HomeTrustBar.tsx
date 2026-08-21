@@ -1,13 +1,13 @@
-import { Star, MessageSquare, MapPin, Package, PhoneCall } from "lucide-react";
+import { Leaf, Star, Package, Handshake } from "lucide-react";
 
 import { trustItems } from "@/app/_components/home.data";
 
-const icons = [Star, MessageSquare, MapPin, Package, PhoneCall];
+const icons = [Leaf, Star, Package, Handshake];
 
 export function HomeTrustBar() {
   return (
     <section className="border-y border-border bg-white">
-      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 py-8 sm:px-6 md:grid-cols-5 lg:px-8">
+      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 py-8 sm:px-6 md:grid-cols-4 lg:px-8">
         {trustItems.map((item, index) => {
           const Icon = icons[index] ?? Star;
           return (

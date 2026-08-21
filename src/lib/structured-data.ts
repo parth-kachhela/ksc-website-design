@@ -69,7 +69,7 @@ export function serviceSchema() {
     provider: { "@type": "LocalBusiness", name: siteConfig.name, url: baseUrl },
     areaServed: ["Gadu", "Chorvad", "Junagadh", "Gujarat", "India"],
     description:
-      "Tender coconut and size-graded coconut supply inquiries based on coconut type, preferred size grade, quantity and supply frequency for buyers in Gadu, Chorvad, Junagadh, Gujarat and all over India.",
+      "Wholesale tender coconut and size-graded coconut supply based on preferred size grade, bulk quantity, delivery destination and supply frequency. Sourced directly from farms in Gadu and the coastal areas near Somnath, Junagadh, Gujarat.",
   };
 }
 

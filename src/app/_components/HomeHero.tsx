@@ -23,15 +23,9 @@ export function HomeHero() {
 
       <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-10 lg:px-8 lg:py-24">
         <div className="flex flex-col items-start gap-6">
-          <Badge
-            variant="secondary"
-            className="rounded-full px-3 py-1 text-xs font-semibold tracking-wide uppercase"
-          >
-            {hero.eyebrow}
-          </Badge>
           <h1
             id="home-hero-title"
-            className="max-w-xl text-4xl leading-tight font-semibold tracking-tight text-foreground sm:text-5xl"
+            className="max-w-lg text-4xl leading-tight font-semibold tracking-tight text-foreground sm:text-5xl"
           >
             {hero.title}
           </h1>

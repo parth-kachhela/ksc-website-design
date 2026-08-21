@@ -14,9 +14,10 @@ import {
 } from "@/app/about/_components";
 
 export const metadata: Metadata = buildSeoMetadata({
-  title: "About Kankeshwari Coconut Supplier | Trusted Supplier in Gujarat & All Over India",
+  title:
+    "About Kankeshwari Coconut Supplier | Wholesale Tender Coconut Supplier in Gadu, Gujarat",
   description:
-    "Learn about Kankeshwari Coconut Supplier, a quality-focused coconut supplier based in Gadu near Chorvad, Junagadh, Gujarat supplying tender coconuts across India.",
+    "Learn about Kankeshwari Coconut Supplier, a wholesale-only tender coconut supplier based in Gadu, District Junagadh, Gujarat, sourcing fresh coconuts directly from farms near Somnath.",
   path: "/about",
 });
 

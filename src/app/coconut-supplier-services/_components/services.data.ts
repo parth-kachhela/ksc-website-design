@@ -1,8 +1,6 @@
 import {
   Store,
   ShoppingCart,
-  UtensilsCrossed,
-  PartyPopper,
   Briefcase,
   Users,
   Package,
@@ -20,17 +18,17 @@ import type {
 } from "@/types/service";
 
 export const servicesHero = {
-  eyebrow: "Tender, Size-Graded and Bulk Coconut Supply",
-  title: "Trusted Coconut Supplier in Gujarat for Supply Across India",
+  eyebrow: "Wholesale Tender Coconut Supply from Gadu, Gujarat",
+  title: "Fresh Tender Coconuts. Direct from the Farms.",
   description:
-    "Kankeshwari Coconut Supplier provides quality tender coconuts from the Somnath region of Gujarat to retailers, wholesalers, distributors and commercial buyers across India. Share your preferred size, required quantity, delivery destination and supply frequency directly through WhatsApp or phone.",
+    "Kankeshwari Coconut Supplier supplies fresh tender coconuts sourced directly from farms in Gadu and the surrounding coastal areas near Somnath. Share your required quantity, preferred size, delivery destination and supply frequency directly through WhatsApp or phone.",
   primaryCta: "Share Coconut Requirement",
   secondaryCta: "Call Supplier",
   trustLabels: [
-    "Tender Coconut Supply",
+    "Farm-Direct Sourcing",
     "Multiple Size Categories",
-    "Bulk and Recurring Orders",
-    "Pan-India Supply Support",
+    "Bulk Availability",
+    "Wholesale Only",
   ],
 };
 
@@ -39,28 +37,28 @@ export const overviewCards = [
     id: "tender-coconut",
     title: "Tender Coconut Supply",
     description:
-      "Quality tender coconut supply based on your required quantity, preferred size, business requirement and delivery destination.",
+      "Fresh tender coconuts supplied in bulk quantities based on your required quantity, preferred size and business requirement.",
     image: "/images/services/tender-coconut.avif",
     imageAlt:
-      "Fresh tender coconuts prepared for bulk supply from Gujarat across India",
+      "Fresh tender coconuts prepared for wholesale supply from farms near Somnath, Gujarat",
   },
   {
     id: "size-graded-coconut",
     title: "Size-Graded Coconut Supply",
     description:
-      "Discuss Big, Big-small, Medium Size and Small Size coconut requirements according to your target market.",
+      "Discuss Big, Big-small, Medium Size and Small Size coconut requirements according to your market and customer preference.",
     image: "/images/services/size-graded-coconut.avif",
     imageAlt:
-      "Different tender coconut size grades prepared for commercial buyers",
+      "Different tender coconut size grades prepared for wholesale buyers",
   },
   {
     id: "bulk-coconut-orders",
     title: "Bulk and Recurring Orders",
     description:
-      "One-time, scheduled and recurring tender coconut supply for buyers located across India.",
+      "One-time, scheduled and recurring tender coconut supply supported by consistent farm-direct sourcing.",
     image: "/images/services/bulk-coconut.avif",
     imageAlt:
-      "Bulk tender coconut order prepared for transportation across India",
+      "Bulk tender coconut order prepared for wholesale transportation",
   },
 ];
 
@@ -69,21 +67,21 @@ export const coconutTypes: CoconutTypeOption[] = [
     id: "tender-coconut",
     name: "Tender Coconut",
     shortDescription:
-      "Quality tender coconuts for retailers, distributors, wholesalers and other commercial buyers.",
+      "Fresh tender coconuts for wholesalers, traders, distributors and other bulk buyers.",
     description:
       "Buyers can inquire about tender coconut supply by sharing their required quantity, preferred size category, delivery destination and expected supply frequency. Current availability, dispatch planning and transportation details are confirmed directly before the order is finalised.",
     availableGrades: ["Big", "Big-small", "Medium Size", "Small Size"],
     buyerExamples: [
-      "Retail coconut sellers",
-      "Fruit shops and vendors",
-      "Hotels, cafés and refreshment businesses",
-      "Events and functions",
-      "Wholesalers and distributors",
-      "Recurring commercial buyers",
+      "Wholesalers",
+      "Traders",
+      "Distributors",
+      "Fruit markets",
+      "Large-volume buyers",
+      "Businesses requiring regular bulk supply",
     ],
     image: "/images/services/tender-coconut.svg",
     imageAlt:
-      "Tender coconuts arranged for size-based and quantity-based supply",
+      "Tender coconuts arranged for size-based and quantity-based wholesale supply",
     whatsappValue: "Tender Coconut",
   },
 ];
@@ -93,14 +91,14 @@ export const coconutSizeGrades: CoconutSizeGrade[] = [
     id: "big-small",
     name: "Big Size",
     shortDescription:
-      "Large tender coconuts for buyers looking for a prominent commercial size category.",
+      "Large tender coconuts for bulk buyers looking for a prominent commercial size category.",
     description:
       "Buyers requiring Big Size tender coconuts can share their quantity, delivery destination and expected supply schedule. Current size availability is confirmed before finalising the order.",
     suitableFor: [
       "Bulk coconut buyers",
       "Wholesale and distribution requirements",
-      "Retailers requesting larger tender coconuts",
-      "Commercial buyers with size-specific requirements",
+      "Fruit markets requesting larger tender coconuts",
+      "Buyers with size-specific requirements",
     ],
     availabilityNote:
       "Exact availability depends on required quantity, destination, current stock and season.",
@@ -112,20 +110,20 @@ export const coconutSizeGrades: CoconutSizeGrade[] = [
     id: "big-small-mix",
     name: "Big-small",
     shortDescription:
-      "A practical commercial size category suitable for different retail and wholesale requirements.",
+      "A practical commercial size category suitable for different wholesale requirements.",
     description:
       "The Big-small category can be discussed by buyers looking for a balanced tender coconut size. Share the required quantity, delivery destination and supply frequency for availability confirmation.",
     suitableFor: [
       "Wholesale coconut buyers",
-      "Retail supply requirements",
-      "Fruit shops and coconut sellers",
+      "Trading and distribution requirements",
+      "Fruit markets and resellers",
       "Recurring size-specific orders",
     ],
     availabilityNote:
       "The available size combination is confirmed directly before order finalisation.",
     image: "/images/services/big-small.avif",
     imageAlt:
-      "Big-small tender coconut size category for wholesale and retail buyers",
+      "Big-small tender coconut size category for wholesale buyers",
     whatsappValue: "Big-small",
   },
   {
@@ -136,36 +134,36 @@ export const coconutSizeGrades: CoconutSizeGrade[] = [
     description:
       "Buyers looking for Medium Size tender coconuts can share their required quantity, delivery destination, expected date and supply frequency directly with the supplier.",
     suitableFor: [
-      "Retail coconut sellers",
-      "Hotels, cafés and refreshment businesses",
-      "Events and commercial functions",
-      "Recurring business supply",
+      "Wholesalers and traders",
+      "Distributors supplying local markets",
+      "Fruit markets with steady demand",
+      "Recurring bulk supply",
     ],
     availabilityNote:
       "Medium Size availability is confirmed separately for every requirement.",
     image: "/images/services/medium.avif",
     imageAlt:
-      "Medium Size tender coconuts arranged for commercial supply",
+      "Medium Size tender coconuts arranged for wholesale supply",
     whatsappValue: "Medium Size",
   },
   {
     id: "small-size",
     name: "Small Size",
     shortDescription:
-      "Compact tender coconut size requirements for retail, resale and bulk commercial use.",
+      "Compact tender coconut size requirements for resale and bulk commercial use.",
     description:
       "Small Size tender coconut supply can be discussed according to total quantity, delivery destination, expected date and one-time or recurring supply requirement.",
     suitableFor: [
       "Bulk order requirements",
-      "Retail and resale businesses",
-      "Events and refreshment requirements",
+      "Trading and resale businesses",
+      "Fruit markets with compact-size demand",
       "Buyers requesting a compact commercial grade",
     ],
     availabilityNote:
       "Small Size availability depends on current stock, season and required quantity.",
     image: "/images/services/small.avif",
     imageAlt:
-      "Small Size tender coconuts prepared for business supply",
+      "Small Size tender coconuts prepared for wholesale supply",
     whatsappValue: "Small Size",
   },
 ];
@@ -183,11 +181,11 @@ export const supplyServices: SupplyService[] = [
   {
     id: "tender-coconut",
     eyebrow: "Tender Coconut",
-    title: "Tender Coconut Supply Across India",
+    title: "Farm-Direct Tender Coconut Supply",
     description:
-      "Kankeshwari Coconut Supplier provides quality tender coconuts from Gujarat for retailers, wholesalers, distributors, fruit sellers, hospitality businesses and other commercial buyers across India. Buyers can select their preferred size category and discuss bulk supply requirements directly.",
+      "Kankeshwari Coconut Supplier provides fresh tender coconuts sourced directly from farms in Gadu and the surrounding coastal areas near Somnath. Wholesale buyers can select their preferred size category and discuss bulk supply requirements directly.",
     points: [
-      "Quality tender coconut supply",
+      "Fresh, farm-sourced tender coconuts",
       "Big, Big-small, Medium or Small size inquiry",
       "Required quantity confirmation",
       "Delivery city and state discussion",
@@ -196,7 +194,7 @@ export const supplyServices: SupplyService[] = [
     ],
     image: "/images/services/tender-coconut.avif",
     imageAlt:
-      "Tender coconuts supplied from Gujarat to commercial buyers across India",
+      "Tender coconuts supplied from farms in Gadu to wholesale buyers",
     ctaLabel: "Inquire for Tender Coconut",
     inquiryType: "Tender Coconut Supply",
   },
@@ -205,7 +203,7 @@ export const supplyServices: SupplyService[] = [
     eyebrow: "Bulk Orders",
     title: "Bulk Tender Coconut Orders",
     description:
-      "For larger requirements, buyers can share their preferred tender coconut size, required quantity, delivery destination and expected date. Kankeshwari Coconut Supplier supports one-time, scheduled and recurring bulk supply inquiries across India.",
+      "For larger requirements, buyers can share their preferred tender coconut size, required quantity, delivery destination and expected date. Kankeshwari Coconut Supplier supports one-time, scheduled and recurring bulk supply inquiries.",
     points: [
       "Choose the preferred tender coconut size",
       "Share the required quantity",
@@ -216,7 +214,7 @@ export const supplyServices: SupplyService[] = [
     ],
     image: "/images/services/bulk.avif",
     imageAlt:
-      "Bulk tender coconut order prepared for pan-India supply",
+      "Bulk tender coconut order prepared for wholesale supply",
     ctaLabel: "Request Bulk Supply",
     inquiryType: "Bulk Tender Coconut Order",
   },
@@ -227,66 +225,54 @@ export const supplyDisclaimer =
 
 export const buyerTypes: BuyerType[] = [
   {
-    title: "Retail Coconut Sellers",
+    title: "Wholesalers",
     description:
-      "Retail sellers looking for quality tender coconuts for local customers.",
-    icon: Store,
-  },
-  {
-    title: "Fruit Shops and Vendors",
-    description:
-      "Fruit retailers and vendors requiring tender coconut supply according to their sales volume.",
-    icon: ShoppingCart,
-  },
-  {
-    title: "Coconut Distributors",
-    description:
-      "Distributors managing tender coconut supply for multiple retail locations and business customers.",
-    icon: Package,
-  },
-  {
-    title: "Wholesale Buyers",
-    description:
-      "Wholesale buyers placing larger, scheduled or recurring tender coconut orders.",
+      "Wholesale buyers looking for fresh, quality tender coconuts in bulk quantities.",
     icon: ShoppingBag,
   },
   {
-    title: "Hotels, Cafés and Food Businesses",
+    title: "Traders",
     description:
-      "Hospitality and food businesses requiring tender coconuts for regular customer service.",
-    icon: UtensilsCrossed,
+      "Coconut traders requiring dependable farm-direct sourcing for their trading requirements.",
+    icon: Store,
   },
   {
-    title: "Events and Functions",
+    title: "Distributors",
     description:
-      "Event organisers requiring tender coconuts for weddings, functions, gatherings and refreshment arrangements.",
-    icon: PartyPopper,
+      "Distributors managing tender coconut supply for multiple markets and business customers.",
+    icon: Package,
   },
   {
-    title: "New Coconut Business Owners",
+    title: "Fruit Markets",
     description:
-      "Entrepreneurs planning to start a tender coconut retail, wholesale or distribution business.",
-    icon: Briefcase,
+      "Fruit markets requiring regular tender coconut supply according to their sales volume.",
+    icon: ShoppingCart,
   },
   {
-    title: "Businesses With Recurring Requirements",
+    title: "Large-Volume Buyers",
     description:
-      "Businesses looking for dependable weekly, scheduled or recurring tender coconut supply.",
+      "Businesses placing larger, scheduled or recurring tender coconut orders.",
     icon: Users,
+  },
+  {
+    title: "Businesses With Regular Bulk Requirements",
+    description:
+      "Businesses looking for dependable weekly, scheduled or recurring wholesale supply.",
+    icon: Briefcase,
   },
 ];
 
 export const startupSection = {
-  eyebrow: "Coconut Business Startup",
-  title: "Tender Coconut Supply Support for New Businesses",
+  eyebrow: "Start Buying in Bulk",
+  title: "Planning to Buy Tender Coconuts in Bulk?",
   paragraphs: [
-    "Starting a tender coconut retail, wholesale or distribution business requires a dependable sourcing connection. Kankeshwari Coconut Supplier welcomes inquiries from new business owners looking for a trusted coconut supplier in Gujarat with supply support across India.",
+    "A reliable sourcing connection is important for any business buying tender coconuts in bulk. Kankeshwari Coconut Supplier welcomes inquiries from wholesalers, traders, distributors and businesses looking for a trusted farm-direct supplier in Gadu, Gujarat.",
 
-    "Before contacting the supplier, estimate your expected quantity, preferred tender coconut size and supply frequency. Available categories may include Big, Big-small, Medium Size and Small Size tender coconuts. Buyers who are uncertain about the correct category can explain their target market and business model during the inquiry.",
+    "Before contacting the supplier, estimate your expected quantity, preferred tender coconut size and supply frequency. Available categories may include Big, Big-small, Medium Size and Small Size tender coconuts. Buyers who are uncertain about the correct category can explain their market and business model during the inquiry.",
 
     "Share your city, state, delivery destination, preferred size, expected quantity and required supply schedule. Current availability, transportation options and other order details can then be discussed clearly before any commitment is made.",
   ],
-  ctaLabel: "Discuss Your Startup Requirement",
+  ctaLabel: "Discuss Your Bulk Requirement",
   checklistTitle: "Key Details to Share",
   checklist: [
     "Preferred tender coconut size",
@@ -302,29 +288,24 @@ export const startupSection = {
 
 export const locations: LocationCard[] = [
   {
-    name: "Somnath Region",
+    name: "Gadu",
     description:
-      "Kankeshwari Coconut Supplier is connected to the coconut-growing region around Somnath, Gujarat.",
+      "Kankeshwari Coconut Supplier is based in Gadu, District Junagadh, Gujarat, sourcing fresh tender coconuts directly from local farms.",
   },
   {
-    name: "Gujarat",
+    name: "Somnath Coastal Belt",
     description:
-      "Retailers, wholesalers, distributors and businesses across Gujarat can discuss their tender coconut requirements directly.",
+      "Our sourcing extends across the surrounding coastal areas near Somnath, working with local farmers and nearby growing areas.",
   },
   {
-    name: "Western India",
+    name: "Junagadh District and Gujarat",
     description:
-      "Bulk tender coconut supply inquiries are accepted from commercial buyers across western Indian states.",
+      "Wholesalers, traders, distributors and fruit markets across Junagadh district and Gujarat can discuss their tender coconut requirements directly.",
   },
   {
-    name: "North, South, East and Central India",
+    name: "Beyond Gujarat",
     description:
-      "Buyers from different regions of India can share their quantity, size requirement and delivery destination for supply planning.",
-  },
-  {
-    name: "All Over India",
-    description:
-      "Kankeshwari Coconut Supplier supplies tender coconuts from Gujarat to buyers across India, subject to quantity, availability and transportation planning.",
+      "Bulk supply inquiries from other regions can be discussed subject to quantity, availability and transportation planning.",
   },
 ];
 
@@ -338,7 +319,7 @@ export const orderProcess: ProcessStep[] = [
   {
     title: "Share Required Quantity",
     description:
-      "Mention the total quantity required for your retail, wholesale, event or commercial requirement.",
+      "Mention the total bulk quantity required for your wholesale requirement.",
     icon: Package,
   },
   {
@@ -365,7 +346,7 @@ export const servicesFaqs: FaqItem[] = [
   {
     question: "What type of coconut does Kankeshwari Coconut Supplier supply?",
     answer:
-      "Kankeshwari Coconut Supplier supplies tender coconuts for retailers, wholesalers, distributors, fruit sellers, events, hospitality businesses and other commercial buyers.",
+      "Kankeshwari Coconut Supplier supplies fresh tender coconuts in bulk quantities, sourced directly from farms in Gadu and the surrounding coastal areas near Somnath.",
   },
   {
     question: "What tender coconut sizes can I inquire about?",
@@ -410,7 +391,7 @@ export const servicesFaqs: FaqItem[] = [
   {
     question: "Is there a fixed minimum order quantity?",
     answer:
-      "There is no publicly listed minimum order quantity. The suitable order quantity and pricing are discussed based on destination, current availability and transportation requirements.",
+      "There is no publicly listed minimum order quantity. As a wholesale-only supplier, we focus on bulk requirements. The suitable order quantity and pricing are discussed based on destination, current availability and transportation requirements.",
   },
   {
     question: "How is tender coconut pricing decided?",
@@ -418,19 +399,19 @@ export const servicesFaqs: FaqItem[] = [
       "Pricing depends on preferred size, total quantity, current market availability, delivery destination and transportation planning. Contact the supplier for a current quotation.",
   },
   {
-    question: "Can a new coconut seller contact Kankeshwari Coconut Supplier?",
+    question: "Do you sell to individual customers?",
     answer:
-      "Yes. New retailers, wholesalers, distributors and business owners can discuss their expected quantity, preferred size, business location and sourcing requirements.",
+      "No. Kankeshwari Coconut Supplier is focused on wholesale only, serving wholesalers, traders, distributors, fruit markets and large-volume buyers.",
   },
   {
-    question: "Does Kankeshwari Coconut Supplier supply across India?",
+    question: "Where do you source your coconuts from?",
     answer:
-      "Yes. Kankeshwari Coconut Supplier accepts tender coconut supply inquiries from buyers across India. Delivery planning depends on quantity, destination, current availability and transportation options.",
+      "Our coconuts are sourced directly from farms in Gadu and nearby growing areas across the coastal belt near Somnath, in coordination with local farmers.",
   },
   {
     question: "Why choose Kankeshwari Coconut Supplier?",
     answer:
-      "Kankeshwari Coconut Supplier focuses on quality tender coconuts, clear communication, size-based requirements, organised bulk-order coordination and supply support from Gujarat to buyers across India.",
+      "We offer farm-direct sourcing, carefully selected fresh coconuts, bulk availability, reliable supply from Gadu and nearby areas, and a wholesale-only focus dedicated to bulk buyers.",
   },
   {
     question: "How quickly will I receive a response?",
@@ -441,9 +422,9 @@ export const servicesFaqs: FaqItem[] = [
 
 export const servicesCta = {
   eyebrow: "Place a Bulk Supply Inquiry",
-  title: "Looking for a Trusted Coconut Supplier in India?",
+  title: "Looking for a Reliable Wholesale Tender Coconut Supplier?",
   description:
-    "Share your preferred tender coconut size, required quantity, delivery city, state and expected supply schedule with Kankeshwari Coconut Supplier.",
+    "Contact Kankeshwari Coconut Supplier for bulk requirements and wholesale enquiries. Share your preferred size, required quantity, delivery city, state and expected supply schedule.",
   whatsappLabel: "Send WhatsApp Inquiry",
   callLabel: "Call Kankeshwari Coconut Supplier",
 };

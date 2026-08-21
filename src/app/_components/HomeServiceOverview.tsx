@@ -29,9 +29,9 @@ export function HomeServiceOverview() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
           <SectionHeading
-            eyebrow="Coconut Supply"
-            title="Reliable Coconut Supply for Bulk Requirements"
-            description="From regular business requirements to larger coconut orders, Kankeshwari Coconut Supplier helps buyers source tender and green coconuts from Gadu, near Chorvad in Junagadh, Gujarat."
+            eyebrow="Our Products"
+            title="Fresh Tender Coconuts for Wholesale Supply"
+            description="We supply fresh tender coconuts in bulk quantities, sourced directly from farms in Gadu and the surrounding coastal areas near Somnath, Gujarat."
           />
         </Reveal>
 

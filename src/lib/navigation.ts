@@ -11,7 +11,7 @@ export const footerServices = [
   { label: "Tender Coconut Supply", href: "/coconut-supplier-services#tender-coconut" },
   { label: "Bulk Coconut Orders", href: "/coconut-supplier-services#bulk-order" },
   { label: "Coconut Supply for Businesses", href: "/coconut-supplier-services#buyers" },
-  { label: "Coconut Business Startup Sourcing", href: "/coconut-supplier-services#startup" },
+  { label: "Wholesale Supply for Bulk Buyers", href: "/coconut-supplier-services#startup" },
 ] as const;
 
 export const callHref = `tel:${siteConfig.phoneRaw}`;

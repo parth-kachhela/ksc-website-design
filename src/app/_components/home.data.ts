@@ -4,74 +4,67 @@ import type { Review } from "@/types/review";
 import type { TrustItem } from "@/types/global";
 
 export const hero = {
-  eyebrow: "Bulk Tender Coconut Supply Across India",
-  title: "Trusted Coconut Supplier in Gujarat for Pan-India Supply",
+  title: "Fresh Tender Coconuts. Direct from the Farms.",
   description:
-    "Kankeshwari Coconut Supplier supplies quality tender coconuts from the Somnath region of Gujarat to retailers, distributors, wholesalers and businesses across India. We focus on carefully selected coconuts, dependable communication, transparent order coordination and timely bulk supply.",
+    "We are a wholesale tender coconut supplier based in Gadu, District Junagadh, Gujarat, sourcing fresh coconuts from Gadu and the surrounding coastal areas near Somnath. Our coconuts are sourced directly from farms, allowing us to provide fresh, quality products with a reliable supply for wholesale buyers.",
   primaryCta: "Get Bulk Supply Quote",
   secondaryCta: "Talk with Us",
-  trustLine: "Trusted by buyers for quality, communication and reliable service",
+  trustLine: "Trusted by wholesale buyers for quality, communication and reliable service",
 };
 
 export const trustItems: TrustItem[] = [
-  { value: "5.0", label: "Google Rating" },
-  { value: "34+", label: "Customer Reviews" },
-  { value: "Gujarat", label: "Somnath Region" },
-  { value: "Pan-India", label: "Supply Network" },
-  { value: "Direct", label: "Phone & WhatsApp" },
+  { value: "Freshness", label: "Farm-Direct Sourcing" },
+  { value: "Quality", label: "Carefully Selected" },
+  { value: "Bulk Supply", label: "Wholesale Quantities" },
+  { value: "Reliable Service", label: "Dependable Support" },
 ];
 
 export const supplyCards: ServiceCard[] = [
   {
-    title: "Tender Coconut Supply",
+    title: "Fresh Tender Coconuts",
     description:
-      "Quality tender coconuts supplied for retailers, distributors, wholesalers, fruit sellers, hospitality businesses and other commercial requirements.",
+      "We supply fresh tender coconuts in bulk quantities, sourced from farms across the coastal areas of Somnath. Our focus is on freshness, quality and consistent supply.",
     ctaLabel: "Inquire for Tender Coconut",
   },
   {
-    title: "Size-Graded Coconut Supply",
+    title: "Bulk Wholesale Supply",
     description:
-      "Choose from available coconut size categories based on your market, customer preference, quantity and business requirements.",
-    ctaLabel: "Discuss Size-Based Supply",
+      "Tender coconuts supplied in bulk quantities suitable for traders, distributors and large-volume wholesale requirements.",
+    ctaLabel: "Discuss Bulk Supply",
   },
   {
-    title: "Bulk Coconut Orders",
+    title: "Consistent Farm-Direct Availability",
     description:
-      "Bulk coconut supply support for one-time, scheduled and recurring requirements across Gujarat and other parts of India.",
-    ctaLabel: "Request Bulk Supply",
+      "Direct sourcing from farms nearby growing areas supports dependable availability for regular wholesale buyers.",
+    ctaLabel: "Request Wholesale Supply",
   },
 ];
 
 export const benefits = [
   {
-    title: "Quality-Focused Supply",
+    title: "Farm-Direct Sourcing",
     description:
-      "Coconuts are selected with attention to freshness, size, appearance and suitability for bulk business requirements.",
+      "Tender coconuts sourced directly from farms the surrounding coastal areas near Somnath.",
   },
   {
-    title: "Pan-India Supply Support",
+    title: "Fresh & Quality Products",
     description:
-      "We discuss coconut supply requirements for buyers located across Gujarat and other states of India.",
+      "Every coconut is carefully selected for freshness and quality before it is prepared for wholesale supply.",
   },
   {
-    title: "Clear Communication",
+    title: "Bulk Availability",
     description:
-      "Buyers can directly discuss quantity, size, destination, schedule and other supply requirements through phone or WhatsApp.",
+      "Suitable for traders, distributors and large-volume buyers looking for consistent bulk quantities.",
   },
   {
-    title: "Reliable Order Coordination",
+    title: "Reliable Supply",
     description:
-      "Availability, quantity, dispatch planning and destination details are confirmed before the order is finalised.",
+      "Consistent sourcing from Gadu and nearby areas, supported by direct coordination with local farmers.",
   },
   {
-    title: "Bulk Order Capability",
+    title: "Wholesale Only",
     description:
-      "Suitable for retailers, wholesalers, distributors, fruit sellers, hospitality businesses and recurring commercial buyers.",
-  },
-  {
-    title: "Flexible Supply Planning",
-    description:
-      "Buyers can discuss one-time orders, scheduled deliveries or recurring coconut supply based on their business needs.",
+      "We are focused on serving wholesale and bulk requirements for business buyers.",
   },
 ];
 
@@ -79,100 +72,102 @@ export const supplyNote =
   "Supply availability, dispatch schedule and delivery options depend on the required quantity, destination, current stock and transportation availability. Contact us directly for confirmation.";
 
 export const gardenStory = {
-  eyebrow: "Coconut Garden & Sourcing",
+  eyebrow: "Farm to Wholesale Market",
 
-  title: "From Gujarat’s Coconut-Growing Region to Buyers Across India",
+  title: "Sourced Directly from Farms of Coastal Somnath",
 
   description:
-    "Our supply journey begins in the coconut-growing region around Somnath, Gujarat. We focus on selecting suitable coconuts, coordinating bulk requirements carefully and connecting businesses across India with a dependable coconut supply source.",
+    "We work with local farmers the surrounding coastal areas near Somnath to create a simple and dependable supply chain — from the farm directly to the wholesale market.",
 
   highlights: [
-    "Coconuts sourced from Gujarat’s coconut-growing region.",
+    "Coconuts sourced directly from farms nearby growing areas.",
     "Careful selection based on freshness, quality and size.",
-    "Bulk supply support for different business requirements.",
-    "Direct coordination for quantity, schedule and destination.",
+    "A simple, dependable farm-to-wholesale supply chain.",
+    "Direct coordination for quantity, schedule and delivery.",
   ],
 
   note:
-    "Every order is handled according to the buyer’s quantity, preferred coconut size, delivery destination and expected supply schedule. Our goal is to build dependable, long-term relationships with buyers across India.",
+    "By sourcing directly from farmers and nearby growing areas, we aim to deliver fresh tender coconuts while maintaining dependable supply and quality for our wholesale buyers.",
 
-  videoTitle: "Coconut Garden and Supply Journey",
+  videoTitle: "Coconut Gardens and Farm Sourcing",
 
   videoSubtitle:
-    "Explore the natural coconut-growing environment and the journey behind our pan-India coconut supply.",
+    "Explore the natural coconut-growing environment of coastal Somnath and the journey behind our wholesale supply.",
 };
 
 export const galleryImages = [
   {
     src: "/images/gallery/garden-1.svg",
-    alt: "Coconut garden in the Somnath region of Gujarat",
-    caption: "Coconut-growing region of Gujarat",
+    alt: "Coconut gardens in Gadu near the coastal Somnath region of Gujarat",
+    caption: "Coconut-growing region near Somnath",
   },
   {
     src: "/images/gallery/garden-2.svg",
-    alt: "Fresh tender coconuts selected for bulk supply across India",
-    caption: "Tender coconuts prepared for bulk supply",
+    alt: "Fresh tender coconuts selected for wholesale supply",
+    caption: "Tender coconuts prepared for wholesale supply",
   },
   {
     src: "/images/gallery/garden-3.svg",
-    alt: "Healthy coconut trees growing in Gujarat",
-    caption: "Natural coconut gardens in Gujarat",
+    alt: "Healthy coconut trees on farms around Gadu, Gujarat",
+    caption: "Natural coconut farms in Gadu",
   },
   {
     src: "/images/gallery/garden-4.svg",
-    alt: "Quality coconuts prepared for wholesale and commercial buyers",
-    caption: "Quality coconuts for commercial buyers",
+    alt: "Quality coconuts prepared for wholesale and bulk buyers",
+    caption: "Quality coconuts for wholesale buyers",
   },
 ];
 
 export const processSteps = [
   {
-    title: "Share Your Requirement",
+    title: "Farm",
     description:
-      "Tell us your required quantity, preferred coconut size, delivery destination and expected supply date.",
+      "Fresh tender coconuts are grown on farms the surrounding coastal areas near Somnath.",
   },
   {
-    title: "Confirm Availability",
+    title: "Sourcing",
     description:
-      "We review current coconut availability and understand the complete details of your requirement.",
+      "We source coconuts directly from local farmers and nearby growing areas.",
   },
   {
-    title: "Plan the Supply",
+    title: "Selection",
     description:
-      "Quantity, pricing, dispatch schedule, transportation and destination-related details are discussed directly.",
+      "Coconuts are carefully selected for freshness, quality and suitability for wholesale supply.",
   },
   {
-    title: "Finalise Your Order",
+    title: "Wholesale Supply",
     description:
-      "The order proceeds after the supply terms and required details are mutually confirmed.",
+      "Selected coconuts are supplied in bulk quantities to wholesalers, traders, distributors and large-volume buyers.",
   },
 ];
 
 export const serviceAreaTitle =
-  "Trusted Coconut Supplier in Gujarat with Supply Across India";
+  "Wholesale Tender Coconut Supplier From coastal areas near Somnath, Gujarat to Businesses Across India";
 
 export const serviceAreaParagraphs = [
-  "Kankeshwari Coconut Supplier is connected to the coconut-growing region around Somnath, Gujarat. We supply quality tender coconuts for retailers, wholesalers, distributors, fruit sellers, hospitality businesses and other commercial buyers looking for a dependable coconut supplier in Gujarat.",
+  "Kankeshwari Coconut Supplier is based in Gadu, District Junagadh, Gujarat, and sources fresh tender coconuts from Gadu and the surrounding coastal areas near Somnath. We supply fresh, quality coconuts in bulk quantities for wholesalers, traders, distributors, fruit markets and large-volume buyers.",
 
-  "Our coconut supply service is not limited to Gujarat. Buyers from different cities and states across India can contact us to discuss their bulk coconut requirements. Share your required quantity, preferred coconut size, delivery destination and expected schedule so that availability and transportation options can be reviewed properly.",
+  "Our coconuts are sourced directly from farms, which allows us to maintain freshness, quality and a reliable supply for wholesale buyers. Share your required quantity, preferred coconut size and delivery destination so that availability and transportation options can be confirmed properly.",
 
-  "Businesses searching for a trusted coconut supplier in India can communicate with us directly through phone or WhatsApp. We believe that reliable supply begins with clear communication, honest availability confirmation and careful order planning before dispatch.",
+  "Businesses searching for a trusted wholesale tender coconut supplier can communicate with us directly through phone or WhatsApp. We believe that reliable supply begins with clear communication, honest availability confirmation and careful selection before dispatch.",
 
-  "Whether you need a one-time bulk order or recurring coconut supply, Kankeshwari Coconut Supplier can help you discuss suitable sourcing options. Supply availability and delivery planning depend on quantity, destination, current stock and transportation arrangements.",
+  "Whether you need a one-time bulk order or recurring wholesale supply, we work with local farmers to keep the supply chain simple and dependable — from the farm directly to the wholesale market.",
 ];
 
-export const startupSection = {
-  eyebrow: "Start Your Coconut Business",
-  title: "Planning to Start or Expand a Coconut Business?",
+export const whoWeSupply = {
+  eyebrow: "Who We Supply",
+  title: "Wholesale Tender Coconuts for Bulk Buyers",
   description:
-    "A reliable sourcing connection is important for starting or growing a coconut retail, wholesale or distribution business. Share your expected quantity, business location and supply schedule to discuss available coconut sourcing options from Gujarat.",
+    "Our wholesale tender coconuts are suitable for businesses that require fresh, quality coconuts in bulk quantities with a dependable supply.",
   points: [
-    "Discuss your expected order quantity",
-    "Share your city and delivery destination",
-    "Choose the preferred coconut size category",
-    "Plan one-time or recurring supply",
+    "Wholesalers",
+    "Traders",
+    "Distributors",
+    "Fruit markets",
+    "Large-volume buyers",
+    "Businesses requiring regular bulk supply",
   ],
-  ctaLabel: "Discuss Your Business Requirement",
+  ctaLabel: "Get in Touch",
 };
 
 export const reviews: Review[] = [
@@ -220,42 +215,42 @@ export const faqs: FaqItem[] = [
   {
     question: "Where is Kankeshwari Coconut Supplier based?",
     answer:
-      "Kankeshwari Coconut Supplier is based in Gujarat and is connected to the coconut-growing region around Somnath. We discuss bulk coconut supply requirements for buyers across India.",
+      "Kankeshwari Coconut Supplier is a wholesale tender coconut supplier based in Gadu, District Junagadh, Gujarat. We source fresh coconuts from Gadu and the surrounding coastal areas near Somnath.",
   },
   {
-    question: "Do you supply coconuts across India?",
+    question: "Do you sell to individual customers?",
     answer:
-      "Yes. Buyers from different cities and states across India can contact us for bulk coconut requirements. Supply and transportation availability depend on quantity, destination, current stock and delivery planning.",
+      "No. Kankeshwari Coconut Supplier is focused on wholesale only. We serve wholesalers, traders, distributors, fruit markets and other businesses with bulk requirements.",
   },
   {
-    question: "How can I place a bulk coconut inquiry?",
+    question: "How can I place a wholesale coconut inquiry?",
     answer:
       "Call +91 63522 95050 or contact us through WhatsApp. Share your required quantity, preferred coconut size, delivery destination and expected supply date.",
   },
   {
     question: "Do you supply tender coconuts?",
     answer:
-      "Yes. We supply tender coconuts for retailers, wholesalers, distributors, fruit sellers, hospitality businesses and other commercial buyers, subject to current availability.",
+      "Yes. We supply fresh tender coconuts in bulk quantities, sourced directly from farms across the coastal areas of Somnath, subject to current availability.",
+  },
+  {
+    question: "Where are your coconuts sourced from?",
+    answer:
+      "Our coconuts are sourced directly from farms the surrounding coastal areas near Somnath, in coordination with local farmers.",
   },
   {
     question: "Can I contact you for recurring coconut supply?",
     answer:
-      "Yes. Businesses requiring weekly, scheduled or recurring coconut supply can share their expected quantity, destination and preferred schedule for discussion.",
+      "Yes. Businesses requiring weekly, scheduled or recurring bulk supply can share their expected quantity, destination and preferred schedule for discussion.",
   },
   {
-    question: "Can you support a new coconut business startup?",
+    question: "What is your minimum order requirement?",
     answer:
-      "Yes. New retailers, distributors and coconut business owners can discuss their expected quantity, preferred coconut category, business location and recurring supply requirements.",
+      "As a wholesale-only supplier, we focus on bulk quantities. The suitable order quantity and pricing are discussed based on your requirement, destination and current availability.",
   },
   {
     question: "Why choose Kankeshwari Coconut Supplier?",
     answer:
-      "We focus on quality-based coconut selection, direct communication, clear availability confirmation, flexible bulk-order planning and dependable coordination for buyers across India.",
-  },
-  {
-    question: "How do I choose a trusted coconut supplier in Gujarat?",
-    answer:
-      "Check the supplier’s customer feedback, product quality, communication, bulk-order capability and willingness to confirm availability, transportation and supply details before finalising an order.",
+      "We offer farm-direct sourcing, carefully selected fresh coconuts, bulk availability, reliable supply from Gadu and nearby areas, and a wholesale-only focus dedicated to bulk buyers.",
   },
   {
     question: "What information should I share for a supply quotation?",
@@ -265,8 +260,8 @@ export const faqs: FaqItem[] = [
 ];
 
 export const finalCta = {
-  title: "Looking for a Trusted Coconut Supplier in India?",
+  title: "Looking for a Reliable Wholesale Tender Coconut Supplier?",
   description:
-    "Share your coconut quantity, preferred size, delivery destination and expected supply schedule with Kankeshwari Coconut Supplier.",
-  location: "Supplying from Gujarat to Buyers Across India",
+    "Contact Kankeshwari Coconut Supplier for bulk requirements and wholesale enquiries.",
+  location: "Gadu, District Junagadh, Gujarat",
 };

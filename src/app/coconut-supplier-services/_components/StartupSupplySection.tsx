@@ -14,7 +14,7 @@ export function StartupSupplySection() {
       points={startupSection.checklist}
       asideNote={startupSection.asideNote}
       ctaLabel={startupSection.ctaLabel}
-      ctaHref={buildContactQuery({ inquiryType: "Coconut Business Startup" })}
+      ctaHref={buildContactQuery({ inquiryType: "Wholesale Business Inquiry" })}
     />
   );
 }

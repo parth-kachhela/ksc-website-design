@@ -8,60 +8,60 @@ import {
 } from "lucide-react";
 
 export const aboutHero = {
-  eyebrow: "Supplying from Gujarat Across India",
-  title: "A Trusted Coconut Supplier Committed to Quality and Reliable Supply",
+  eyebrow: "Wholesale Tender Coconut Supplier · Gadu, Gujarat",
+  title: "A Wholesale Coconut Supplier Committed to Freshness, Quality and Reliable Supply",
   intro:
-    "Kankeshwari Coconut Supplier provides quality tender coconuts and bulk coconut supply from the Somnath region of Gujarat to retailers, wholesalers, distributors and businesses across India.",
+    "Kankeshwari Coconut Supplier is a wholesale tender coconut supplier based in Gadu, District Junagadh, Gujarat. We source fresh coconuts directly from farms in Gadu and the surrounding coastal areas near Somnath for wholesale buyers.",
 };
 
 export const introduction = {
-  title: "A Trusted Coconut Supplier in Gujarat for Buyers Across India",
+  title: "Farm-Direct Tender Coconuts for Wholesale Buyers",
   paragraphs: [
-    "Kankeshwari Coconut Supplier is connected to the coconut-growing region around Somnath, Gujarat. We supply quality tender coconuts to retailers, wholesalers, distributors, fruit sellers, hospitality businesses and other commercial buyers across India.",
+    "Kankeshwari Coconut Supplier sources fresh tender coconuts directly from farms in Gadu and the surrounding coastal areas near Somnath. Our wholesale-only focus allows us to provide fresh, quality products with a reliable supply for bulk buyers.",
 
-    "Every buyer has different requirements. Our team communicates directly with buyers to understand the preferred coconut size, required quantity, delivery destination and expected supply schedule before confirming availability and order details.",
+    "We work with local farmers and wholesale buyers to create a simple and dependable supply chain — from the farm directly to the wholesale market. Every requirement is understood clearly before availability and order details are confirmed.",
 
-    "Customer feedback regularly highlights coconut quality, clear communication and timely service. Whether you need a one-time bulk order or recurring coconut supply, you can contact us through phone or WhatsApp to discuss suitable supply options from Gujarat to your location anywhere in India.",
+    "Customer feedback regularly highlights coconut quality, clear communication and timely service. Whether you need a one-time bulk order or recurring wholesale supply, you can contact us through phone or WhatsApp to discuss suitable sourcing options.",
   ],
 
   supplyApproachTitle: "Our Supply Approach",
 
   supplyApproach: [
-    "Understand the buyer’s complete coconut requirement",
-    "Discuss preferred coconut size and required quantity",
-    "Confirm current availability and delivery destination",
+    "Source coconuts directly from farms in Gadu and nearby growing areas",
+    "Select coconuts carefully for freshness, quality and size",
+    "Confirm current availability with the buyer",
     "Coordinate dispatch and supply-related details clearly",
     "Maintain direct communication throughout the order process",
   ],
 };
 
 export const qualityCommitment = {
-  title: "Quality That Builds Buyer Trust",
+  title: "Our Commitment to Quality and Trust",
   paragraphs: [
-    "Quality is an important part of every coconut supply requirement. Kankeshwari Coconut Supplier focuses on selecting coconuts with attention to freshness, size, appearance and suitability for retail, wholesale and commercial use.",
+    "At Kankeshwari Coconut Supplier, we value quality, trust and long-term business relationships. Coconuts are carefully selected with attention to freshness, size, appearance and suitability for wholesale supply.",
 
-    "Buyers are encouraged to share their quality expectations, preferred coconut category and business requirements directly. This helps us explain current availability clearly and coordinate a supply option that is suitable for the buyer before the order is finalised.",
+    "Buyers are encouraged to share their quality expectations, preferred coconut category and bulk requirements directly. This helps us explain current availability clearly and coordinate a supply option that is suitable for the buyer before the order is finalised.",
 
-    "Our aim is not limited to completing a single order. We work to build dependable and long-term relationships with buyers who require consistent coconut quality, transparent communication and reliable bulk supply across India.",
+    "We are committed to providing fresh farm-sourced tender coconuts, dependable wholesale supply and professional service to our customers.",
   ],
 };
 
 export const gardenSourcing = {
-  title: "Connected to Gujarat’s Coconut-Growing Region",
+  title: "Sourced from Gadu and the Coastal Areas Near Somnath",
 
   paragraphs: [
-    "The coastal region around Somnath, Gujarat is naturally connected with coconut cultivation. This growing environment forms an important part of the sourcing journey behind Kankeshwari Coconut Supplier and supports our commitment to providing quality coconuts to buyers across India.",
+    "Gadu and the surrounding coastal areas near Somnath, Gujarat are naturally connected with coconut cultivation. This growing environment forms the foundation of our farm-direct sourcing journey.",
 
-    "Our garden and sourcing visuals help buyers understand the natural origin of the coconuts, the freshness of the produce and the care involved before coconuts are prepared for wholesale and bulk supply.",
+    "Our garden and sourcing visuals help buyers understand the natural origin of the coconuts, the freshness of the produce and the care involved before coconuts are prepared for wholesale supply.",
 
-    "From Gujarat’s coconut-growing region to businesses in different states of India, each supply requirement is coordinated according to quantity, destination, availability and transportation planning.",
+    "By sourcing directly from local farmers and nearby growing areas, we maintain dependable supply and quality for wholesalers, traders, distributors and large-volume buyers.",
   ],
 
   images: [
     {
       src: "/images/about/garden-hero.avif",
-      alt: "Coconut trees growing in the coastal Somnath region of Gujarat",
-      caption: "Coconut-growing region of Gujarat",
+      alt: "Coconut trees on farms in Gadu near the coastal Somnath region of Gujarat",
+      caption: "Coconut-growing region near Somnath",
     },
     {
       src: "/images/about/tender-garden.avif",
@@ -73,9 +73,9 @@ export const gardenSourcing = {
 
 export const businessValues = [
   {
-    title: "Quality-Focused Supply",
+    title: "Freshness First",
     description:
-      "Coconuts are selected with attention to freshness, size, appearance and suitability for commercial requirements.",
+      "Coconuts are sourced directly from farms and selected with attention to freshness for wholesale supply.",
     icon: Leaf,
   },
   {
@@ -99,7 +99,7 @@ export const businessValues = [
   {
     title: "Long-Term Business Relationships",
     description:
-      "We welcome recurring requirements and aim to build dependable relationships with regular buyers across India.",
+      "We value trust and work to build dependable, long-term relationships with our wholesale buyers.",
     icon: Handshake,
   },
   {
@@ -111,9 +111,9 @@ export const businessValues = [
 ];
 
 export const aboutCta = {
-  eyebrow: "Direct Bulk Supply Inquiry",
-  title: "Connect With a Trusted Coconut Supplier in Gujarat",
+  eyebrow: "Get in Touch",
+  title: "Connect With a Wholesale Tender Coconut Supplier in Gujarat",
   description:
-    "Share your required quantity, preferred coconut size, delivery destination and expected supply schedule to discuss coconut supply from Gujarat to your location across India.",
-  footer: "Supplying from the Somnath Region of Gujarat Across India",
+    "Looking for a reliable wholesale tender coconut supplier? Contact Kankeshwari Coconut Supplier for bulk requirements and wholesale enquiries.",
+  footer: "Gadu, District Junagadh, Gujarat",
 };
