@@ -3,7 +3,7 @@ export const siteConfig = {
   shortName: "KCS",
   domain: "https://kankeshwaricoconutsupplier.com",
   description:
-    "Kankeshwari Coconut Supplier is a wholesale tender coconut supplier in Gadu, Junagadh, Gujarat, sourcing fresh coconuts directly from farms for bulk buyers.",
+    "Kankeshwari Coconut Supplier is a wholesale tender coconut supplier based in Gadu, Junagadh, Gujarat, sourcing fresh coconuts directly from farms for bulk buyers.",
   phoneDisplay: "+91 63522 95050",
   phoneRaw: "916352295050",
   email: "kcsgadu@gmail.com",
@@ -17,7 +17,7 @@ export const siteConfig = {
   country: "India",
   whatsappUrl: "https://wa.me/916352295050",
   googleMapsQuery:
-    "Kankeshwari Coconut Supplier, Gadu Chorvad Highway, Junagadh, Gujarat 362255",
+    "Kankeshwari Coconut Supplier, Gadu , Junagadh, Gujarat 362255",
   rating: "5.0",
   reviewCount: 34,
   instagramUsername: "kcsgadu",

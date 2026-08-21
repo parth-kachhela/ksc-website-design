@@ -16,7 +16,7 @@ const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
   title: {
-    default: `${siteConfig.name} | Wholesale Tender Coconut Supplier in Gadu, Gujarat`,
+    default: `${siteConfig.name} | Wholesale Tender Coconut Supplier`,
     template: `%s`,
   },
   description: siteConfig.description,
